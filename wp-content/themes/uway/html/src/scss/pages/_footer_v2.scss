@@ -1,0 +1,126 @@
+//-----------FOOTER
+.footer {
+    height: 360px;
+    background-color: #112848;
+    //background-image: url(../../../src/img/bg-footer.png);
+    background-repeat: no-repeat;
+    width:100%;
+    @include small-mobile{
+        height:1000px;
+    }
+    @include tablet{
+        height:400px;
+    }
+    &-content {
+        margin: $marginBody;
+        &-list {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 50px;
+            font-family: $mainFont;
+            @include font-Basic(white, 18px, 45px, 300);
+            @include mobile-down{
+                display:block;
+                text-align:center;
+                padding-top:20px;
+            }
+            &-info {
+                .logo-footer {
+                    .bg-image {
+                        img {
+                            padding-bottom: 10px;
+                            
+                        }
+                    }
+                }
+                .infor-footer{
+                    @include small-mobile{
+                        display:inline-block;
+                        width:80%;
+                        margin: 0 auto;
+                    }
+                    .mobile-info-footer {
+                        display: flex;
+                        align-items: center;
+                        @include small-mobile{
+                            display: flex;
+                            justify-content: center;
+                        }
+                        .icon-mobile {
+                            @include iconEx($bgColorIcon, 30px, 15px);
+                        }
+                    }
+                    .email-info-footer {
+                        @extend .mobile-info-footer;
+                        .icon-email {
+                            @include iconEx($bgColorIcon, 20px, 15px);
+                        }
+                    }
+                    .address-info-footer {
+                        @extend .mobile-info-footer;
+                        .icon-address {
+                            @extend .icon-mobile;
+                        }
+                    } 
+                }                                                                         
+            }
+            &-menu {
+                .link {
+                    @include font-Basic($mainColor, 20px, none, 700);
+                    padding-bottom: 10px;
+                }
+                a {
+                    p {
+                        color: white;
+                    }
+                }
+            }
+            &-policy {
+                .support {
+                    @include font-Basic($mainColor, 20px, none, 700);
+                    padding-bottom: 10px;
+                }
+                a {
+                    p {
+                        color: white;
+                    }
+                }
+            }
+            &-follow {
+                .follow-title {
+                    @include font-Basic($mainColor, 20px, none, 700);
+                    padding-bottom: 10px;
+                }
+                .list-icon-social {
+                    display: flex;
+                    @include mobile-down{
+                        justify-content:center;
+                    }
+                    .icon-intagram {
+                        @include iconEx($bgColorIcon, 20px, 20px);
+                        margin-right: 20px;
+                    }
+                    .icon-tiktok {
+                        @extend .icon-intagram;
+                    }
+                    .icon-facebook {
+                        @extend .icon-intagram;
+                    }
+                    .icon-youtube {
+                        @extend .icon-intagram;
+                    }
+                }
+            }
+        }
+        &-bottom {
+            display: flex;
+            justify-content: space-between;
+            color: #ffffff;
+            padding-top: 20px;
+            @include mobile-down{
+                display:block;
+                text-align:center;
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+include include/template
+
++template("Account Order","account","logged")
+
+    // ACCOUNT: BANNER
+    section.banner-product.spacing-around.spacing-header
+        .text-cover
+            h1.title-page My account
+            p.des-page Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+        .img-drop: img.lazygo(data-src="upload/account-banner.jpg", alt="")
+
+
+    // ACCOUNT: CONTENT TAB
+    section.account.spacing-around.bg-skin
+        // Tab page ul
+        ul.nav(role="tablist").tab-navi-learn
+            li.wow.fadeInUp(data-wow-delay=".1s"): a(href="account-personal.html") Personal details
+            li.wow.fadeInUp(data-wow-delay=".2s"): a.active(href="account-order.html") Order history
+            li.wow.fadeInUp(data-wow-delay=".3s"): a(href="account-address.html") Address book
+            li.wow.fadeInUp(data-wow-delay=".4s").logout: a(href="#") log out
+        .container.spacing-end
+            // Tab page content
+            .tab-content.content-account
+                .row
+                    .col-md-3   
+                        h2.title-page.animated.fadeInUp.margin-bottom Order <br>history
+                    .col-md-9
+                        .wrap-list#wrap-list-order
+                            .list-order-history
+                                ul
+                                    each val in [1,2,3,4]
+                                        li
+                                            .order-number
+                                                p Order#: #[b C372613XYZ]
+                                                span 4 items
+                                            .order-date 23/03/2018                    
+                                            .order-price 
+                                                p.price $288.50
+                                                span Shipped
+                                            .view-detail-order
+                                                a(href="account-order-detail.html").toggle-review View
+                                    li.no-orders
+                                        p You haven't placed any orders yet.
+                                    a(href="/").btn-black RETURN SHOP

@@ -1,0 +1,107 @@
+include include/template_v2
++template("Homepage","home")
+    .body-content
+        //Banner
+        .body-content-banner
+            -const promotions = {"Tặng 15k cho đơn hàng 200k":1,"Tặng 30k cho đơn hàng 10k":2,"Tặng nhà khi mua 200k":3,"Cấp luôn người yêu khi mua 500k":4}
+            img(src="../../src/img/ecolearn-banner-1.png" id="img-banner-index")
+            .btn-navigation
+                img(src="../../src/img/button-left.svg" onclick="previous()" )
+                img(src="../../src/img/button-right.svg" onclick="next()" )
+            span(id="desc")
+        .bottom-baner
+            .bottom-content
+                .bottom-content-commit
+                    img(src="../../src/img/ecolearn-commit.svg", alt="")
+                    p.text-content-banner Cam kết chính hãng
+                .bottom-content-refund
+                    img(src="../../src/img/ecolearn-commit.svg", alt="")
+                    p.text-content-banner Hàng giả hoàn tiền 100%
+                .bottom-content-freeship
+                    img(src="../../src/img/ecolearn-commit.svg", alt="")
+                    p.text-content-banner FREESHIP từ đơn 300K
+        //Sản phẩm bán chạy
+        .body-content-selling
+            h1.title-selling Top sản phẩm bán chạy 
+            -const products = {"Xịt lau bếp Stain Remover, khăn lau đa năng Micro Fiber":1, "Vệ sinh khử mùi nhà vệ sinh - Ecofresh":2,"Tẩy ố quần áo 250ml Stain Remover":3,"Vi sinh xử lý dầu mỡ Ecolean Fog - chai 1 lít":4}
+            .list-product
+                each value1,index1 in products
+                    .product-item
+                        .img-product
+                            img(src="../../src/img/product-selling-"+value1+".png", alt="")
+                        .info-product
+                            .name-product= index1
+                            .price-product 245,000 đ
+                            .btn-order
+                                button(name="button" type="button").button-order
+                                    span Đặt hàng   
+        //Giới thiệu
+        .body-content-introduce     
+            .body-content-introduce-background
+                .left-introduce
+                    .introduce-about-ecoclean 
+                        .title-introduce Giới thiệu về EcoClean
+                        .title-introduce-2 Công ty TNHH EcoClean Việt Nam được thành lập vào năm 2009.
+                        .desc-introduce Với đội ngũ giàu kinh nghiệm, trình độ chuyên môn kĩ thuật cao, chúng tôi đã tiến hành tư vấn, phân tích thí nghiệm, thiết kế, thẩm kế, thi công, bảo trì, cải tạo và đặc biệt chuyển giao công nghệ trong lĩnh vực xử lý nước thải, khí thải, rác thải.
+                    .img-introduce
+                        .img-core
+                .right-introduce 
+                    .img-introduce-2
+                        .img-core-2
+                    .text-introduce
+                        .container-introduce 
+                            .content-introduce
+                                .title-text Công ty TNHH EcoClean Việt Nam
+                                .content-text Luôn luôn đồng hành và chung tay với cộng đồng, nhằm giảm thiểu tối đa các vấn nạn về chất thải sinh hoạt, hướng đến một tương lai xanh hơn, sạch hơn và đảm bảo an toàn sức khỏe.
+        //Danh mục
+        .body-content-category
+            -const categorys ={"Men vi sinh bể phốt":1,"Thông tắc đường ống":2,"Khử mùi chuyên dụng":3,"Thiết bị gia đình":4}
+            each value3,index3 in categorys
+                .body-content-category-item
+                    .category-img
+                        img(src="../../src/img/category-"+value3+".png", alt="")
+                        .text-category= index3
+        //Lợi ích
+        .body-content-benefit
+            .body-content-benefit-title 5 lợi ích vi sinh <br> ecoclearn mang lại
+            .body-content-benefit-content
+                -const benefits = {"Thân thiện môi trường":1, "Nâng tầm cuộc sống":2, "Bảo trì bền vững":3, "Tiết kiệm chi phí":4,"Ứng dụng rộng rãi":5}
+                each value4,index4 in benefits
+                    .body-content-benefit-content-item
+                        .img-benefit
+                            img(src="../../src/img/benefit-"+value4+".svg", alt="")
+                        .name-benefit= index4
+        //Blog
+        .body-content-blog
+            .body-content-blog-content
+                .body-content-blog-content-left
+                    .content-blog-left
+                        .content-blog-left-title Blog
+                        .content-blog-left-desc Không thể phủ nhận những lúc gặp phải tình huống khó khăn, khẩn cấp thì biết một chút kiến thức hay mẹo vặt sẽ là phao cứu sinh giải quyết vấn đề cực kỳ hiệu quả. Và những thông tin, kiến thức hữu ích, giá trị sẽ được EcoClean bổ sung, cập nhật thường xuyên trên Blog của chúng tôi.
+                        button(type="button").content-blog-left-btn-more
+                            span.text-btn Xem thêm mẹo vặt hay
+                .body-content-blog-content-right
+                    .body-content-blog-content-right-content
+                        -const blogs = {"Loại bỏ nấm móc gây mùi hôi trong nhà vào mùa mưa":1,"7 mối nguy hại trong phòng tắm gây hại tiềm ẩn":2,"4 dấu hiệu giúp bạn nhận biết đường cống thoát nước đang bị tắt":3}
+                        each value5,index5 in blogs
+                            .blog-item
+                                .img-blog
+                                    img(src="../../src/img/ecoclearn-blog-"+value5+".png")
+                                .title-blog= index5
+        //Tham khảo ý kiến
+        .body-content-consult
+            .body-content-consult-content 
+                .body-content-consult-content-title Tư vấn ngay
+                .body-content-consult-content-respone 
+                    .form-respone 
+                        p.form-name Họ và tên
+                        input(type="text" placeholder="Họ và tên").input-name
+                        p.form-email-address Địa chỉ email
+                        input(type="text" placeholder="Địa chỉ email").input-email-address
+                        p.form-title Tiêu đề
+                        input(type="text" placeholder="Tiêu đề").input-title
+                        p.form-content Nội dung
+                        input(type="text" placeholder="Nội dung").input-content
+                        button(type="button").btn-send
+                            span Gửi
+                    .img-respone

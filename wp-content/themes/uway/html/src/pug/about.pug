@@ -1,0 +1,84 @@
+include include/template
+
++template("About & Contact","about")
+
+    // ABOUT: BANNER
+    section.banner-product.spacing-around.spacing-header
+        .text-cover
+            h1.title-page About us
+            p.des-page Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+        .img-drop: img.lazygo(data-src="upload/about-banner.jpg", alt="")
+    // SUPPLEMENT CONTENT
+    section.about-nutritional.spacing-around.bg-green.section-scroll.row-center
+        .container
+            .row
+                .col-md-6
+                    .wrap-text-4-item
+                        h4.title-medium Flourish Nutritional Supplements
+                        .desc Flourish Nutritional Supplements are made purely from health-giving whole foods, just as Mother Nature provided. Like a symphony, all ingredients work in harmony to help alleviate aches and pains, improve sleep and energy, and relieve some chronic conditions.
+                .col-md-6
+                    .img-drop: img.lazygo(data-src="upload/img-about-1.jpg", alt="")
+    // OUR PROMISE
+    section.our-promise.spacing-around.bg-skin
+        .container
+            .wrap-text-4-item
+                h4.title-medium Our Promise
+                .desc Flourish Nutritional Supplements will always be;
+            .list-nutritional
+                .items
+                    .icon
+                        img(src="upload/about-icon-1.png", alt="")
+                    .wrap-item
+                        h5 Whole Foods
+                        .desc Every ingredient comes from it’s whole food natural source. Our turmeric, for example, is powered from the whole root – containing all the curcuminoids, turmerones, vitamins and minerals in their natural form, nothing added or subtracted. Together, these phytochemicals and nutrients produce their most powerful effects.
+                .items
+                    .icon
+                        img(src="upload/about-icon-2.png", alt="")
+                    .wrap-item
+                        h5 Plant-Based
+                        .desc We use plants as medicine, and believe in harnessing the healing powers of nature. All ingredients within our blends are mindfully selected and designed to work synergistically, so as much as possible is absorbed by the cells and available to be of benefit to the body.
+                .items
+                    .icon
+                        img(src="upload/about-icon-3.png", alt="")
+                    .wrap-item
+                        h5 Powdered
+                        .desc We will always make our products powdered, to allow for the most therapeutic dose.<br>This way, you can use the powder to give a healthy boost to your meals and drinks.<br>This also solves problems for people who struggle to take tablets or capsules.<br>Our products are designed as medicinal remedies to help health conditions, and will be made to be as palatable as possible, but do keep in mind that it is food as medicine.
+                .items
+                    .icon
+                        img(src="upload/about-icon-4.png", alt="")
+                    .wrap-item
+                        h5 Pure
+                        .desc Our blends are all natural. There is nothing synthetic within them. No extracts, no fillers, no artificial preservatives. This makes them unique to the market.<br>Every batch is independently tested to ensure its safety for consumption and that it is free from any environmental contaminants.
+            .box-quote
+                .avatar
+                    .img-drop
+                        img(src="upload/img-home-people-1.png", alt="")
+                .desc Our body is designed to heal,<br> it’s not designed to kill us,<br> unless you are not feeding it properly.
+                .signature Kathy Ashton #[span Founder & Medicinal Nutritionist]
+    // CONTACT CONTENT
+    section.about-contact.spacing-around.bg-green.section-scroll
+        .container
+            .row
+                .col-md-4
+                    .wrap-text-4-item
+                        h4.title-medium Contact
+                        .desc Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                .col-md-8
+                    .wrap-contact
+                        form(action="")
+                            ul
+                                li
+                                    label(for="label-1") Your name 
+                                        span.gfield_required *
+                                    input#label-1(type="text")
+                                li
+                                    label(for="label-3") Your email 
+                                        span.gfield_required *
+                                    input#label-2(type="email")
+                                li
+                                    label(for="label-3") Your message 
+                                        span.gfield_required *
+                                    textarea#label-3(name="", cols="30", rows="10")
+                            .gform_footer
+                                input(type="submit", value="send")
+    

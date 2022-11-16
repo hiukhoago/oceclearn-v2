@@ -1,0 +1,118 @@
+// RECIPES: CONTENT ARCHIVE
+section.recipes-content-archive {
+    .featured-recipe {
+        @include space-col(0);
+        border-bottom: 2px solid #000000;
+        margin-bottom: 40px;
+        padding-bottom: 40px;
+        @include tablet-up {
+            margin-bottom: 70px;
+            padding-bottom: 70px;
+        }
+        .col-md-5 {
+            overflow: hidden;
+        }
+        .img-drop {
+            // padding-top: 449/410*100%;
+            display: block;
+            @include mobile-up {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                padding-top: 0;
+            }
+            @include mobile-down {
+                img {
+                    position: relative;
+                }
+            }
+        }
+        .d-flex {
+            height: 100%;
+            background: #fff;
+        }
+        .wrap-text {
+            padding: 25px 25px;
+            @include tablet {
+                padding: 45px 40px;
+            }
+            @include tablet-up {
+                padding: 75px 70px;
+            }
+        }
+        .product-tag-list {
+            margin-top: 30px;
+            li {
+                font-weight: 700;
+            }
+        }
+    }
+    .list-recipe-archive {
+        @include space-col(14px);
+        .item-post {
+            margin-bottom: 14px;
+        }
+        h3 {
+            margin-bottom: 0;
+        }
+        .time-info {
+            margin-left: 0;
+            padding-top: 5px;
+        }
+    }
+}
+
+.label-servers {
+    padding: 5px 12px;
+    background: rgba(#fff, .75);
+    border-radius: 6px;
+    display: inline-block;
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    .icon.person {
+        vertical-align: middle;
+    }
+    sub {
+        font-size: 12px;
+        margin-left: 2px;
+        font-weight: 500;
+    }
+    span {
+        font-size: 12px;
+        margin-left: 2px;
+        font-weight: 500;
+        position: relative;
+        top: 1px;
+    }
+}
+
+.label-lock {
+    padding: 5px 12px;
+    border-radius: 6px;
+    bottom: 7px;
+    right: 7px;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    position: absolute;
+    background: rgba(#fff, .75) url(../img/icon-locker.svg) center center/auto 26px no-repeat;
+    box-shadow: 1px 1px 4px rgba(#000, 0.2);
+}
+
+.loading-more-row {
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 70px;
+    i {
+        margin-bottom: 20px;
+        width: 24px;
+        height: 24px;
+    }
+    span {
+        display: block;
+    }
+}

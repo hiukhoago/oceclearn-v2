@@ -1,0 +1,96 @@
+include include/template
+
++template("Blog Archive","blog")
+
+    // BLOG: BANNER
+    section.banner-product.spacing-around.spacing-header
+        .text-cover
+            h1.title-page Blog
+            p.des-page Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+        .img-drop.lazyload(data-src="upload/blog-banner.jpg")
+
+    // BLOG: CONTENT 
+    section.bg-skin.spacing-around.blog-content-archive
+        .container.spacing-section  
+            .row
+                .col-lg-7
+                    a(href="blog-single.html").item-inner
+                        .img-drop.width-big
+                            img(src="upload/img-blog-1.jpg", alt="")
+                        .wrap-text
+                            span featured post
+                            h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ei
+                .col-lg-5
+                    a(href="blog-single.html").item-inner
+                        .img-drop.width-small
+                            img(src="upload/img-blog-2.jpg", alt="")        
+                        .wrap-text
+                            span featured post
+                            h3 Lorem ipsum dolor sit amet   
+                .col-lg-7
+                    a(href="blog-single.html").item-inner
+                        .img-drop.width-big
+                            img(src="upload/img-blog-4.jpg", alt="")
+                        .wrap-text
+                                span featured post
+                                h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ei
+                .col-lg-5
+                    a(href="blog-single.html").item-inner
+                        .img-drop.width-small
+                            img(src="upload/img-blog-3.jpg", alt="")
+                        .wrap-text
+                            span featured post
+                            h3 Lorem ipsum dolor sit amet                   
+    
+    // BLOG: CONTENT LOAD MORE
+    section.bg-skin.spacing-around.blog-load-more
+        .container.spacing-end
+            .row#loading-blog-data
+                .col-lg-3.col-md-4.col-sm-6
+                    a(href="blog-single.html").item-posts
+                        .img-drop
+                            img(src="upload/item-post-1.jpg", alt="")
+                        h3.wrap-post Sed ut perspiciatis unde omnis iste 
+                .col-lg-3.col-md-4.col-sm-6
+                    a(href="blog-single.html").item-posts
+                        .img-drop
+                            img(src="upload/item-post-2.jpg", alt="")
+                        h3.wrap-post Sed ut perspiciatis unde omnis iste natus
+                .col-lg-3.col-md-4.col-sm-6
+                    a(href="blog-single.html").item-posts
+                        .img-drop
+                            img(src="upload/item-post-3.jpg", alt="")
+                        h3.wrap-post Sed ut perspiciatis unde omnis iste natus
+                .col-lg-3.col-md-4.col-sm-6
+                    a(href="blog-single.html").item-posts
+                        .img-drop
+                            img(src="upload/item-post-4.jpg", alt="")
+                        h3.wrap-post Sed ut perspiciatis unde omnis iste
+                .col-lg-3.col-md-4.col-sm-6
+                    a(href="blog-single.html").item-posts
+                        .img-drop
+                            img(src="upload/item-post-5.jpg", alt="")
+                        h3.wrap-post Sed ut perspiciatis unde omnis iste 
+                .col-lg-3.col-md-4.col-sm-6
+                    a(href="blog-single.html").item-posts
+                        .img-drop
+                            img(src="upload/item-post-6.jpg", alt="")
+                        h3.wrap-post Sed ut perspiciatis unde omnis iste natus
+                .col-lg-3.col-md-4.col-sm-6
+                    a(href="blog-single.html").item-posts
+                        .img-drop
+                            img(src="upload/item-post-7.jpg", alt="")
+                        h3.wrap-post Sed ut perspiciatis unde omnis iste natus
+                .col-lg-3.col-md-4.col-sm-6
+                    a(href="blog-single.html").item-posts
+                        .img-drop
+                            img(src="upload/item-post-8.jpg", alt="")
+                        h3.wrap-post Sed ut perspiciatis unde omnis iste
+            .loading-more-row.hide-with-me
+                i.icon.loading
+                span.loading-more-data.scroll-auto-trigger(data-urljson="/data/blog-more.html", data-totalpage="4", data-text="Load more", data-except="abc", data-target="#loading-blog-data") load more
+
+    
+        
+    
+    

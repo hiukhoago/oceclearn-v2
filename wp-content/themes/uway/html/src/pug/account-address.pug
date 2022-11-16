@@ -1,0 +1,112 @@
+include include/template
+
++template("Account Address","account","logged")
+
+    // ACCOUNT: BANNER
+    section.banner-product.spacing-around.spacing-header
+        .text-cover
+            h1.title-page My account
+            p.des-page Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+        .img-drop: img.lazygo(data-src="upload/account-banner.jpg", alt="")
+
+
+    // ACCOUNT: CONTENT TAB
+    section.account.spacing-around.bg-skin
+        // Tab page ul
+        ul.nav(role="tablist").tab-navi-learn
+            li.wow.fadeInUp(data-wow-delay=".1s"): a(href="account-personal.html") Personal details
+            li.wow.fadeInUp(data-wow-delay=".2s"): a(href="account-order.html") Order history
+            li.wow.fadeInUp(data-wow-delay=".3s"): a.active(href="account-address.html") Address book
+            li.wow.fadeInUp(data-wow-delay=".4s").logout: a(href="#") log out
+        .container.spacing-end
+            // Tab page content
+            .tab-content.content-account
+                .row
+                    .col-md-3   
+                        h2.title-page.animated.fadeInUp.margin-bottom Address<br> book
+                    .col-md-9
+                        .custom-form
+                            form(action="")
+                                .fieldset.billing
+                                    h3 Shipping address
+                                    p.form-row.form-row-wide
+                                        label(for="account_country") Country 
+                                        select#account_country(name="account_country")
+                                            option Australia
+                                            option United States
+                                            option United Kingdom
+                                            option Thailand
+                                            option Japan
+                                    p.form-row.form-row-wide
+                                        label(for="account_address") Address 
+                                        input(type="text")#account_address
+                                    //- p.form-row.form-row-wide#billing_address_2_field
+                                        label(for="account_address11") Address
+                                        input(type="text", placeholder="Lorem ipsum dolor sit.")#account_address11
+                                    p.form-row.form-row-first
+                                        label(for="account_apartment") Apartment/Unit #
+                                        input(type="text", value="")#account_apartment
+                                    p.form-row.form-row-last
+                                        label(for="account_company") Company
+                                        input(type="text")#account_company
+                                    p.form-row.form-row-first
+                                        label(for="account_suburb") Suburb
+                                        input(type="text")#account_suburb
+                                    p.form-row.form-row-last
+                                        label(for="account_state") State
+                                        select#account_state(name="account_state")
+                                            option New South Wales
+                                            option Lorem, ipsum dolor.
+                                            option Lorem, ipsum.
+                                    p.form-row.form-row-first
+                                        label(for="account_postcode") Postcode
+                                        input(type="text")#account_postcode
+                                    p.form-row.form-row-last
+                                        label(for="account_phone") Phone number
+                                        input(type="text")#account_phone
+                                .active-show-shipping-fieldset
+                                    input(type="checkbox")#show-shipping-fieldset
+                                    label(for="show-shipping-fieldset") Different biling address ?
+                                .fieldset.shipping(style="display: none")
+                                    h3 Billing address
+                                    p.form-row.form-row-first
+                                        label(for="account_first2") First Name 
+                                        input(type="text")#account_first2
+                                    p.form-row.form-row-last
+                                        label(for="account_last2") Last Name 
+                                        input(type="text")#account_last2
+                                    p.form-row.form-row-wide
+                                        label(for="account_country2") Country 
+                                        select#account_country2(name="account_country")
+                                            option Australia
+                                            option United States
+                                            option United Kingdom
+                                    p.form-row.form-row-wide#shipping_address_1_field
+                                        label(for="account_address2") Address 
+                                        input(type="text")#account_address2
+                                    p.form-row.form-row-wide#shipping_address_2_field
+                                        label(for="account_address22") Address
+                                        input(type="text", placeholder="64 Fitzroy St")#account_address22
+                                    p.form-row.form-row-first
+                                        label(for="account_apartment2") Apartment/Unit #
+                                        input(type="text")#account_apartment2
+                                    p.form-row.form-row-last
+                                        label(for="account_company2") Company
+                                        input(type="text")#account_company2
+                                    p.form-row.form-row-first
+                                        label(for="account_suburb2") Suburb
+                                        input(type="text")#account_suburb2
+                                    p.form-row.form-row-last
+                                        label(for="account_state2") State
+                                        select#account_state2(name="account_state")
+                                            option New South Wales
+                                            option Lorem, ipsum dolor.
+                                            option Lorem, ipsum.
+                                    p.form-row.form-row-first
+                                        label(for="account_postcode2") Postcode
+                                        input(type="text")#account_postcode2
+                                    p.form-row.form-row-last
+                                        label(for="account_phone2") Phone number
+                                        input(type="text")#account_phone2
+                                p.form-row.no-margin
+                                    button.btn-black(type="submit") Save changes

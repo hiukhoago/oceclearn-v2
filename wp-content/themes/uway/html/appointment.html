@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- Favicon-->
+        <link rel="shortcut icon" href="upload/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" href="upload/favicon.png">
+        <!-- CSS-->
+        <link rel="stylesheet" href="src/scss/plugins.css">
+        <link rel="stylesheet" href="src/scss/style.css">
+        <!-- Title-->
+        <title>Appointment - Flourish</title>
+    </head>
+    <body class="page-template-template-appointment">
+        <script>sessionStorage.getItem("isFirstRun") || document.write('<div id="preloader"><div class="loading"></div></div>')</script>
+        <!-- HEADER PAGE -->
+        <header class="header-page">           <a class="logo" href="index.html"><img src="upload/logo.png" alt=""/></a><a class="btn-menu-sp" href="#" id="btn-menu-sp"><span></span></a><a class="header-btn-cart mobile-show show-cart" href="#"><span>0  </span></a>
+            <div class="wrap-content-mobile">
+                <div class="wrap-inner">
+                    <!--HEADER CONTENT-->
+                    <div class="container-fluid">
+                        <div class="row">                   
+                            <div class="col-6">
+                                <ul class="menu-top">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="about.html">About</a></li>
+                                    <li class="has-sub-menu"> <a href="education.html">Education</a><i class="dropdown-carret"></i>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="education.html">Education</a></li>
+                                            <li><a href="education.html">Education</a></li>
+                                            <li><a href="education.html">Education</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="current-menu-item"><a href="recipes.html">Recipes</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 row-custom">
+                                <ul class="menu-top right">
+                                    <li><a href="blog.html">Blog</a></li>
+                                    <li><a href="products.html">Shop</a></li>
+                                    <li><a href="stockists.html">Stockists</a></li>
+                                    <li class="login"><a href="#" id="login-toggle">Login        </a></li>
+                                    <li class="info-user"><a href="#">Hi, <b>Vencreative</b></a></li>
+                                </ul><a class="header-btn-cart desktop-show show-cart" href="#"><span>0      </span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--SIDEBAR LEFT-->
+                    <section class="sidebar-left">
+                        <ul class="list-social">
+                            <li class="ins"><a href="#" target="_blank">Instagram </a></li>
+                            <li class="fb"><a href="#" target="_blank">Facebook</a></li>
+                        </ul>
+                        <ul class="list-mobile-contact d-lg-none d-block">
+                            <li><a href="tel:1300121248">1300 121 248</a></li>
+                            <li><a href="mailto:hello@flourishln.com.au">hello@flourishln.com.au </a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+            <!--SIDEBAR RIGHT-->
+            <section class="sidebar-right"><i class="icon icon-x"></i></section>
+            <!-- FOOTER PAGE-->
+            <section class="side-bottom">
+                <div class="container-fluid">
+                    <ul class="item-footer">
+                        <li class="d-lg-block d-none">© 2018 Flourish Nutritional Medicine Pty Ltd </li>
+                        <li>Free shipping for orders over $100</li>
+                        <li> <a href="tel:1300121248"><span>1300 121 248</span><i class="icon tel"></i></a><a href="mailto:hello@flourishln.com.au"><span>hello@flourishln.com.au</span><i class="icon mail"> </i></a></li>
+                    </ul>
+                </div>
+            </section>
+        </header>
+        <!-- PANEL-LOGIN-->
+        <div class="panel-login" id="panel-login"><a href="#" title="Close the panel" id="btn-close-login"></a>
+            <div class="scrollbar-macosx">
+                <div class="login-panel-container">
+                    <div id="signup-fields">
+                        <h1 class="title-product text-center">Welcome back !</h1>
+                        <p class="text-center mb-15">Please login to your account</p><a class="btn-white" href="#"><i class="icon fb-square"></i> Sign up with Facebook</a>
+                        <div class="white-textline"></div>
+                        <form class="woocommerce-form woocommerce-form-login" action="">                       
+                            <div class="form-text-input">
+                                <label for="">Email</label>
+                                <input type="text"/>
+                            </div>
+                            <div class="form-text-input">
+                                <label for="">Password</label>
+                                <input type="password"/>
+                            </div>
+                            <div class="lost-pw text-center"><a class="text-futura" href="#">Forgot your password?       </a></div>
+                            <input type="submit" value="LOG IN"/>
+                            <div class="text-center footer-login">
+                                <p>Don't have an account? <strong><a href="javascript:;" id="sign-up-show">Sign up here</a></strong></p>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="login-fields">
+                        <h1 class="title-product text-center">Hello there !</h1>
+                        <p class="text-center mb-15">Fill in your details to create an account</p><a class="btn-white" href="#"><i class="icon fb-square"></i> Sign up with Facebook</a>
+                        <div class="white-textline"></div>
+                        <form class="woocommerce-form woocommerce-form-login" action="">                       
+                            <div class="form-text-input">
+                                <label for="">Email</label>
+                                <input type="text"/>
+                            </div>
+                            <div class="form-text-input form-half">
+                                <label for="">Password</label>
+                                <input type="password"/>
+                            </div>
+                            <div class="form-text-input form-half">
+                                <label for="">Confirm Password</label>
+                                <input type="password"/>
+                            </div>
+                            <input type="submit" value="SIGN UP"/>
+                            <div class="text-center footer-login">
+                                <p>Already have an account? <strong><a href="javascript:;" id="login-show">Sign in here</a></strong></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bag-hover">
+            <div class="ul-cart fixed">
+                <div class="name">Product</div>
+                <div class="quanity gray">Quantity</div>
+                <div class="price">Price</div>
+                <div class="delete"><a class="btn-close-cart" href="#"><i class="icon close"></i></a></div>
+            </div>
+            <ul class="header-cart-list scrollbar-macosx">
+                <li>
+                    <div class="wrap-infor-image-title">
+                        <div class="header-cart-img">
+                            <div class="img-drop ratio-11"><img src="upload/img-home-prod-1.png" alt=""></div>
+                        </div>
+                        <div class="header-cart-info">
+                            <h5>Turmeric blend</h5>
+                        </div>
+                    </div>
+                    <div class="header-cart-quanity item-qty">
+                        <div class="qty-holder">
+                            <input type="number" value="1"><i class="square-minus"></i><i class="square-plus"></i>
+                        </div>
+                    </div>
+                    <div class="header-cart-price">$220.0</div>
+                    <div class="delete-header-cart"></div>
+                </li>
+                <li>
+                    <div class="wrap-infor-image-title">
+                        <div class="header-cart-img">
+                            <div class="img-drop ratio-11"><img src="upload/img-home-prod-1.png" alt=""></div>
+                        </div>
+                        <div class="header-cart-info">
+                            <h5>Turmeric blend</h5>
+                        </div>
+                    </div>
+                    <div class="header-cart-quanity item-qty">
+                        <div class="qty-holder">
+                            <input type="number" value="1"><i class="square-minus"></i><i class="square-plus"></i>
+                        </div>
+                    </div>
+                    <div class="header-cart-price">$220.0</div>
+                    <div class="delete-header-cart"></div>
+                </li>
+                <li>
+                    <div class="wrap-infor-image-title">
+                        <div class="header-cart-img">
+                            <div class="img-drop ratio-11"><img src="upload/img-home-prod-1.png" alt=""></div>
+                        </div>
+                        <div class="header-cart-info">
+                            <h5>Turmeric blend</h5>
+                        </div>
+                    </div>
+                    <div class="header-cart-quanity item-qty">
+                        <div class="qty-holder">
+                            <input type="number" value="1"><i class="square-minus"></i><i class="square-plus"></i>
+                        </div>
+                    </div>
+                    <div class="header-cart-price">$220.0</div>
+                    <div class="delete-header-cart"></div>
+                </li>
+                <li>
+                    <div class="wrap-infor-image-title">
+                        <div class="header-cart-img">
+                            <div class="img-drop ratio-11"><img src="upload/img-home-prod-1.png" alt=""></div>
+                        </div>
+                        <div class="header-cart-info">
+                            <h5>Turmeric blend</h5>
+                        </div>
+                    </div>
+                    <div class="header-cart-quanity item-qty">
+                        <div class="qty-holder">
+                            <input type="number" value="1"><i class="square-minus"></i><i class="square-plus"></i>
+                        </div>
+                    </div>
+                    <div class="header-cart-price">$220.0</div>
+                    <div class="delete-header-cart"></div>
+                </li>
+                <li>
+                    <div class="wrap-infor-image-title">
+                        <div class="header-cart-img">
+                            <div class="img-drop ratio-11"><img src="upload/img-home-prod-1.png" alt=""></div>
+                        </div>
+                        <div class="header-cart-info">
+                            <h5>Turmeric blend</h5>
+                        </div>
+                    </div>
+                    <div class="header-cart-quanity item-qty">
+                        <div class="qty-holder">
+                            <input type="number" value="1"><i class="square-minus"></i><i class="square-plus"></i>
+                        </div>
+                    </div>
+                    <div class="header-cart-price">$220.0</div>
+                    <div class="delete-header-cart"></div>
+                </li>
+                <li>
+                    <div class="wrap-infor-image-title">
+                        <div class="header-cart-img">
+                            <div class="img-drop ratio-11"><img src="upload/img-home-prod-1.png" alt=""></div>
+                        </div>
+                        <div class="header-cart-info">
+                            <h5>Turmeric blend</h5>
+                        </div>
+                    </div>
+                    <div class="header-cart-quanity item-qty">
+                        <div class="qty-holder">
+                            <input type="number" value="1"><i class="square-minus"></i><i class="square-plus"></i>
+                        </div>
+                    </div>
+                    <div class="header-cart-price">$220.0</div>
+                    <div class="delete-header-cart"></div>
+                </li>
+                <li>
+                    <div class="wrap-infor-image-title">
+                        <div class="header-cart-img">
+                            <div class="img-drop ratio-11"><img src="upload/img-home-prod-1.png" alt=""></div>
+                        </div>
+                        <div class="header-cart-info">
+                            <h5>Turmeric blend</h5>
+                        </div>
+                    </div>
+                    <div class="header-cart-quanity item-qty">
+                        <div class="qty-holder">
+                            <input type="number" value="1"><i class="square-minus"></i><i class="square-plus"></i>
+                        </div>
+                    </div>
+                    <div class="header-cart-price">$220.0</div>
+                    <div class="delete-header-cart"></div>
+                </li>
+                <li>
+                    <div class="wrap-infor-image-title">
+                        <div class="header-cart-img">
+                            <div class="img-drop ratio-11"><img src="upload/img-home-prod-1.png" alt=""></div>
+                        </div>
+                        <div class="header-cart-info">
+                            <h5>Turmeric blend</h5>
+                        </div>
+                    </div>
+                    <div class="header-cart-quanity item-qty">
+                        <div class="qty-holder">
+                            <input type="number" value="1"><i class="square-minus"></i><i class="square-plus"></i>
+                        </div>
+                    </div>
+                    <div class="header-cart-price">$220.0</div>
+                    <div class="delete-header-cart"></div>
+                </li>
+            </ul>
+            <div class="wrap-cart-panel-bottom">
+                <div class="row">
+                    <div class="coupon">
+                        <input type="text" placeholder="Coupon Code">
+                        <button type="submit">APPLY</button>
+                    </div>
+                    <div class="header-cart-buttons header-total">
+                        <div>Total</div>
+                        <div>$820</div>
+                    </div>
+                    <div class="row-cart-buttons"> <a class="header-cart-buttons header-viewbag" href="checkout.html">View bag</a><a class="header-cart-buttons header-checkout" href="checkout.html">check out</a></div>
+                </div>
+            </div>
+        </div>
+        <!-- WRAP PAGE-->
+        <div id="wrap-page">
+            <!-- APPOINTMENT: BANNER-->
+            <section class="banner-product spacing-around spacing-header appointment-banner">
+                <div class="text-cover">
+                    <h1 class="title-page">Appointment</h1>
+                    <p class="des-page">We use food as medicine to treat chronic disease processes. We focus on the underlying cause of the disease so that the symptoms fall away when the cause is addressed.</p>
+                </div>
+                <div class="img-drop lazyload" data-src="upload/banner-health-hub.jpg"></div>
+            </section>
+            <!-- APPOINTMENT: BENEFITS-->
+            <section class="appointment-benefits spacing-around bg-skin">
+                <div class="container">
+                    <!--ROW TITLE-->
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <h2 class="title-page">Benefits</h2>
+                        </div>
+                        <div class="col-lg-7">
+                            <p>Relieve anxiety around their issues and validate their situation, by offering our clients the time and support to be heard and understood.</p>
+                            <p>Through education our clients gain an understanding as to what is the cause of their problem and how it can be resolved, in simple easy to understand drawings and explanations.</p>
+                            <p>A wholistic health plan that actually sees results.</p>
+                        </div>
+                    </div>
+                    <!--ROW BENEFITS BLOCK-->
+                    <div class="row row-benefits-block">
+                        <div class="col-lg-4">
+                            <div class="block-benefit">
+                                <div class="flex-row">
+                                    <h3 class="medium-title">Education</h3><img src="upload/leaf.svg" alt="">
+                                </div>
+                                <p>A greater understanding about your condition, its pathophysiology as well as where and how it started.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="block-benefit">
+                                <div class="flex-row">
+                                    <h3 class="medium-title">Plan</h3><img src="upload/education.svg" alt="">
+                                </div>
+                                <p>Therapeutic health plan – based on a holistic assessment that will help reduce symptoms by focusing on the underlying problem.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="block-benefit">
+                                <div class="flex-row">
+                                    <h3 class="medium-title">Support</h3><img src="upload/smile.svg" alt="">
+                                </div>
+                                <p>Emotional Support for your journey & on-going support via text and/or email – during and after your healing phase.  </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- APPOINTMENT: MEET PRACTITIONERS-->
+            <section class="booking-appointment spacing-around pb-80">
+                <div class="wrapper-effect">
+                    <!--INTRO PRACTITIONERS-->
+                    <div class="container-fluid row-intro active">  
+                        <h2 class="title-page text-green text-center mobile-appointment-title">Meet Our Practitioners</h2>
+                        <div class="row">
+                            <div class="col-12 order-lg-2">
+                                <div class="row">
+                                    <div class="col-lg-7 offset-lg-5">
+                                        <div class="wrap-slider">
+                                            <div class="owl-carousel practitioners-slider"><a class="practitioner-item active" href="#">
+                                                    <div class="img-drop"><img src="upload/round-1.png" alt=""></div>
+                                                    <div class="practitioner-text">
+                                                        <h5><span class="desktop-name">Kathy</span> <span class="mobile-name">Kathy Ashton</span> </h5>
+                                                        <div class="abbr-pos">BHSc(NutMed)</div>
+                                                    </div></a><a class="practitioner-item" href="#">
+                                                    <div class="img-drop"><img src="upload/round-2.png" alt=""></div>
+                                                    <div class="practitioner-text">
+                                                        <h5><span class="desktop-name">Chris</span> <span class="mobile-name">Chris Hemsworth</span></h5>
+                                                        <div class="abbr-pos">BHSc(NutMed)</div>
+                                                    </div></a><a class="practitioner-item" href="#">
+                                                    <div class="img-drop"><img src="upload/round-2.png" alt=""></div>
+                                                    <div class="practitioner-text">
+                                                        <h5><span class="desktop-name">Tim</span> <span class="mobile-name">Tim Howard</span></h5>
+                                                        <div class="abbr-pos">BHSc(NutMed)</div>
+                                                    </div></a><a class="practitioner-item" href="#">
+                                                    <div class="img-drop"><img src="upload/round-1.png" alt=""></div>
+                                                    <div class="practitioner-text">
+                                                        <h5>layla</h5>
+                                                        <div class="abbr-pos">BHSc(NutMed)</div>
+                                                    </div></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="owl-profile owl-carousel">
+                                    <div class="row">
+                                        <div class="col-lg-5">
+                                            <div class="wrap-avt">
+                                                <div class="img-drop big-avt ratio-11"><img src="upload/round-1.png" alt=""></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-7">
+                                            <div class="wrapper-intro">
+                                                <h2 class="title-page text-green desktop-appointment-title">Meet Our Practitioners</h2>
+                                                <h3 class="title-section">Kathy Ashton</h3>
+                                                <div class="abbr-pos">BHSc(NutMed)</div>
+                                                <div class="short-des">
+                                                    <p>It’s Kathy's extensive knowledge, clinical experience, and immense passion for helping others that’s made Flourish what it is today. Her whole foods’ alchemy has now culminated in a range of raw, whole food, plant-based supplements that empower people to achieve their health goals naturally.</p>
+                                                </div>
+                                                <div class="degree-info">
+                                                    <p><b>Bachelor of Health Science</b><br>Nutritional Medicine</p>
+                                                    <p><b>Certificate of Plant Based Nutrition</b><br>Cornell University</p>
+                                                    <p><b>Certificate Level 4</b><br>Adult Education<br></p>
+                                                    <p><b>NLP Practitioner</b></p>
+                                                    <p><b>Advance Diploma Health Science</b><br>(Remedial Therapy)</p>
+                                                    <p><b>Certificate Level 4</b><br>Pilates Instructor</p>
+                                                    <p><b>Fully Qualified LifeCoach</b></p>
+                                                    <p>&nbsp;</p>
+                                                </div><a class="btn-common trans book-appointment-btn" href="#">
+                                                    <div class="pos">BOOK WITH KATHY</div></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-5">
+                                            <div class="wrap-avt">
+                                                <div class="img-drop big-avt ratio-11"><img src="upload/round-2.png" alt=""></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-7">
+                                            <div class="wrapper-intro">
+                                                <h2 class="title-page text-green desktop-appointment-title">Meet Our Practitioners</h2>
+                                                <h3 class="title-section">Chris Hemsworth</h3>
+                                                <div class="abbr-pos">BHSc(NutMed)</div>
+                                                <div class="short-des">
+                                                    <p>It’s Kathy's extensive knowledge, clinical experience, and immense passion for helping others that’s made Flourish what it is today. Her whole foods’ alchemy has now culminated in a range of raw, whole food, plant-based supplements that empower people to achieve their health goals naturally.</p>
+                                                </div>
+                                                <div class="degree-info">
+                                                    <p><b>Bachelor of Health Science</b><br>Nutritional Medicine</p>
+                                                    <p><b>Certificate of Plant Based Nutrition</b><br>Cornell University</p>
+                                                    <p><b>Certificate Level 4</b><br>Adult Education<br></p>
+                                                    <p><b>NLP Practitioner</b></p>
+                                                    <p><b>Advance Diploma Health Science</b><br>(Remedial Therapy)</p>
+                                                    <p><b>Certificate Level 4</b><br>Pilates Instructor</p>
+                                                    <p><b>Fully Qualified LifeCoach</b></p>
+                                                    <p>&nbsp;</p>
+                                                </div><a class="btn-common trans book-appointment-btn" href="#">
+                                                    <div class="pos">BOOK WITH CHRIS</div></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-5">
+                                            <div class="wrap-avt">
+                                                <div class="img-drop big-avt ratio-11"><img src="upload/round-2.png" alt=""></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-7">
+                                            <div class="wrapper-intro">
+                                                <h2 class="title-page text-green desktop-appointment-title">Meet Our Practitioners</h2>
+                                                <h3 class="title-section">Tim Howard</h3>
+                                                <div class="abbr-pos">BHSc(NutMed)</div>
+                                                <div class="short-des">
+                                                    <p>It’s Kathy's extensive knowledge, clinical experience, and immense passion for helping others that’s made Flourish what it is today. Her whole foods’ alchemy has now culminated in a range of raw, whole food, plant-based supplements that empower people to achieve their health goals naturally.</p>
+                                                </div>
+                                                <div class="degree-info">
+                                                    <p><b>Bachelor of Health Science</b><br>Nutritional Medicine</p>
+                                                    <p><b>Certificate of Plant Based Nutrition</b><br>Cornell University</p>
+                                                    <p><b>Certificate Level 4</b><br>Adult Education<br></p>
+                                                    <p><b>NLP Practitioner</b></p>
+                                                    <p><b>Advance Diploma Health Science</b><br>(Remedial Therapy)</p>
+                                                    <p><b>Certificate Level 4</b><br>Pilates Instructor</p>
+                                                    <p><b>Fully Qualified LifeCoach</b></p>
+                                                    <p>&nbsp;</p>
+                                                </div><a class="btn-common trans book-appointment-btn" href="#">
+                                                    <div class="pos">BOOK WITH TIM</div></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-5">
+                                            <div class="wrap-avt">
+                                                <div class="img-drop big-avt ratio-11"><img src="upload/round-1.png" alt=""></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-7">
+                                            <div class="wrapper-intro">
+                                                <h2 class="title-page text-green desktop-appointment-title">Meet Our Practitioners</h2>
+                                                <h3 class="title-section">Layla Atkinson</h3>
+                                                <div class="abbr-pos">BHSc(NutMed)</div>
+                                                <div class="short-des">
+                                                    <p>It’s Kathy's extensive knowledge, clinical experience, and immense passion for helping others that’s made Flourish what it is today. Her whole foods’ alchemy has now culminated in a range of raw, whole food, plant-based supplements that empower people to achieve their health goals naturally.</p>
+                                                </div>
+                                                <div class="degree-info">
+                                                    <p><b>Bachelor of Health Science</b><br>Nutritional Medicine</p>
+                                                    <p><b>Certificate of Plant Based Nutrition</b><br>Cornell University</p>
+                                                    <p><b>Certificate Level 4</b><br>Adult Education<br></p>
+                                                    <p><b>NLP Practitioner</b></p>
+                                                    <p><b>Advance Diploma Health Science</b><br>(Remedial Therapy)</p>
+                                                    <p><b>Certificate Level 4</b><br>Pilates Instructor</p>
+                                                    <p><b>Fully Qualified LifeCoach</b></p>
+                                                    <p>&nbsp;</p>
+                                                </div><a class="btn-common trans book-appointment-btn" href="#">
+                                                    <div class="pos">BOOK WITH LAYLA</div></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--STEP 1-->
+                    <div class="container-fluid row-step-1">
+                        <div class="row-top-step"><a class="btn-common trans return-step" href="#">
+                                <div class="pos">CLOSE</div></a>
+                            <h3 class="text-center title-page">Book an appointment</h3>
+                        </div>
+                        <div class="wrapper-stepper">
+                            <form action="">
+                                <div class="step-slide-1 stepper">
+                                    <div class="row">
+                                        <div class="col-lg-2">
+                                            <div class="step-number">STEP 1</div>
+                                            <div class="step-title">Practitioner of choice</div>
+                                        </div>
+                                        <div class="col-lg-10">
+                                            <div class="selection-practitioner-list"><a class="selection-practitioner text-center active" href="#">
+                                                    <div class="img-drop"><img src="upload/round-1.png" alt=""></div>
+                                                    <h5>kathy</h5></a><a class="selection-practitioner text-center" href="#">
+                                                    <div class="img-drop"><img src="upload/round-2.png" alt=""></div>
+                                                    <h5>chris</h5></a><a class="selection-practitioner text-center" href="#">
+                                                    <div class="img-drop"><img src="upload/round-2.png" alt=""></div>
+                                                    <h5>tim</h5></a><a class="selection-practitioner text-center" href="#">
+                                                    <div class="img-drop"><img src="upload/round-1.png" alt=""></div>
+                                                    <h5>layla</h5></a></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-2">
+                                            <div class="step-number">STEP 2</div>
+                                            <div class="step-title">Consultation selection</div>
+                                        </div>
+                                        <div class="col-lg-10 consult-wrapper-append">
+                                            <div class="consult-wrapper">
+                                                <input id="consult-1" type="radio" name="consultation" value="220">
+                                                <label for="consult-1"><span class="title-consult">initial consultation</span><span class="price-consult"><span class="currency">$</span> 220</span><span class="time-consult"><span class="minutes">90</span> minutes </span></label>
+                                            </div>
+                                            <div class="consult-wrapper">
+                                                <input id="consult-2" type="radio" name="consultation" value="180">
+                                                <label for="consult-2"><span class="title-consult">Follow Up Consults</span><span class="price-consult"><span class="currency">$</span> 180</span><span class="time-consult"><span class="minutes">60</span> minutes</span></label>
+                                            </div>
+                                            <div class="consult-wrapper">
+                                                <input id="consult-3" type="radio" name="consultation" value="110">
+                                                <label for="consult-3"><span class="title-consult">1⁄2 Consult</span><span class="price-consult"><span class="currency">$</span> 110</span><span class="time-consult"><span class="minutes">30</span> minutes</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-2">
+                                            <div class="step-number">STEP 3</div>
+                                            <div class="step-title">Method of Appointment</div>
+                                        </div>
+                                        <div class="col-lg-10">
+                                            <div class="method-wrapper">
+                                                <input id="method-1" type="radio" name="method" value="face to face">
+                                                <label for="method-1"><i class="icon icon-face"></i> FACE TO FACE</label>
+                                            </div>
+                                            <div class="method-wrapper">
+                                                <input id="method-2" type="radio" name="method" value="over phone">
+                                                <label for="method-2"><i class="icon icon-phone"></i> OVER PHONE</label>
+                                            </div>
+                                            <div class="method-wrapper">
+                                                <input id="method-3" type="radio" name="method" value="skype">
+                                                <label for="method-3"><i class="icon icon-skype"></i> SKYPE</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="step-slide-2 stepper">
+                                    <!-- APPOINTMENT STEP : 4-->
+                                    <div class="row">
+                                        <div class="col-lg-2">
+                                            <div class="step-number">STEP 4</div>
+                                            <div class="step-title">Pick a date</div>
+                                        </div>
+                                        <div class="col-lg-10">
+                                            <div class="wrapper-step-4">
+                                                <div class="calendar-custom">
+                                                    <div class="wrap-calendar">
+                                                        <div id="calendar"></div>
+                                                    </div>
+                                                    <div class="box-chosen-date">
+                                                        <p>Your chosen date is: <span class="date-chosen"></span></p>
+                                                    </div>
+                                                </div>
+                                                <div class="box-info-pick">
+                                                    <div class="item-inner">
+                                                        <div class="title">Practitioner</div>
+                                                        <div class="text"><span class="practitioner-name"></span> <i class="fa fa-pencil edit-back"></i></div>
+                                                    </div>
+                                                    <div class="item-inner">
+                                                        <div class="title">Consultation</div>
+                                                        <div class="text"><span class="consultation-title"></span> <i class="fa fa-pencil edit-back"></i></div>
+                                                    </div>
+                                                    <div class="item-inner">
+                                                        <div class="title">Method of appointment</div>
+                                                        <div class="text"><span class="method-name"></span> <i class="fa fa-pencil edit-back"></i></div>
+                                                    </div>
+                                                    <div class="item-inner">
+                                                        <div class="title">Date</div>
+                                                        <div class="text"><span class="date-chosen"></span></div>
+                                                    </div>
+                                                    <div class="item-inner">
+                                                        <div class="title">Time</div>
+                                                        <div class="text"><span class="time-start"></span><span class="time-end"></span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-2">
+                                            <div class="step-number">STEP 5</div>
+                                            <div class="step-title">Select time</div>
+                                        </div>
+                                        <div class="col-lg-10">
+                                            <div class="wrap-slide-time-picker">
+                                                <div class="owl-carousel owl-time-picker">
+                                                    <div class="item-time-picker"> 
+                                                        <input id="time-picker-1" type="radio" name="time-picker" value="9.00">
+                                                        <label for="time-picker-1">9.00</label>
+                                                    </div>
+                                                    <div class="item-time-picker"> 
+                                                        <input id="time-picker-2" type="radio" name="time-picker" value="9.30">
+                                                        <label for="time-picker-2">9.30</label>
+                                                    </div>
+                                                    <div class="item-time-picker">
+                                                        <input id="time-picker-3" type="radio" name="time-picker" value="10.00">
+                                                        <label for="time-picker-3">10.00</label>
+                                                    </div>
+                                                    <div class="item-time-picker">
+                                                        <input id="time-picker-4" type="radio" name="time-picker" value="11.30">
+                                                        <label for="time-picker-4">11.30</label>
+                                                    </div>
+                                                    <div class="item-time-picker">
+                                                        <input id="time-picker-5" type="radio" name="time-picker" value="1.30">
+                                                        <label for="time-picker-5">1.30</label>
+                                                    </div>
+                                                    <div class="item-time-picker">
+                                                        <input id="time-picker-6" type="radio" name="time-picker" value="2.30">
+                                                        <label for="time-picker-6">2.30</label>
+                                                    </div>
+                                                    <div class="item-time-picker">
+                                                        <input id="time-picker-7" type="radio" name="time-picker" value="3.30">
+                                                        <label for="time-picker-7">3.30</label>
+                                                    </div>
+                                                    <div class="item-time-picker">
+                                                        <input id="time-picker-8" type="radio" name="time-picker" value="4.30">
+                                                        <label for="time-picker-8">4.30</label>
+                                                    </div>
+                                                    <div class="item-time-picker">
+                                                        <input id="time-picker-9" type="radio" name="time-picker" value="5.00">
+                                                        <label for="time-picker-9">5.00</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center row-bottom-step">
+                                    <div class="dot-holder">
+                                        <div class="dot active"></div>
+                                        <div class="dot"></div>
+                                    </div><a class="btn-black book-step-next show" href="#">NEXT</a><a class="btn-transparent btn-final-step book-step-prev" href="#">BACK</a><a class="btn-black btn-final-step book-step-final" href="#">$<span></span>&nbsp;- PAY FOR BOOKING</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- APPOINTMENT: WHAT WILL YOU GET?-->
+            <section class="what-will-get spacing-around bg-skin pb-80" style="background-image: url('upload/img-home-1.png')">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <h2 class="title-page">What will you get out of meeting with us?</h2>
+                        </div>
+                        <div class="col-lg-7">
+                            <h3>We offer a wholistic health service.</h3>
+                            <p>Our aim is to help patients become responsible for their own healing regime and outcomes.</p>
+                            <p>We want them to understand the enormous ramifications that eating the wrong foods can have on all health outcomes. If they understand a little of the biochemistry and pathophysiology then they are equipped to make informed rational positive decisions when it comes to food and food choices.</p>
+                            <p>By giving people access to us via text or email, they feel well supported and not so alone on their health journey</p><a class="btn-common trans to-booking-section" href="#">
+                                <div class="pos">BOOK NOW</div></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- APPOINTMENT: PRICING-->
+            <section class="appointment-pricing bg-green pb-80 spacing-around">
+                <div class="container">
+                    <div class="wrap-title text-center">
+                        <h2 class="title-page text-center">Pricing</h2>
+                        <div class="desc">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor  lorem ipsum dolor</p>
+                        </div>
+                    </div>
+                    <div class="wrap-appointment-pricing-content">
+                        <div class="wrap-width">
+                            <div class="owl-carousel slider-pricing">
+                                <div class="block-pricing">
+                                    <div class="item-pricing text-center">
+                                        <h3 class="item-top">1/2 CONSULT</h3>
+                                        <div class="bg-skin">
+                                            <div class="item-icon"><img src="upload/clock.svg" alt=""></div>
+                                            <div class="item-cost"><span class="item-currency">$</span> 110</div>
+                                            <div class="item-time">30 minutes</div>
+                                            <p>Lorem, ipsum dolor sit amet, consectetuer</p>
+                                        </div>
+                                    </div><a class="btn-common trans to-booking-section" href="#">
+                                        <div class="pos">BOOK NOW</div></a>
+                                </div>
+                                <div class="block-pricing">
+                                    <div class="item-pricing text-center">
+                                        <h3 class="item-top">INITIAL CONSULTATION </h3>
+                                        <div class="bg-skin">
+                                            <div class="item-icon"><img src="upload/handshake.svg" alt=""></div>
+                                            <div class="item-cost"><span class="item-currency">$</span> 220</div>
+                                            <div class="item-time">90 minutes</div>
+                                            <p>Lorem, ipsum dolor sit amet, consectetuer</p>
+                                        </div>
+                                    </div><a class="btn-common trans to-booking-section" href="#">
+                                        <div class="pos">BOOK NOW</div></a>
+                                </div>
+                                <div class="block-pricing">
+                                    <div class="item-pricing text-center">
+                                        <h3 class="item-top">FOLLOW UP CONSULTS</h3>
+                                        <div class="bg-skin">
+                                            <div class="item-icon"><img src="upload/comments.svg" alt=""></div>
+                                            <div class="item-cost"><span class="item-currency">$</span> 180</div>
+                                            <div class="item-time">60 minutes</div>
+                                            <p>Lorem, ipsum dolor sit amet, consectetuer            </p>
+                                        </div>
+                                    </div><a class="btn-common trans to-booking-section" href="#">
+                                        <div class="pos">BOOK NOW</div></a>
+                                </div>
+                            </div>
+                            <div class="text-center"><a class="btn-common trans to-booking-section mobile-button-booking" href="#">
+                                    <div class="pos">BOOK NOW</div></a></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="fade modal modal-alert" id="modal-alert">
+                <div class="modal-dialog modal-lg modal-dialog-centered">          
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button class="close" type="button" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <h6 class="text-center">You need to complete checkout product | appointment first to add to cart. Do you wish to overwrite your current item in cart?</h6>
+                            <div class="d-flex flex-wrap justify-content-center"><a class="btn-black" href="#">Confirm</a><a class="btn-transparent" href="#">Cancel</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- FOOTER PAGE-->
+            <footer class="footer-page">
+                <div class="container">
+                    <div class="form-subcribe">
+                        <h3>Subscribe to our Newsletter</h3>
+                        <div class="wrap-form"> 
+                            <form action="">
+                                <ul>
+                                    <li>
+                                        <input type="text" placeholder="Your email address"/>
+                                    </li>
+                                </ul>
+                                <div class="gform_footer">
+                                    <input type="submit" value="SUBMIT"/>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-6">
+                            <ul class="list-menu-footer">
+                                <li><a href="#">Home Page</a></li>
+                                <li><a href="#">Shop</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Education</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-6">
+                            <ul class="list-menu-footer">
+                                <li><a href="#">Stockists</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">My account</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-6">
+                            <ul class="list-menu-footer">
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Delivery, Refund and Returns</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="img-animation">
+                        <div class="item">  <img src="upload/img-footer-1.png" alt=""/></div>
+                        <div class="item">  <img src="upload/img-footer-2.png" alt=""/></div>
+                        <div class="item">  <img src="upload/img-footer-3.png" alt=""/></div>
+                    </div>
+                    <div class="copyright"><span>© 2022 EcoClean</span> Website by <strong><a href="https://uway.asia" target="_blank">Uway Technology</a></strong></div>
+                </div>
+            </footer>
+        </div>
+        <script>window.jQuery || document.write('<script src="src/js/jquery.js"><\/script>')</script>
+        <script src="src/js/plugins.min.js"></script>
+        <script data-src="https://maps.google.com/maps/api/js?libraries=places&amp;key=AIzaSyApEpQ5tDwzlRfH1vuo4351Bwdar8OzyUI" id="google-map"></script>
+        <script src="src/js/main.js"></script>
+        <script src="src/js/pages/slider_v2.js"></script>
+        <script src="src/js/initmap.js"></script>
+    </body>
+</html>

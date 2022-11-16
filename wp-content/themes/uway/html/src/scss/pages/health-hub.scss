@@ -1,0 +1,187 @@
+.wrap-title-health {
+    @include mobile-up {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+.wrap-btn-health {
+    @include mobile-up {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .product-tag-list {
+            flex-basis: 70%;
+            li {
+                cursor: pointer;
+            }
+        }
+        .btn-common {
+            flex-basis: 30%;
+            margin-bottom: 1rem;
+        }
+    }
+}
+*[data-toggle-tooltip="tooltip"] {
+    position: relative;
+}
+.tooltip {
+    &.show {
+        opacity: 1;
+    }
+}
+.bs-tooltip-right {
+    .arrow {
+        &::before {
+            left: -1px;
+            border-right-color: #FFF;
+            z-index: 10;
+        }
+    }
+}
+.bs-tooltip-bottom {
+    .arrow {
+        &::before {
+            bottom: -1px;
+            border-bottom-color: #FFF;
+            z-index: 10;
+        }
+    }
+}
+.tooltip-inner {
+    padding: 10px 15px;
+    color: #000;
+    text-align: left;
+    background-color: #FFF;
+    max-width: 400px;
+}
+.btn-play-popup {
+    font: 700 14px / normal $font-Cir;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+    transition: all .3s ease;
+    &:hover {
+        opacity: .7;
+    }
+    .fa {
+        margin-left: 15px;
+        color: $green;
+        position: relative;
+        transition: all .3s ease;
+        &:after {
+            content: '';
+            top: 50%;
+            left: calc(50% - 2px);
+            transform: translate3d(-50%, -50%, 0);
+            border: 1px solid $green;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            transition: all .3s ease;
+        }
+    }
+}
+.popup-video {
+    position: fixed;
+    top: calc(50% + 15px);
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    max-width: 1140px;
+    padding: 0 15px;
+    width: 100%;
+    z-index: 102;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .7s ease;
+    -webkit-overflow-scrolling: touch;
+    &.expand {
+        opacity: 1;
+        visibility: visible;
+        top: 50%;
+    }
+    .video-holder {
+        padding-top: 100%/(16/9);
+        &:hover {
+            #mute-video {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+    .close-btn {
+        @include reset-input;
+        padding: 8px;
+        background-color: rgba(#252525, 0.8);
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        z-index: 999;
+        cursor: pointer;
+        color: #FFF;
+        opacity: 0;
+        transition: all 0.5s ease;
+        @include small-mobile-up {
+            right: 55px;
+        }
+        span {
+            background: url('../img/icon-close-w.svg') no-repeat center / auto 100%;
+            display: block;
+            width: 20px;
+            height: 20px;
+        }
+        &.health {
+            top: -40px;
+            right: 15px;
+            opacity: 1;
+        }
+    }
+    iframe {
+        background: #000;
+        object-fit: fill;
+    }
+    #mute-video {
+        position: absolute;
+        bottom: 50px;
+        right: 20px;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .3s ease;
+        i {
+            font-size: 30px;
+            color: #fff;
+        }
+    }
+}
+.popup-video-backdrop {
+    background: rgba(#000, 0.75);
+    z-index: 101;
+    background: rgba(232, 230, 222, 0.85);
+    cursor: not-allowed;
+}
+.banner-promotion-health-hub {
+    display: none;
+    @include small-mobile-up {
+        display: block;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+.banner-promotion-health-hub-mobile {
+    @include small-mobile-up {
+        display: none;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+}

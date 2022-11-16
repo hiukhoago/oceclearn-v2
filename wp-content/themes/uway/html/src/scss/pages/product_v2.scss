@@ -1,0 +1,145 @@
+.body-content{
+    font-family: $mainFont;
+    &-product-banner{
+        position:relative;
+        img{
+            background-repeat: no-repeat;
+            object-fit: cover;
+            height: 480px;
+            @include small-mobile {
+                object-fit: cover;
+                height: 130px;
+                width: 100%;
+            }
+            @include tablet {
+                object-fit: cover;
+                width: 100%;
+                height: 300px;
+            }
+        }
+        #desc-product {
+            position: absolute;
+            top: 25%;
+            left: 7%;
+            width: 30%;
+            @include font-Basic(black, 54px, 27px, 700px);
+            @include small-mobile {
+                display: none;
+            }
+            @include tablet {
+                position: absolute;
+                top: 17%;
+                left: 7%;
+                @include font-Basic(black, 23px, 30px, 700px);
+                width: 60%;
+            }
+        }
+        a{
+            position:absolute;
+            top:65%;
+            left:7%;
+            @include font-Basic($fontColor,18px,27px,400);
+            opacity:.6;
+            @include small-mobile {
+                display: none;
+            }
+        }
+    }
+    &-list-1{
+        font-family: $mainFont;
+        background-color:#F5F5F5;
+        @include small-mobile {
+            padding:5% 0 5% 0;
+        }
+        &:nth-child(even){
+            background-color:white;
+        }
+        &-content{
+            margin: $marginBody;
+            display:flex;
+            justify-content: space-between;
+            @include small-mobile {
+                display:block;
+            }
+        &-describe{
+            width:30%;
+            padding:5%;
+            @include small-mobile {
+                width:100%;
+            }
+            @include tablet {
+                width:50%;
+            }
+            .name-describe{
+                @include font-Basic($fontColor,28px,120%,700);
+            }
+            .long-describe{
+                @include font-Basic($fontColor,18px,27px,400);
+                opacity:.6;
+                padding:7% 0;
+                width:115%;
+                
+            }
+            a{
+                @include font-Basic($fontColor,18px,27px,400);
+                opacity:.6;
+            }
+            
+        }
+        .list-product{
+            display:flex;
+            justify-content:space-between;
+            width:70%;
+            padding:5% 0;
+            @include small-mobile {
+               display:block;
+               width:100%
+            }
+            @include tablet {
+                width:50%;
+                overflow: scroll;
+            }
+            .product-item{
+                width:33.3%;
+                @include small-mobile {
+                    width:100%;
+                    box-shadow:  rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                    margin: 4% 0;
+                }
+                @include tablet {
+                    width:50%;
+                    padding: 0 5% 0 5%;
+                }
+                .img-product{
+                    img{
+                        width:100%;
+                        height:100%;
+                        object-fit:cover;
+                    }
+                }
+                .info-product{
+                    padding:5% 0;
+                    text-align:center;
+                    .name-product{
+                        padding: 0 3%;
+                        @include font-Basic($fontColor,18px,27px,400);
+                        @include tablet {
+                            height:80px;
+                            overflow:hidden;
+                            text-overflow:ellipsis;
+                        }
+                    }
+                    .price-product{
+                        @include font-Basic(#008984,28px,90px,700);
+                    }
+                    .btn-order{
+                        button{
+                            @include button-ecoclearn(white, #008984, 144px, #008984);
+                        }
+                    }
+                }
+            }
+        }
+        }
+    }
+}

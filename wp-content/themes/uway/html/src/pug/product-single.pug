@@ -1,0 +1,197 @@
+include include/template
+
++template("Product Single","product")
+
+    //SECTION PRODUCT SINGLE INFO
+    section.product-single.spacing-header.spacing-around.pb-100.spacing-section.bg-skin
+        .container
+            .wrap-flex
+                .product-img-wrap
+                    .owl-carousel.owl-product-single
+                        each val in [1,2,1]
+                            div
+                                .img-drop.ratio-11
+                                    img.owl-lazy(data-src="upload/img-home-prod-"+val+".png", alt="/")
+                    .education-article.d-lg-block.d-none
+                        h6.small-title Education articles
+                        .row
+                            each val in [2,3]
+                                .col-sm-6
+                                    a(href="#")
+                                        .article-wrap
+                                            .img-wrap
+                                                .img-drop.ratio-11
+                                                    img(src="upload/home-health-0"+val+".jpg", alt="/")
+                                            .article-excerpt Lorem ipsum dolor sit amet consec tetur adipiscing elit
+                .product-single-info
+                    h1.title-product.wow.fadeIn Turmeric blend
+                    .product-description.no-scroll Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.#[br]Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. qtw dolore magna aliqua.#[br]Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  
+                    .cta-add-to-cart
+                        select.qty-box.text-center
+                            option(value="1") 1
+                            option(value="2") 2
+                            option(value="3") 3
+                            option(value="4") 4
+                            option(value="5") 5
+                            option(value="6") 6
+                        a(href="#").add-to-cart.btn-black $#[span 50&nbsp;] - add to cart 
+                    ul.nav.product-info-tab
+                        li.nav-item
+                            a.nav-link.active(data-toggle='tab', href='#product-info1') Benefits
+                        li.nav-item
+                            a.nav-link(data-toggle='tab', href='#product-info2') Ingredients                        
+                        li.nav-item
+                            a.nav-link(data-toggle='tab', href='#product-info3') Nutritional Information
+                    .tab-content.tab-info
+                        #product-info1.tab-pane.fade.active.show
+                            p Content Here
+                        #product-info2.tab-pane.fade
+                            ul.product-tag-list
+                                li: span Alleppey Turmeric
+                                li: span True Cinnamon (ceylon cinnamon)
+                                li: span Stevia Leaf
+                                li: span Coconut Powder
+                                li: span Black Pepper
+                                li: span Orange Peel
+                                li: span Ginger
+                                li: span Rosemary
+                                li: span Aniseed
+                                li: span Clove
+                                li: span Chicory root
+                                li: span Cardamom
+                                li: span Fennel seed
+                        #product-info3.tab-pane.fade
+                            .bg-gray
+                                .table-nutrition
+                                    .serving
+                                        .serving-item SERVING PER PACKAGE: 40
+                                        .serving-item SERVING SIZE: 6G
+                                    table 
+                                        thead
+                                            tr
+                                                th avg. quantity
+                                                th per serving
+                                                th per 100g
+                                        tbody
+                                            tr.basic-nutrition
+                                                td ENERGY
+                                                td 93.34kJ
+                                                td 1554kJ
+                                            tr.basic-nutrition
+                                                td PROTEIN
+                                                td 0.53g
+                                                td 8.9g
+                                            tr.basic-nutrition
+                                                td FAT
+                                                td 0.10g
+                                                td 1.7g
+                                            tr.details-nutrition
+                                                td Total                                            
+                                                td 0.01g
+                                                td 0.2g
+                                            tr.details-nutrition
+                                                td Monounsaturated                                            
+                                                td 0.02g
+                                                td 0.4g
+                                            tr.details-nutrition
+                                                td Polyunsaturated                                            
+                                                td 0.07g
+                                                td 1.1g
+                                            tr.basic-nutrition
+                                                td CARBOHYDRATE
+                                                td 4.73g
+                                                td 78.8g
+                                            tr.details-nutrition
+                                                td Sugars                                            
+                                                td 2.87g
+                                                td 47.8g
+                                            tr.basic-nutrition
+                                                td SODIUM
+                                                td 7.20mg
+                                                td 120mg
+                    .education-article.d-lg-none
+                        h6.small-title Education articles
+                        .row
+                            each val in [2,3]
+                                .col-sm-6
+                                    a(href="#")
+                                        .article-wrap
+                                            .img-wrap
+                                                .img-drop.ratio-11
+                                                    img(src="upload/home-health-0"+val+".jpg", alt="/")
+                                            .article-excerpt Lorem ipsum dolor sit amet consec tetur adipiscing elit
+
+    //SECTION PRODUCT EXTRA INFO 
+    section.bg-skin.spacing-around.pb-150.extra-info
+        .container
+            .wrap-flex
+                .product-img-wrap
+                    .img-drop.ratio-extra-info.wow.fadeIn
+                        img(src="upload/product-extra-info1.jpg", alt="/")
+                .product-single-info
+                    ul.nav.product-info-tab
+                        li.nav-item
+                            a.nav-link.active(data-toggle='tab', href='#product-extra1') Instructions
+                        li.nav-item
+                            a.nav-link(data-toggle='tab', href='#product-extra2') Resources
+                    .tab-content.tab-info
+                        #product-extra1.tab-pane.show.active.fade
+                            .product-description.no-scroll
+                                p.mb-30 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                                .accordion#extra-info-tab1  
+                                    .row-collapse                                  
+                                        a(href="javascript:;" class="small-title" data-toggle="collapse" data-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1") Gentle Start
+                                        #collapse-1.collapse.show(data-parent="#extra-info-tab1")
+                                            .collapse-content Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                    .row-collapse          
+                                        a(href="javascript:;" class="collapsed small-title" data-toggle="collapse" data-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2") General wellbeing Dose
+                                        #collapse-2.collapse(data-parent="#extra-info-tab1")
+                                            .collapse-content Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                    .row-collapse          
+                                        a(href="javascript:;" class="collapsed small-title" data-toggle="collapse" data-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3") Aches and Pains Dose
+                                        #collapse-3.collapse(data-parent="#extra-info-tab1")
+                                            .collapse-content Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                    .row-collapse          
+                                        a(href="javascript:;" class="collapsed small-title" data-toggle="collapse" data-target="#collapse-4" aria-expanded="false" aria-controls="collapse-4") Severe Aches and Pains Dose
+                                        #collapse-4.collapse(data-parent="#extra-info-tab1")
+                                            .collapse-content Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                    .row-collapse          
+                                        a(href="javascript:;" class="collapsed small-title" data-toggle="collapse" data-target="#collapse-5" aria-expanded="false" aria-controls="collapse-5") Significant Health Issues Dose
+                                        #collapse-5.collapse(data-parent="#extra-info-tab1")
+                                            .collapse-content Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        #product-extra2.tab-pane.fade
+                            .product-description.no-scroll 
+                                p.mb-30 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                                .accordion#extra-info-tab2
+                                    .row-collapse                                  
+                                        a(href="javascript:;" class="small-title" data-toggle="collapse" data-target="#collapse2-1" aria-expanded="true" aria-controls="collapse2-1") Gentle Start
+                                        #collapse2-1.collapse.show(data-parent="#extra-info-tab2")
+                                            .collapse-content Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                    .row-collapse          
+                                        a(href="javascript:;" class="collapsed small-title" data-toggle="collapse" data-target="#collapse2-2" aria-expanded="false" aria-controls="collapse2-2") Gentle Start
+                                        #collapse2-2.collapse(data-parent="#extra-info-tab2")
+                                            .collapse-content Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    
+    //SECTION RELATED RESCIPES
+    section.related-recipes.pb-150.spacing-section.bg-green.spacing-around
+        .container
+            h2.title-product.wow.fadeIn Related recipes
+            .wrap-text
+                .font-product Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                a(href="#").btn-common.green.big-btn: .pos see all recipes
+            .row.row-recipes
+                each val in [1,2,3,4]
+                    .col-lg-3.col-sm-6
+                        .item-post
+                            a(href="#").img-drop.ratio-11
+                                img(src="upload/recipes-"+val+".jpg", alt="/")
+                            .wrap-info
+                                h3 Pumpkin soup topped with seeds
+                                .d-flex
+                                    .qty-info 2250kJ
+                                    .time-info 40 minutes
+                                .row-read-btn
+                                    a(href="#").btn-common.trans: .pos read now
+
+
+    

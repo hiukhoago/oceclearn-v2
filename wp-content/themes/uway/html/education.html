@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- Favicon-->
+        <link rel="shortcut icon" href="upload/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" href="upload/favicon.png">
+        <!-- CSS-->
+        <link rel="stylesheet" href="src/scss/plugins.css">
+        <link rel="stylesheet" href="src/scss/style.css">
+        <!-- Title-->
+        <title>Education - Flourish</title>
+    </head>
+    <body>
+        <script>sessionStorage.getItem("isFirstRun") || document.write('<div id="preloader"><div class="loading"></div></div>')</script>
+        <!-- HEADER PAGE -->
+        <header class="header-page">           <a class="logo" href="index.html"><img src="upload/logo.png" alt=""/></a><a class="btn-menu-sp" href="#" id="btn-menu-sp"><span></span></a><a class="header-btn-cart mobile-show show-cart" href="#"><span>0  </span></a>
+            <div class="wrap-content-mobile">
+                <div class="wrap-inner">
+                    <!--HEADER CONTENT-->
+                    <div class="container-fluid">
+                        <div class="row">                   
+                            <div class="col-6">
+                                <ul class="menu-top">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="about.html">About</a></li>
+                                    <li class="has-sub-menu"> <a href="education.html">Education</a><i class="dropdown-carret"></i>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="education.html">Education</a></li>
+                                            <li><a href="education.html">Education</a></li>
+                                            <li><a href="education.html">Education</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="recipes.html">Recipes</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 row-custom">
+                                <ul class="menu-top right">
+                                    <li><a href="blog.html">Blog</a></li>
+                                    <li><a href="products.html">Shop</a></li>
+                                    <li><a href="stockists.html">Stockists</a></li>
+                                    <li class="login"><a href="#" id="login-toggle">Login        </a></li>
+                                    <li class="info-user"><a href="#">Hi, <b>Vencreative</b></a></li>
+                                </ul><a class="header-btn-cart desktop-show show-cart" href="#"><span>0      </span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--SIDEBAR LEFT-->
+                    <section class="sidebar-left">
+                        <ul class="list-social">
+                            <li class="ins"><a href="#" target="_blank">Instagram </a></li>
+                            <li class="fb"><a href="#" target="_blank">Facebook</a></li>
+                        </ul>
+                        <ul class="list-mobile-contact d-lg-none d-block">
+                            <li><a href="tel:1300121248">1300 121 248</a></li>
+                            <li><a href="mailto:hello@flourishln.com.au">hello@flourishln.com.au </a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+            <!--SIDEBAR RIGHT-->
+            <section class="sidebar-right"><i class="icon icon-x"></i></section>
+            <!-- FOOTER PAGE-->
+            <section class="side-bottom">
+                <div class="container-fluid">
+                    <ul class="item-footer">
+                        <li class="d-lg-block d-none">© 2018 Flourish Nutritional Medicine Pty Ltd </li>
+                        <li>Free shipping for orders over $100</li>
+                        <li> <a href="tel:1300121248"><span>1300 121 248</span><i class="icon tel"></i></a><a href="mailto:hello@flourishln.com.au"><span>hello@flourishln.com.au</span><i class="icon mail"> </i></a></li>
+                    </ul>
+                </div>
+            </section>
+        </header>
+        <!-- PANEL-LOGIN-->
+        <div class="panel-login" id="panel-login"><a href="#" title="Close the panel" id="btn-close-login"></a>
+            <div class="scrollbar-macosx">
+                <div class="login-panel-container">
+                    <div id="signup-fields">
+                        <h1 class="title-product text-center">Welcome back !</h1>
+                        <p class="text-center mb-15">Please login to your account</p><a class="btn-white" href="#"><i class="icon fb-square"></i> Sign up with Facebook</a>
+                        <div class="white-textline"></div>
+                        <form class="woocommerce-form woocommerce-form-login" action="">                       
+                            <div class="form-text-input">
+                                <label for="">Email</label>
+                                <input type="text"/>
+                            </div>
+                            <div class="form-text-input">
+                                <label for="">Password</label>
+                                <input type="password"/>
+                            </div>
+                            <div class="lost-pw text-center"><a class="text-futura" href="#">Forgot your password?       </a></div>
+                            <input type="submit" value="LOG IN"/>
+                            <div class="text-center footer-login">
+                                <p>Don't have an account? <strong><a href="javascript:;" id="sign-up-show">Sign up here</a></strong></p>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="login-fields">
+                        <h1 class="title-product text-center">Hello there !</h1>
+                        <p class="text-center mb-15">Fill in your details to create an account</p><a class="btn-white" href="#"><i class="icon fb-square"></i> Sign up with Facebook</a>
+                        <div class="white-textline"></div>
+                        <form class="woocommerce-form woocommerce-form-login" action="">                       
+                            <div class="form-text-input">
+                                <label for="">Email</label>
+                                <input type="text"/>
+                            </div>
+                            <div class="form-text-input form-half">
+                                <label for="">Password</label>
+                                <input type="password"/>
+                            </div>
+                            <div class="form-text-input form-half">
+                                <label for="">Confirm Password</label>
+                                <input type="password"/>
+                            </div>
+                            <input type="submit" value="SIGN UP"/>
+                            <div class="text-center footer-login">
+                                <p>Already have an account? <strong><a href="javascript:;" id="login-show">Sign in here</a></strong></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bag-hover">
+            <div class="ul-cart fixed">
+                <div class="name">Product</div>
+                <div class="quanity gray">Quantity</div>
+                <div class="price">Price</div>
+                <div class="delete"><a class="btn-close-cart" href="#"><i class="icon close"></i></a></div>
+            </div>
+            <ul class="header-cart-list scrollbar-macosx">
+                <li>
+                    <div class="wrap-infor-image-title">
+                        <div class="header-cart-img">
+                            <div class="img-drop ratio-11"><img src="upload/img-home-prod-1.png" alt=""></div>
+                        </div>
+                        <div class="header-cart-info">
+                            <h5>Turmeric blend</h5>
+                        </div>
+                    </div>
+                    <div class="header-cart-quanity item-qty">
+                        <div class="qty-holder">
+                            <input type="number" value="1"><i class="square-minus"></i><i class="square-plus"></i>
+                        </div>
+                    </div>
+                    <div class="header-cart-price">$220.0</div>
+                    <div class="delete-header-cart"></div>
+                </li>
+                <li>
+                    <div class="wrap-infor-image-title">
+                        <div class="header-cart-img">
+                            <div class="img-drop ratio-11"><img src="upload/img-home-prod-1.png" alt=""></div>
+                        </div>
+                        <div class="header-cart-info">
+                            <h5>Turmeric blend</h5>
+                        </div>
+                    </div>
+                    <div class="header-cart-quanity item-qty">
+                        <div class="qty-holder">
+                            <input type="number" value="1"><i class="square-minus"></i><i class="square-plus"></i>
+                        </div>
+                    </div>
+                    <div class="header-cart-price">$220.0</div>
+                    <div class="delete-header-cart"></div>
+                </li>
+                <li>
+                    <div class="wrap-infor-image-title">
+                        <div class="header-cart-img">
+                            <div class="img-drop ratio-11"><img src="upload/img-home-prod-1.png" alt=""></div>
+                        </div>
+                        <div class="header-cart-info">
+                            <h5>Turmeric blend</h5>
+                        </div>
+                    </div>
+                    <div class="header-cart-quanity item-qty">
+                        <div class="qty-holder">
+                            <input type="number" value="1"><i class="square-minus"></i><i class="square-plus"></i>
+                        </div>
+                    </div>
+                    <div class="header-cart-price">$220.0</div>
+                    <div class="delete-header-cart"></div>
+                </li>
+                <li>
+                    <div class="wrap-infor-image-title">
+                        <div class="header-cart-img">
+                            <div class="img-drop ratio-11"><img src="upload/img-home-prod-1.png" alt=""></div>
+                        </div>
+                        <div class="header-cart-info">
+                            <h5>Turmeric blend</h5>
+                        </div>
+                    </div>
+                    <div class="header-cart-quanity item-qty">
+                        <div class="qty-holder">
+                            <input type="number" value="1"><i class="square-minus"></i><i class="square-plus"></i>
+                        </div>
+                    </div>
+                    <div class="header-cart-price">$220.0</div>
+                    <div class="delete-header-cart"></div>
+                </li>
+                <li>
+                    <div class="wrap-infor-image-title">
+                        <div class="header-cart-img">
+                            <div class="img-drop ratio-11"><img src="upload/img-home-prod-1.png" alt=""></div>
+                        </div>
+                        <div class="header-cart-info">
+                            <h5>Turmeric blend</h5>
+                        </div>
+                    </div>
+                    <div class="header-cart-quanity item-qty">
+                        <div class="qty-holder">
+                            <input type="number" value="1"><i class="square-minus"></i><i class="square-plus"></i>
+                        </div>
+                    </div>
+                    <div class="header-cart-price">$220.0</div>
+                    <div class="delete-header-cart"></div>
+                </li>
+                <li>
+                    <div class="wrap-infor-image-title">
+                        <div class="header-cart-img">
+                            <div class="img-drop ratio-11"><img src="upload/img-home-prod-1.png" alt=""></div>
+                        </div>
+                        <div class="header-cart-info">
+                            <h5>Turmeric blend</h5>
+                        </div>
+                    </div>
+                    <div class="header-cart-quanity item-qty">
+                        <div class="qty-holder">
+                            <input type="number" value="1"><i class="square-minus"></i><i class="square-plus"></i>
+                        </div>
+                    </div>
+                    <div class="header-cart-price">$220.0</div>
+                    <div class="delete-header-cart"></div>
+                </li>
+                <li>
+                    <div class="wrap-infor-image-title">
+                        <div class="header-cart-img">
+                            <div class="img-drop ratio-11"><img src="upload/img-home-prod-1.png" alt=""></div>
+                        </div>
+                        <div class="header-cart-info">
+                            <h5>Turmeric blend</h5>
+                        </div>
+                    </div>
+                    <div class="header-cart-quanity item-qty">
+                        <div class="qty-holder">
+                            <input type="number" value="1"><i class="square-minus"></i><i class="square-plus"></i>
+                        </div>
+                    </div>
+                    <div class="header-cart-price">$220.0</div>
+                    <div class="delete-header-cart"></div>
+                </li>
+                <li>
+                    <div class="wrap-infor-image-title">
+                        <div class="header-cart-img">
+                            <div class="img-drop ratio-11"><img src="upload/img-home-prod-1.png" alt=""></div>
+                        </div>
+                        <div class="header-cart-info">
+                            <h5>Turmeric blend</h5>
+                        </div>
+                    </div>
+                    <div class="header-cart-quanity item-qty">
+                        <div class="qty-holder">
+                            <input type="number" value="1"><i class="square-minus"></i><i class="square-plus"></i>
+                        </div>
+                    </div>
+                    <div class="header-cart-price">$220.0</div>
+                    <div class="delete-header-cart"></div>
+                </li>
+            </ul>
+            <div class="wrap-cart-panel-bottom">
+                <div class="row">
+                    <div class="coupon">
+                        <input type="text" placeholder="Coupon Code">
+                        <button type="submit">APPLY</button>
+                    </div>
+                    <div class="header-cart-buttons header-total">
+                        <div>Total</div>
+                        <div>$820</div>
+                    </div>
+                    <div class="row-cart-buttons"> <a class="header-cart-buttons header-viewbag" href="checkout.html">View bag</a><a class="header-cart-buttons header-checkout" href="checkout.html">check out</a></div>
+                </div>
+            </div>
+        </div>
+        <!-- WRAP PAGE-->
+        <div id="wrap-page">
+            <!-- EDUCATION: BANNER-->
+            <section class="banner-product spacing-around spacing-header">
+                <div class="text-cover">
+                    <h1 class="title-page">Education</h1>
+                    <p class="des-page">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+                </div>
+                <div class="img-drop"><img class="lazygo" data-src="upload/education-banner.jpg" alt=""></div>
+            </section>
+            <!-- EDUCATION: CONTENT TAB-->
+            <section class="education spacing-around bg-skin">
+                <!-- Tab page ul-->
+                <ul class="nav tab-navi-learn" role="tablist">
+                    <li class="wow fadeInUp" data-wow-delay=".1s"><a href="#option2" data-toggle="tab">Why whole foods ?   </a></li>
+                    <li class="wow fadeInUp" data-wow-delay=".2s"><a href="#" data-toggle="tab">Why plant-based ? </a></li>
+                    <li class="wow fadeInUp" data-wow-delay=".3s"><a href="#" data-toggle="tab">Why oil-free?                                                        </a></li>
+                    <li class="wow fadeInUp" data-wow-delay=".4s"><a class="active" href="#option4" data-toggle="tab" data-hash="howto">Ingredients</a></li>
+                </ul>
+                <div class="container spacing-end">
+                    <!-- Tab page content-->
+                    <div class="tab-content content-learn">
+                        <div class="tab-pane fade active show" id="option4">
+                            <h2 class="title-page animated fadeInUp margin-bottom">Ingredients   </h2>
+                            <div class="des-intro fw-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+                            <div class="des-page">
+                                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.                    
+                                <br><br><img class="animated fadeIn" src="upload/education-ing.jpg" alt="/">
+                            </div>
+                            <div class="learn-text-editor">
+                                <select class="ingredients-select">
+                                    <option value="*">All</option>
+                                </select>
+                                <div class="clearfix"></div>
+                                <div class="ingredient-item">
+                                    <div class="ingredient-img">
+                                        <div class="img-drop"><img class="animated fadeInLeft" src="upload/ingredient1.jpg" alt="/"></div>
+                                    </div>
+                                    <div class="ingredient-des">
+                                        <h4 class="title-featured">Alleppey Turmeric</h4>
+                                        <div class="des-page">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</div>
+                                    </div>
+                                </div>
+                                <div class="ingredient-item">
+                                    <div class="ingredient-img">
+                                        <div class="img-drop"><img class="animated fadeInLeft" src="upload/ingredient2.jpg" alt="/"></div>
+                                    </div>
+                                    <div class="ingredient-des">
+                                        <h4 class="title-featured">Aniseed</h4>
+                                        <div class="des-page">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quia nam iusto fuga, aperiam maiores dicta aliquam ducimus, ullam facere voluptatibus hic quos unde placeat ipsa ipsum voluptatum ratione voluptatem!</div>
+                                    </div>
+                                </div>
+                                <div class="ingredient-item">
+                                    <div class="ingredient-img">
+                                        <div class="img-drop"><img class="animated fadeInLeft" src="upload/ingredient3.jpg" alt="/"></div>
+                                    </div>
+                                    <div class="ingredient-des">
+                                        <h4 class="title-featured">Black Pepper</h4>
+                                        <div class="des-page">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quia nam iusto fuga, aperiam maiores dicta aliquam ducimus, ullam facere voluptatibus hic quos unde placeat ipsa ipsum voluptatum ratione voluptatem!                                </div>
+                                    </div>
+                                </div>
+                                <div class="ingredient-item">
+                                    <div class="ingredient-img">
+                                        <div class="img-drop"><img class="animated fadeInLeft" src="upload/ingredient4.jpg" alt="/"></div>
+                                    </div>
+                                    <div class="ingredient-des">
+                                        <h4 class="title-featured">Cardamom</h4>
+                                        <div class="des-page">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quia nam iusto fuga, aperiam maiores dicta aliquam ducimus, ullam facere voluptatibus hic quos unde placeat ipsa ipsum voluptatum ratione voluptatem!</div>
+                                    </div>
+                                </div>
+                                <div class="ingredient-item">
+                                    <div class="ingredient-img">
+                                        <div class="img-drop"><img class="animated fadeInLeft" src="upload/ingredient5.jpg" alt="/"></div>
+                                    </div>
+                                    <div class="ingredient-des">
+                                        <h4 class="title-featured">Coconut Powder</h4>
+                                        <div class="des-page">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quia nam iusto fuga, aperiam maiores dicta aliquam ducimus, ullam facere voluptatibus hic quos unde placeat ipsa ipsum voluptatum ratione voluptatem!</div>
+                                    </div>
+                                </div>
+                                <div class="ingredient-item">
+                                    <div class="ingredient-img">
+                                        <div class="img-drop"><img class="animated fadeInLeft" src="upload/ingredient6.jpg" alt="/"></div>
+                                    </div>
+                                    <div class="ingredient-des">
+                                        <h4 class="title-featured">Chicory Root</h4>
+                                        <div class="des-page">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quia nam iusto fuga, aperiam maiores dicta aliquam ducimus, ullam facere voluptatibus hic quos unde placeat ipsa ipsum voluptatum ratione voluptatem!</div>
+                                    </div>
+                                </div>
+                                <div class="ingredient-item">
+                                    <div class="ingredient-img">
+                                        <div class="img-drop"><img class="animated fadeInLeft" src="upload/ingredient7.jpg" alt="/"></div>
+                                    </div>
+                                    <div class="ingredient-des">
+                                        <h4 class="title-featured">Clove</h4>
+                                        <div class="des-page">Is rich in many nutrients craved by the body, such as vitamin A and D, Lecithin and Potassium. Avocado Oil is a fantastic dry-skin moisturising oil and sooth the skin, helps with skin conditions such as eczema, and assists in the treatment of climate-damaged, parched, undernourished or ageing skin</div>
+                                    </div>
+                                </div>
+                                <div class="ingredient-item">
+                                    <div class="ingredient-img">
+                                        <div class="img-drop"><img class="animated fadeInLeft" src="upload/ingredient8.jpg" alt="/"></div>
+                                    </div>
+                                    <div class="ingredient-des">
+                                        <h4 class="title-featured">Fennel Seed</h4>
+                                        <div class="des-page">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quia nam iusto fuga, aperiam maiores dicta aliquam ducimus, ullam facere voluptatibus hic quos unde placeat ipsa ipsum voluptatum ratione voluptatem!</div>
+                                    </div>
+                                </div>
+                                <div class="ingredient-item">
+                                    <div class="ingredient-img">
+                                        <div class="img-drop"><img class="animated fadeInLeft" src="upload/ingredient9.jpg" alt="/"></div>
+                                    </div>
+                                    <div class="ingredient-des">
+                                        <h4 class="title-featured">Ginger</h4>
+                                        <div class="des-page">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quia nam iusto fuga, aperiam maiores dicta aliquam ducimus, ullam facere voluptatibus hic quos unde placeat ipsa ipsum voluptatum ratione voluptatem!</div>
+                                    </div>
+                                </div>
+                                <div class="ingredient-item">
+                                    <div class="ingredient-img">
+                                        <div class="img-drop"><img class="animated fadeInLeft" src="upload/ingredient10.jpg" alt="/"></div>
+                                    </div>
+                                    <div class="ingredient-des">
+                                        <h4 class="title-featured">Orange Peel</h4>
+                                        <div class="des-page">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quia nam iusto fuga, aperiam maiores dicta aliquam ducimus, ullam facere voluptatibus hic quos unde placeat ipsa ipsum voluptatum ratione voluptatem!</div>
+                                    </div>
+                                </div>
+                                <div class="ingredient-item">
+                                    <div class="ingredient-img">
+                                        <div class="img-drop"><img class="animated fadeInLeft" src="upload/ingredient11.jpg" alt="/"></div>
+                                    </div>
+                                    <div class="ingredient-des">
+                                        <h4 class="title-featured">Rosemary</h4>
+                                        <div class="des-page">Is rich in many nutrients craved by the body, such as vitamin A and D, Lecithin and Potassium. Avocado Oil is a fantastic dry-skin moisturising oil and sooth the skin, helps with skin conditions such as eczema, and assists in the treatment of climate-damaged, parched, undernourished or ageing skin</div>
+                                    </div>
+                                </div>
+                                <div class="ingredient-item">
+                                    <div class="ingredient-img">
+                                        <div class="img-drop"><img class="animated fadeInLeft" src="upload/ingredient12.jpg" alt="/"></div>
+                                    </div>
+                                    <div class="ingredient-des">
+                                        <h4 class="title-featured">Stevia Leaf</h4>
+                                        <div class="des-page">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quia nam iusto fuga, aperiam maiores dicta aliquam ducimus, ullam facere voluptatibus hic quos unde placeat ipsa ipsum voluptatum ratione voluptatem!</div>
+                                    </div>
+                                </div>
+                                <div class="ingredient-item">
+                                    <div class="ingredient-img">
+                                        <div class="img-drop"><img class="animated fadeInLeft" src="upload/ingredient13.jpg" alt="/"></div>
+                                    </div>
+                                    <div class="ingredient-des">
+                                        <h4 class="title-featured">True Cinnamon (ceylon cinnamon)</h4>
+                                        <div class="des-page">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quia nam iusto fuga, aperiam maiores dicta aliquam ducimus, ullam facere voluptatibus hic quos unde placeat ipsa ipsum voluptatum ratione voluptatem!</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade learn-2" id="option2"> 
+                            <h2 class="title-page animated fadeInUp margin-bottom">Why Whole Foods ?</h2>
+                            <div class="des-intro fw-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+                            <div class="des-page">
+                                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+                                <br><br><img class="animated fadeIn" src="upload/education-ing.jpg" alt="/">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- FOOTER PAGE-->
+            <footer class="footer-page">
+                <div class="container">
+                    <div class="form-subcribe">
+                        <h3>Subscribe to our Newsletter</h3>
+                        <div class="wrap-form"> 
+                            <form action="">
+                                <ul>
+                                    <li>
+                                        <input type="text" placeholder="Your email address"/>
+                                    </li>
+                                </ul>
+                                <div class="gform_footer">
+                                    <input type="submit" value="SUBMIT"/>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-6">
+                            <ul class="list-menu-footer">
+                                <li><a href="#">Home Page</a></li>
+                                <li><a href="#">Shop</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Education</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-6">
+                            <ul class="list-menu-footer">
+                                <li><a href="#">Stockists</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">My account</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-6">
+                            <ul class="list-menu-footer">
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Delivery, Refund and Returns</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="img-animation">
+                        <div class="item">  <img src="upload/img-footer-1.png" alt=""/></div>
+                        <div class="item">  <img src="upload/img-footer-2.png" alt=""/></div>
+                        <div class="item">  <img src="upload/img-footer-3.png" alt=""/></div>
+                    </div>
+                    <div class="copyright"><span>© 2022 EcoClean</span> Website by <strong><a href="https://uway.asia" target="_blank">Uway Technology</a></strong></div>
+                </div>
+            </footer>
+        </div>
+        <script>window.jQuery || document.write('<script src="src/js/jquery.js"><\/script>')</script>
+        <script src="src/js/plugins.min.js"></script>
+        <script data-src="https://maps.google.com/maps/api/js?libraries=places&amp;key=AIzaSyApEpQ5tDwzlRfH1vuo4351Bwdar8OzyUI" id="google-map"></script>
+        <script src="src/js/main.js"></script>
+        <script src="src/js/pages/slider_v2.js"></script>
+        <script src="src/js/initmap.js"></script>
+    </body>
+</html>

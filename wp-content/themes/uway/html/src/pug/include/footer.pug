@@ -1,0 +1,47 @@
+mixin footer
+
+    // FOOTER PAGE
+    footer.footer-page
+        .container
+            .form-subcribe
+                h3 Subscribe to our Newsletter
+                .wrap-form  
+                    form(action="")
+                        ul
+                            li
+                                input(type="text" placeholder="Your email address")
+                        .gform_footer
+                            input(type="submit", value="SUBMIT")
+            .row
+                .col-md-4.col-6
+                    ul.list-menu-footer
+                        li(class=active=="home" ? "current-menu-item" : "")
+                            a(href="#") Home Page
+                        li(class=active=="shop" ? "current-menu-item" : "")
+                            a(href="#") Shop
+                        li(class=active=="about" ? "current-menu-item" : "")
+                            a(href="#") About
+                        li(class=active=="education" ? "current-menu-item" : "")
+                            a(href="#") Education
+                .col-md-4.col-6
+                    ul.list-menu-footer
+                        li(class=active=="stockists" ? "current-menu-item" : "")
+                            a(href="#") Stockists
+                        li(class=active=="blog" ? "current-menu-item" : "")
+                            a(href="#") Blog
+                        li(class=active=="my-account" ? "current-menu-item" : "")
+                            a(href="#") My account
+                .col-md-4.col-6
+                    ul.list-menu-footer
+                        li(class=active=="privacy-policy" ? "current-menu-item" : "")
+                            a(href="#") Privacy Policy
+                        li(class=active=="delivery" ? "current-menu-item" : "")
+                            a(href="#") Delivery, Refund and Returns
+            .img-animation
+                .item   
+                    img(src="upload/img-footer-1.png", alt="")
+                .item   
+                    img(src="upload/img-footer-2.png", alt="")
+                .item   
+                    img(src="upload/img-footer-3.png", alt="")
+            .copyright #[span © 2022 EcoClean] Website by #[strong #[a(href="https://uway.asia" target="_blank") Uway Technology]]

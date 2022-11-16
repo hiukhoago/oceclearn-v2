@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 19</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Checkout-&amp;-payment" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Cart" transform="translate(-1862.000000, -514.000000)">
+            <g id="Group-19" transform="translate(1862.000000, 514.000000)">
+                <g id="Group-2">
+                    <circle id="Oval" fill="#62BD89" fill-rule="nonzero" cx="21" cy="21" r="21"></circle>
+                    <g id="close" transform="translate(14.000000, 14.000000)" fill="#FFFFFF">
+                        <polygon id="Path" points="1.722 0.969 0.968 1.723 6.246 7.001 0.993 12.254 1.747 13.008 7 7.755 12.253 13.008 13.007 12.254 7.754 7.001 13.032 1.723 12.278 0.969 7 6.247"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

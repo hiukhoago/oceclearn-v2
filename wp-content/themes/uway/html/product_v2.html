@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- Favicon-->
+        <link rel="shortcut icon" href="upload/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" href="upload/favicon.png">
+        <!-- CSS-->
+        <link rel="stylesheet" href="src/scss/plugins.css">
+        <link rel="stylesheet" href="src/scss/style.css">
+        <!-- Title-->
+        <title>ProductPage - ECOCLEARN</title>
+    </head>
+    <body>
+        <script>sessionStorage.getItem("isFirstRun") || document.write('<div id="preloader"><div class="loading"></div></div>')</script>
+        <!-- HEADER PAGE -->
+        <header class="header">
+            <div class="header-welcome">
+                <div class="header-welcome-content">
+                    <div class="header-welcome-content-left">
+                        <div class="mobile-info">
+                            <div class="icon-mobile"><i class="fa fa-mobile"></i></div>
+                            <div class="number-mobile">+84 3555 01613</div>
+                        </div>
+                        <div class="email-info">
+                            <div class="icon-email"><i class="fa fa-envelope-o"></i></div>
+                            <div class="name-email">hiukhoa@gmail.com</div>
+                        </div>
+                    </div>
+                    <div class="header-welcome-content-right">
+                        <div class="icon-flag"><img src="../../../src/img/flag-VN.svg" alt=""/></div>
+                        <div class="country">Vietnamese</div>
+                        <div class="icon-dropdown-menu"><img src="../../../src/img/drop-down-more.svg" alt=""/></div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-menu">
+                <div class="header-menu-content"> 
+                    <div class="header-menu-content-left"><a class="logo-menu" href=""><img src="../../../src/img/ecolear-logo.png" alt=""/></a>
+                        <div class="nav-menu">
+                            <ul class="menu"> 
+                                <li class="item-menu">                      <a href="../../../product_v2.html">Sản phẩm</a></li>
+                                <li class="item-menu">                      <a href="#">Về chúng tôi</a></li>
+                                <li class="item-menu"><a href="#">Blog </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="header-menu-content-right">
+                        <div class="icon-account"> 
+                            <div class="dropdown"><img src="../../../src/img/ecolearn-user.svg" alt=""/>
+                                <div class="dropdown-content"><a href="#">Đăng nhập </a><a href="#">Đăng ký  </a></div>
+                            </div>
+                        </div>
+                        <div class="icon-cart-shop">
+                            <label for="nav-cart-input"><img src="../../../src/img/ecolearn-cart.svg" alt=""/></label>
+                            <input class="nav-cart" type="checkbox" id="nav-cart-input"/>
+                            <label class="nav-overlay" for="nav-cart-input"></label>
+                            <div class="nav-menu-cart">
+                                <div class="cart-content">
+                                    <div class="content-title">
+                                        <div class="content-title-name">
+                                            <div class="name-product">Tên sản phẩm</div>
+                                            <div class="count-product">Số lượng </div>
+                                            <div class="price-product">Đơn giá</div>
+                                        </div>
+                                        <label class="btn-close-cart" for="nav-cart-input"><i class="fa fa-times"></i></label>
+                                    </div>
+                                    <div class="content-product-cart">
+                                        <div class="cart-item">
+                                            <div class="infor-cart">
+                                                <div class="img-name"> <img src="../../../src/img/product-selling-1.png" alt=""/>
+                                                    <div class="name-cart-product">Vi sinh khử mùi nhà vệ sinh - Ecofresh</div>
+                                                </div>
+                                                <div class="count-cart"> 
+                                                    <button class="btn-decrease" onclick="handleDecrease()"></button>
+                                                    <div class="value-cart">
+                                                        <input class="amount-input" type="text" id="amount" value="1"/>
+                                                    </div>
+                                                    <button class="btn-increase" onclick="handleIncrease()"></button>
+                                                </div>
+                                                <div class="price-cart">245,000 đ</div>
+                                            </div>
+                                            <button class="btn-clear-product" onclick="handleClear()"><i class="fa fa-times"></i></button>
+                                        </div>
+                                        <div class="cart-item">
+                                            <div class="infor-cart">
+                                                <div class="img-name"> <img src="../../../src/img/product-selling-2.png" alt=""/>
+                                                    <div class="name-cart-product">Tẩy ố quần áo 250ml Stain Remover</div>
+                                                </div>
+                                                <div class="count-cart"> 
+                                                    <button class="btn-decrease" onclick="handleDecrease()"></button>
+                                                    <div class="value-cart">
+                                                        <input class="amount-input" type="text" id="amount" value="1"/>
+                                                    </div>
+                                                    <button class="btn-increase" onclick="handleIncrease()"></button>
+                                                </div>
+                                                <div class="price-cart">245,000 đ</div>
+                                            </div>
+                                            <button class="btn-clear-product" onclick="handleClear()"><i class="fa fa-times"></i></button>
+                                        </div>
+                                        <div class="cart-item">
+                                            <div class="infor-cart">
+                                                <div class="img-name"> <img src="../../../src/img/product-selling-3.png" alt=""/>
+                                                    <div class="name-cart-product">Vi sinh khử mùi nhà vệ sinh</div>
+                                                </div>
+                                                <div class="count-cart"> 
+                                                    <button class="btn-decrease" onclick="handleDecrease()"></button>
+                                                    <div class="value-cart">
+                                                        <input class="amount-input" type="text" id="amount" value="1"/>
+                                                    </div>
+                                                    <button class="btn-increase" onclick="handleIncrease()"></button>
+                                                </div>
+                                                <div class="price-cart">245,000 đ</div>
+                                            </div>
+                                            <button class="btn-clear-product" onclick="handleClear()"><i class="fa fa-times"></i></button>
+                                        </div>
+                                        <div class="cart-item">
+                                            <div class="infor-cart">
+                                                <div class="img-name"> <img src="../../../src/img/product-selling-4.png" alt=""/>
+                                                    <div class="name-cart-product">Vi sinh khử mùi nhà vệ sinh - 4</div>
+                                                </div>
+                                                <div class="count-cart"> 
+                                                    <button class="btn-decrease" onclick="handleDecrease()"></button>
+                                                    <div class="value-cart">
+                                                        <input class="amount-input" type="text" id="amount" value="1"/>
+                                                    </div>
+                                                    <button class="btn-increase" onclick="handleIncrease()"></button>
+                                                </div>
+                                                <div class="price-cart">245,000 đ</div>
+                                            </div>
+                                            <button class="btn-clear-product" onclick="handleClear()"><i class="fa fa-times"></i></button>
+                                        </div>
+                                        <div class="cart-item">
+                                            <div class="infor-cart">
+                                                <div class="img-name"> <img src="../../../src/img/product-selling-4.png" alt=""/>
+                                                    <div class="name-cart-product">Vi sinh khử mùi nhà vệ sinh - 8</div>
+                                                </div>
+                                                <div class="count-cart"> 
+                                                    <button class="btn-decrease" onclick="handleDecrease()"></button>
+                                                    <div class="value-cart">
+                                                        <input class="amount-input" type="text" id="amount" value="1"/>
+                                                    </div>
+                                                    <button class="btn-increase" onclick="handleIncrease()"></button>
+                                                </div>
+                                                <div class="price-cart">245,000 đ</div>
+                                            </div>
+                                            <button class="btn-clear-product" onclick="handleClear()"><i class="fa fa-times"></i></button>
+                                        </div>
+                                        <div class="cart-item">
+                                            <div class="infor-cart">
+                                                <div class="img-name"> <img src="../../../src/img/product-selling-4.png" alt=""/>
+                                                    <div class="name-cart-product">Vi sinh khử mùi nhà vệ sinh - 12</div>
+                                                </div>
+                                                <div class="count-cart"> 
+                                                    <button class="btn-decrease" onclick="handleDecrease()"></button>
+                                                    <div class="value-cart">
+                                                        <input class="amount-input" type="text" id="amount" value="1"/>
+                                                    </div>
+                                                    <button class="btn-increase" onclick="handleIncrease()"></button>
+                                                </div>
+                                                <div class="price-cart">245,000 đ</div>
+                                            </div>
+                                            <button class="btn-clear-product" onclick="handleClear()"><i class="fa fa-times"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="cart-footer">
+                                        <div class="cart-footer-content">
+                                            <div class="shipping-fee">
+                                                <div class="shipping-fee-text">Phí vận chuyển</div>
+                                                <div class="shipping-fee-price">150,000 đ</div>
+                                            </div>
+                                            <div class="total-order">
+                                                <div class="total-order-text">Tổng đơn hàng</div>
+                                                <div class="total-order-price">245,000 đ</div>
+                                            </div>
+                                            <div class="btn-pay">
+                                                <button type="button"><span>Thanh toán</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="icon-menu-mobile">
+                            <label class="btn-bars" for="nav-mobile-input"><i class="fa fa-bars"></i></label>
+                            <input class="nav-input" type="checkbox" id="nav-mobile-input"/>
+                            <label class="nav-overlay" for="nav-mobile-input"></label>
+                            <nav class="nav-menu-mobile">
+                                <label class="btn-close" for="nav-mobile-input"><i class="fa fa-times"></i></label>
+                                <ul class="menu-mobile">
+                                    <li class="item-menu-mobile"><a href="#">Sản phẩm</a></li>
+                                    <li class="item-menu-mobile"><a href="#">Về chúng tôi</a></li>
+                                    <li class="item-menu-mobile"><a href="#">Blog </a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- WRAP PAGE-->
+        <div id="wrap-page">
+            <div class="body-content"> 
+                <div class="body-content-product-banner"><img src="../../src/img/product-banner-1.png" id="product-banner"><span id="desc-product"></span><a href="#">Xem tất cả</a></div>
+            </div>
+            <div class="body-content-list-1">
+                <div class="body-content-list-1-content">
+                    <div class="body-content-list-1-content-describe">
+                        <div class="name-describe">Vi sinh xử lý hầm tự loại</div>
+                        <div class="long-describe">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</div><a href="#">Xem thêm</a>
+                    </div>
+                    <div class="list-product">
+                        <div class="product-item">
+                            <div class="img-product"><img src="../../src/img/product-selling-1.png" alt=""></div>
+                            <div class="info-product">
+                                <div class="name-product">Men vi sinh Ecolean Septic - thông tắt bồn cầu, giảm mùi WC</div>
+                                <div class="price-product">245,000 đ</div>
+                                <div class="btn-order">
+                                    <button class="button-order" name="button" type="button"><span>Đặt hàng </span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="img-product"><img src="../../src/img/product-selling-2.png" alt=""></div>
+                            <div class="info-product">
+                                <div class="name-product">Men vi sinh ecoflush thông tắc bể phốt - túi tự hủy</div>
+                                <div class="price-product">245,000 đ</div>
+                                <div class="btn-order">
+                                    <button class="button-order" name="button" type="button"><span>Đặt hàng </span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="img-product"><img src="../../src/img/product-selling-3.png" alt=""></div>
+                            <div class="info-product">
+                                <div class="name-product">Men vi sinh Ecoflush thông tắt bể phốt - Túi tự hủy - Hộp 6 gói</div>
+                                <div class="price-product">245,000 đ</div>
+                                <div class="btn-order">
+                                    <button class="button-order" name="button" type="button"><span>Đặt hàng </span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="body-content-list-1">
+                <div class="body-content-list-1-content">
+                    <div class="body-content-list-1-content-describe">
+                        <div class="name-describe">Vi sinh ăn mỡ</div>
+                        <div class="long-describe">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</div><a href="#">Xem thêm</a>
+                    </div>
+                    <div class="list-product">
+                        <div class="product-item">
+                            <div class="img-product"><img src="../../src/img/product-selling-1.png" alt=""></div>
+                            <div class="info-product">
+                                <div class="name-product">Men vi sinh Ecolean Septic - thông tắt bồn cầu, giảm mùi WC</div>
+                                <div class="price-product">245,000 đ</div>
+                                <div class="btn-order">
+                                    <button class="button-order" name="button" type="button"><span>Đặt hàng </span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="img-product"><img src="../../src/img/product-selling-2.png" alt=""></div>
+                            <div class="info-product">
+                                <div class="name-product">Men vi sinh ecoflush thông tắc bể phốt - túi tự hủy</div>
+                                <div class="price-product">245,000 đ</div>
+                                <div class="btn-order">
+                                    <button class="button-order" name="button" type="button"><span>Đặt hàng </span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="img-product"><img src="../../src/img/product-selling-3.png" alt=""></div>
+                            <div class="info-product">
+                                <div class="name-product">Men vi sinh Ecoflush thông tắt bể phốt - Túi tự hủy - Hộp 6 gói</div>
+                                <div class="price-product">245,000 đ</div>
+                                <div class="btn-order">
+                                    <button class="button-order" name="button" type="button"><span>Đặt hàng </span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="body-content-list-1">
+                <div class="body-content-list-1-content">
+                    <div class="body-content-list-1-content-describe">
+                        <div class="name-describe">Vi sinh khử mùi</div>
+                        <div class="long-describe">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</div><a href="#">Xem thêm</a>
+                    </div>
+                    <div class="list-product">
+                        <div class="product-item">
+                            <div class="img-product"><img src="../../src/img/product-selling-1.png" alt=""></div>
+                            <div class="info-product">
+                                <div class="name-product">Men vi sinh Ecolean Septic - thông tắt bồn cầu, giảm mùi WC</div>
+                                <div class="price-product">245,000 đ</div>
+                                <div class="btn-order">
+                                    <button class="button-order" name="button" type="button"><span>Đặt hàng </span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="img-product"><img src="../../src/img/product-selling-2.png" alt=""></div>
+                            <div class="info-product">
+                                <div class="name-product">Men vi sinh ecoflush thông tắc bể phốt - túi tự hủy</div>
+                                <div class="price-product">245,000 đ</div>
+                                <div class="btn-order">
+                                    <button class="button-order" name="button" type="button"><span>Đặt hàng </span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="img-product"><img src="../../src/img/product-selling-3.png" alt=""></div>
+                            <div class="info-product">
+                                <div class="name-product">Men vi sinh Ecoflush thông tắt bể phốt - Túi tự hủy - Hộp 6 gói</div>
+                                <div class="price-product">245,000 đ</div>
+                                <div class="btn-order">
+                                    <button class="button-order" name="button" type="button"><span>Đặt hàng </span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="body-content-list-1">
+                <div class="body-content-list-1-content">
+                    <div class="body-content-list-1-content-describe">
+                        <div class="name-describe">Vi sinh ủ phân compost</div>
+                        <div class="long-describe">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</div><a href="#">Xem thêm</a>
+                    </div>
+                    <div class="list-product">
+                        <div class="product-item">
+                            <div class="img-product"><img src="../../src/img/product-selling-1.png" alt=""></div>
+                            <div class="info-product">
+                                <div class="name-product">Men vi sinh Ecolean Septic - thông tắt bồn cầu, giảm mùi WC</div>
+                                <div class="price-product">245,000 đ</div>
+                                <div class="btn-order">
+                                    <button class="button-order" name="button" type="button"><span>Đặt hàng </span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="img-product"><img src="../../src/img/product-selling-2.png" alt=""></div>
+                            <div class="info-product">
+                                <div class="name-product">Men vi sinh ecoflush thông tắc bể phốt - túi tự hủy</div>
+                                <div class="price-product">245,000 đ</div>
+                                <div class="btn-order">
+                                    <button class="button-order" name="button" type="button"><span>Đặt hàng </span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="img-product"><img src="../../src/img/product-selling-3.png" alt=""></div>
+                            <div class="info-product">
+                                <div class="name-product">Men vi sinh Ecoflush thông tắt bể phốt - Túi tự hủy - Hộp 6 gói</div>
+                                <div class="price-product">245,000 đ</div>
+                                <div class="btn-order">
+                                    <button class="button-order" name="button" type="button"><span>Đặt hàng </span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- FOOTER PAGE-->
+            <footer class="footer">
+                <div class="footer-content"> 
+                    <div class="footer-content-list">
+                        <div class="footer-content-list-info">
+                            <div class="logo-footer"><a class="bg-image" href="#"><img src="../../../src/img/ecolearn-logo-footer.png" alt=""/></a></div>
+                            <div class="infor-footer">
+                                <div class="mobile-info-footer">
+                                    <div class="icon-mobile"><i class="fa fa-mobile"></i></div>
+                                    <div class="number-mobile">+84 3555 01613</div>
+                                </div>
+                                <div class="email-info-footer">
+                                    <div class="icon-email"><i class="fa fa-envelope-o"></i></div>
+                                    <div class="name-email">hiukhoa@gmail.com</div>
+                                </div>
+                                <div class="address-info-footer">
+                                    <div class="icon-address"><i class="fa fa-map-marker"></i></div>
+                                    <div class="name-address">Lý Chính Thắng, Quận 3</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-content-list-menu">
+                            <div class="link">Liên kết </div><a href="#"> 
+                                <p class="link-item">Giới thiệu</p></a><a href="#">
+                                <p class="link-item">Blog</p></a><a href="#">
+                                <p class="link-item">Shop </p></a><a href="#">
+                                <p class="link-item">Liên hệ</p></a>
+                        </div>
+                        <div class="footer-content-list-policy">
+                            <div class="support">Hỗ trợ</div><a href="#">
+                                <p class="policy-item">Chính sách giao hàng</p></a><a href="#">
+                                <p class="policy-item">Chính sách bảo mật</p></a><a href="#">
+                                <p class="policy-item">Chính sách đổi trả</p></a><a href="#">
+                                <p class="policy-item">Chính sách bảo hành</p></a>
+                        </div>
+                        <div class="footer-content-list-follow">
+                            <div class="follow-title">Theo dõi chúng tôi</div>
+                            <div class="list-icon-social">
+                                <div class="icon-intagram"><a href="#"><img src="../../../src/img/icon-intargram.svg" alt=""/></a></div>
+                                <div class="icon-tiktok"><a href="#"><img src="../../../src/img/icon-tiktok.svg" alt=""/></a></div>
+                                <div class="icon-facebook"><a href="#"><img src="../../../src/img/icon-facebook.svg" alt=""/></a></div>
+                                <div class="icon-youtube"><a href="#"><img src="../../../src/img/icon-youtube.svg" alt=""/></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-content-bottom"> 
+                        <div class="copyright">Copyright 2022 ECOCLEAN VIETNAM. </div>
+                        <div class="site-by">Site by Uway Technology</div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script>window.jQuery || document.write('<script src="src/js/jquery.js"><\/script>')</script>
+        <script src="src/js/plugins.min.js"></script>
+        <script data-src="https://maps.google.com/maps/api/js?libraries=places&amp;key=AIzaSyApEpQ5tDwzlRfH1vuo4351Bwdar8OzyUI" id="google-map"></script>
+        <script src="src/js/pages/slider_v2.js"></script>
+        <script src="src/js/main.js"></script>
+        <script src="src/js/initmap.js"></script>
+    </body>
+</html>

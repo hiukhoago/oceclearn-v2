@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- Favicon-->
+        <link rel="shortcut icon" href="upload/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" href="upload/favicon.png">
+        <!-- CSS-->
+        <link rel="stylesheet" href="src/scss/plugins.css">
+        <link rel="stylesheet" href="src/scss/style.css">
+        <!-- Title-->
+        <title>Health Hub - Flourish</title>
+    </head>
+    <body>
+        <script>sessionStorage.getItem("isFirstRun") || document.write('<div id="preloader"><div class="loading"></div></div>')</script>
+        <!-- HEADER PAGE -->
+        <header class="header-page">           <a class="logo" href="index.html"><img src="upload/logo.png" alt=""/></a><a class="btn-menu-sp" href="#" id="btn-menu-sp"><span></span></a><a class="header-btn-cart mobile-show show-cart" href="#"><span>0  </span></a>
+            <div class="wrap-content-mobile">
+                <div class="wrap-inner">
+                    <!--HEADER CONTENT-->
+                    <div class="container-fluid">
+                        <div class="row">                   
+                            <div class="col-6">
+                                <ul class="menu-top">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="about.html">About</a></li>
+                                    <li class="has-sub-menu"> <a href="education.html">Education</a><i class="dropdown-carret"></i>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="education.html">Education</a></li>
+                                            <li><a href="education.html">Education</a></li>
+                                            <li><a href="education.html">Education</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="current-menu-item"><a href="recipes.html">Recipes</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 row-custom">
+                                <ul class="menu-top right">
+                                    <li><a href="blog.html">Blog</a></li>
+                                    <li><a href="products.html">Shop</a></li>
+                                    <li><a href="stockists.html">Stockists</a></li>
+                                    <li class="login"><a href="#" id="login-toggle">Login        </a></li>
+                                    <li class="info-user"><a href="#">Hi, <b>Vencreative</b></a></li>
+                                </ul><a class="header-btn-cart desktop-show show-cart" href="#"><span>0      </span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--SIDEBAR LEFT-->
+                    <section class="sidebar-left">
+                        <ul class="list-social">
+                            <li class="ins"><a href="#" target="_blank">Instagram </a></li>
+                            <li class="fb"><a href="#" target="_blank">Facebook</a></li>
+                        </ul>
+                        <ul class="list-mobile-contact d-lg-none d-block">
+                            <li><a href="tel:1300121248">1300 121 248</a></li>
+                            <li><a href="mailto:hello@flourishln.com.au">hello@flourishln.com.au </a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+            <!--SIDEBAR RIGHT-->
+            <section class="sidebar-right"><i class="icon icon-x"></i></section>
+            <!-- FOOTER PAGE-->
+            <section class="side-bottom">
+                <div class="container-fluid">
+                    <ul class="item-footer">
+                        <li class="d-lg-block d-none">© 2018 Flourish Nutritional Medicine Pty Ltd </li>
+                        <li>Free shipping for orders over $100</li>
+                        <li> <a href="tel:1300121248"><span>1300 121 248</span><i class="icon tel"></i></a><a href="mailto:hello@flourishln.com.au"><span>hello@flourishln.com.au</span><i class="icon mail"> </i></a></li>
+                    </ul>
+                </div>
+            </section>
+        </header>
+        <!-- PANEL-LOGIN-->
+        <div class="panel-login" id="panel-login"><a href="#" title="Close the panel" id="btn-close-login"></a>
+            <div class="scrollbar-macosx">
+                <div class="login-panel-container">
+                    <div id="signup-fields">
+                        <h1 class="title-product text-center">Welcome back !</h1>
+                        <p class="text-center mb-15">Please login to your account</p><a class="btn-white" href="#"><i class="icon fb-square"></i> Sign up with Facebook</a>
+                        <div class="white-textline"></div>
+                        <form class="woocommerce-form woocommerce-form-login" action="">                       
+                            <div class="form-text-input">
+                                <label for="">Email</label>
+                                <input type="text"/>
+                            </div>
+                            <div class="form-text-input">
+                                <label for="">Password</label>
+                                <input type="password"/>
+                            </div>
+                            <div class="lost-pw text-center"><a class="text-futura" href="#">Forgot your password?       </a></div>
+                            <input type="submit" value="LOG IN"/>
+                            <div class="text-center footer-login">
+                                <p>Don't have an account? <strong><a href="javascript:;" id="sign-up-show">Sign up here</a></strong></p>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="login-fields">
+                        <h1 class="title-product text-center">Hello there !</h1>
+                        <p class="text-center mb-15">Fill in your details to create an account</p><a class="btn-white" href="#"><i class="icon fb-square"></i> Sign up with Facebook</a>
+                        <div class="white-textline"></div>
+                        <form class="woocommerce-form woocommerce-form-login" action="">                       
+                            <div class="form-text-input">
+                                <label for="">Email</label>
+                                <input type="text"/>
+                            </div>
+                            <div class="form-text-input form-half">
+                                <label for="">Password</label>
+                                <input type="password"/>
+                            </div>
+                            <div class="form-text-input form-half">
+                                <label for="">Confirm Password</label>
+                                <input type="password"/>
+                            </div>
+                            <input type="submit" value="SIGN UP"/>
+                            <div class="text-center footer-login">
+                                <p>Already have an account? <strong><a href="javascript:;" id="login-show">Sign in here</a></strong></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bag-hover">
+            <div class="ul-cart fixed">
+                <div class="name">Product</div>
+                <div class="quanity gray">Quantity</div>
+                <div class="price">Price</div>
+                <div class="delete"><a class="btn-close-cart" href="#"><i class="icon close"></i></a></div>
+            </div>
+            <ul class="header-cart-list scrollbar-macosx">
+                <li>
+                    <div class="wrap-infor-image-title">
+                        <div class="header-cart-img">
+                            <div class="img-drop ratio-11"><img src="upload/img-home-prod-1.png" alt=""></div>
+                        </div>
+                        <div class="header-cart-info">
+                            <h5>Turmeric blend</h5>
+                        </div>
+                    </div>
+                    <div class="header-cart-quanity item-qty">
+                        <div class="qty-holder">
+                            <input type="number" value="1"><i class="square-minus"></i><i class="square-plus"></i>
+                        </div>
+                    </div>
+                    <div class="header-cart-price">$220.0</div>
+                    <div class="delete-header-cart"></div>
+                </li>
+                <li>
+                    <div class="wrap-infor-image-title">
+                        <div class="header-cart-img">
+                            <div class="img-drop ratio-11"><img src="upload/img-home-prod-1.png" alt=""></div>
+                        </div>
+                        <div class="header-cart-info">
+                            <h5>Turmeric blend</h5>
+                        </div>
+                    </div>
+                    <div class="header-cart-quanity item-qty">
+                        <div class="qty-holder">
+                            <input type="number" value="1"><i class="square-minus"></i><i class="square-plus"></i>
+                        </div>
+                    </div>
+                    <div class="header-cart-price">$220.0</div>
+                    <div class="delete-header-cart"></div>
+                </li>
+                <li>
+                    <div class="wrap-infor-image-title">
+                        <div class="header-cart-img">
+                            <div class="img-drop ratio-11"><img src="upload/img-home-prod-1.png" alt=""></div>
+                        </div>
+                        <div class="header-cart-info">
+                            <h5>Turmeric blend</h5>
+                        </div>
+                    </div>
+                    <div class="header-cart-quanity item-qty">
+                        <div class="qty-holder">
+                            <input type="number" value="1"><i class="square-minus"></i><i class="square-plus"></i>
+                        </div>
+                    </div>
+                    <div class="header-cart-price">$220.0</div>
+                    <div class="delete-header-cart"></div>
+                </li>
+                <li>
+                    <div class="wrap-infor-image-title">
+                        <div class="header-cart-img">
+                            <div class="img-drop ratio-11"><img src="upload/img-home-prod-1.png" alt=""></div>
+                        </div>
+                        <div class="header-cart-info">
+                            <h5>Turmeric blend</h5>
+                        </div>
+                    </div>
+                    <div class="header-cart-quanity item-qty">
+                        <div class="qty-holder">
+                            <input type="number" value="1"><i class="square-minus"></i><i class="square-plus"></i>
+                        </div>
+                    </div>
+                    <div class="header-cart-price">$220.0</div>
+                    <div class="delete-header-cart"></div>
+                </li>
+                <li>
+                    <div class="wrap-infor-image-title">
+                        <div class="header-cart-img">
+                            <div class="img-drop ratio-11"><img src="upload/img-home-prod-1.png" alt=""></div>
+                        </div>
+                        <div class="header-cart-info">
+                            <h5>Turmeric blend</h5>
+                        </div>
+                    </div>
+                    <div class="header-cart-quanity item-qty">
+                        <div class="qty-holder">
+                            <input type="number" value="1"><i class="square-minus"></i><i class="square-plus"></i>
+                        </div>
+                    </div>
+                    <div class="header-cart-price">$220.0</div>
+                    <div class="delete-header-cart"></div>
+                </li>
+                <li>
+                    <div class="wrap-infor-image-title">
+                        <div class="header-cart-img">
+                            <div class="img-drop ratio-11"><img src="upload/img-home-prod-1.png" alt=""></div>
+                        </div>
+                        <div class="header-cart-info">
+                            <h5>Turmeric blend</h5>
+                        </div>
+                    </div>
+                    <div class="header-cart-quanity item-qty">
+                        <div class="qty-holder">
+                            <input type="number" value="1"><i class="square-minus"></i><i class="square-plus"></i>
+                        </div>
+                    </div>
+                    <div class="header-cart-price">$220.0</div>
+                    <div class="delete-header-cart"></div>
+                </li>
+                <li>
+                    <div class="wrap-infor-image-title">
+                        <div class="header-cart-img">
+                            <div class="img-drop ratio-11"><img src="upload/img-home-prod-1.png" alt=""></div>
+                        </div>
+                        <div class="header-cart-info">
+                            <h5>Turmeric blend</h5>
+                        </div>
+                    </div>
+                    <div class="header-cart-quanity item-qty">
+                        <div class="qty-holder">
+                            <input type="number" value="1"><i class="square-minus"></i><i class="square-plus"></i>
+                        </div>
+                    </div>
+                    <div class="header-cart-price">$220.0</div>
+                    <div class="delete-header-cart"></div>
+                </li>
+                <li>
+                    <div class="wrap-infor-image-title">
+                        <div class="header-cart-img">
+                            <div class="img-drop ratio-11"><img src="upload/img-home-prod-1.png" alt=""></div>
+                        </div>
+                        <div class="header-cart-info">
+                            <h5>Turmeric blend</h5>
+                        </div>
+                    </div>
+                    <div class="header-cart-quanity item-qty">
+                        <div class="qty-holder">
+                            <input type="number" value="1"><i class="square-minus"></i><i class="square-plus"></i>
+                        </div>
+                    </div>
+                    <div class="header-cart-price">$220.0</div>
+                    <div class="delete-header-cart"></div>
+                </li>
+            </ul>
+            <div class="wrap-cart-panel-bottom">
+                <div class="row">
+                    <div class="coupon">
+                        <input type="text" placeholder="Coupon Code">
+                        <button type="submit">APPLY</button>
+                    </div>
+                    <div class="header-cart-buttons header-total">
+                        <div>Total</div>
+                        <div>$820</div>
+                    </div>
+                    <div class="row-cart-buttons"> <a class="header-cart-buttons header-viewbag" href="checkout.html">View bag</a><a class="header-cart-buttons header-checkout" href="checkout.html">check out</a></div>
+                </div>
+            </div>
+        </div>
+        <!-- WRAP PAGE-->
+        <div id="wrap-page">
+            <!-- HEALTH HUB: BANNER-->
+            <section class="banner-product spacing-around spacing-header">
+                <div class="text-cover">
+                    <h1 class="title-page">Health Hub</h1>
+                    <p class="des-page">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+                </div>
+                <div class="img-drop lazyload" data-src="upload/banner-health-hub.jpg"></div>
+            </section>
+            <!-- HEALTH HUB VIDEO POP UP-->
+            <div class="popup-video">
+                <div class="close-btn health"><span></span></div>
+                <div class="img-drop video-holder">
+                    <div id="vimeo-player" data-vimeo-url="https://vimeo.com/67629521" data-vimeo-autoplay="true" data-vimeo-muted="true"></div>
+                    <div id="mute-video"><i class="fa fa-volume-off"></i></div>
+                </div>
+            </div>
+            <!-- HEALTH HUB-->
+            <section class="health-hub bg-skin spacing-around">
+                <div class="container spacing-section spacing-end">
+                    <div class="wrap-title-health">
+                        <div class="btn-play-popup order-md-2">play introduction<i class="fa fa-play"></i></div>
+                        <h5 class="sub-cate text-green order-md-1">Health Programs                </h5>
+                    </div>
+                    <h1 class="title-product mb-15">The Cleanse</h1>
+                    <div class="mb-30 not-reset-p">
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
+                        <div class="wrap-btn-health">
+                            <ul class="product-tag-list">
+                                <li data-toggle="tooltip" data-html="true" data-placement="bottom" data-original-title="No alcohol is to be consumed during stage 1 of your cleanse and preferably not for the entire 21 days.">No Alcohol</li>
+                                <li data-toggle="tooltip" data-html="true" data-placement="bottom" data-original-title="No alcohol is to be consumed during stage 1 of your cleanse and preferably not for the entire 21 days.">No Free Fats</li>
+                                <li data-toggle="tooltip" data-html="true" data-placement="bottom" data-original-title="No alcohol is to be consumed during stage 1 of your cleanse and preferably not for the entire 21 days.">No Dairy</li>
+                                <li data-toggle="tooltip" data-html="true" data-placement="bottom" data-original-title="No alcohol is to be consumed during stage 1 of your cleanse and preferably not for the entire 21 days.">No Animal Products</li>
+                                <li data-toggle="tooltip" data-html="true" data-placement="bottom" data-original-title="No alcohol is to be consumed during stage 1 of your cleanse and preferably not for the entire 21 days.">Yes Herbal Teas</li>
+                                <li data-toggle="tooltip" data-html="true" data-placement="bottom" data-original-title="No alcohol is to be consumed during stage 1 of your cleanse and preferably not for the entire 21 days.">Yes Black Coffee</li>
+                            </ul><a class="btn-common green-border no-hover" href="#">
+                                <div class="pos">BUY THE FULL CLEANSE</div></a>
+                        </div>
+                    </div>
+                    <div class="row row-health-hub">
+                        <div class="col-md-4">
+                            <div class="item-health">
+                                <div class="img-drop"><img src="upload/recipes-5.jpg" alt=""></div>
+                                <div class="wrapper-text">
+                                    <p>Rest - Days 1 - 7</p>
+                                </div>
+                            </div>
+                            <div class="text-center"><a class="btn-detail" href="#" data-toggle="modal-edit" data-url="modal-health-hub-popup.html">See details</a></div><a class="btn-common gray full-width disabled no-hover" href="#">
+                                <div class="pos">$19.95 - ADD TO CART</div></a>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="item-health">
+                                <div class="img-drop disabled"><img src="upload/recipes-2.jpg" alt=""></div>
+                                <div class="wrapper-text">
+                                    <p>Reseed - Days 8 - 14</p>
+                                    <div class="icon locker"></div>
+                                </div>
+                            </div>
+                            <div class="text-center"><a class="btn-detail" href="#" data-toggle="modal-edit" data-url="modal-health-hub-popup.html">See details</a></div><a class="btn-common gray full-width no-hover" href="#">
+                                <div class="pos"> <span>$19.95 - ADD TO CART</span></div></a>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="item-health">
+                                <div class="img-drop disabled"><img src="upload/recipes-1.jpg" alt=""></div>
+                                <div class="wrapper-text">
+                                    <p>Reintroduce - Days 15 - 21</p>
+                                    <div class="icon locker"></div>
+                                </div>
+                            </div>
+                            <div class="text-center"><a class="btn-detail" href="#" data-toggle="modal-edit" data-url="modal-health-hub-popup.html">See details</a></div><a class="btn-common gray full-width no-hover" href="#">
+                                <div class="pos">$19.95 - ADD TO CART</div></a>
+                        </div>
+                    </div>
+                    <div class="bottom-health-hub pb-50">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-5">
+                                <p>Add Reseed - Days 8-14 for <b>$17</b> </p>
+                                <p>or Buy all for <b>$47</b></p>
+                            </div>
+                            <div class="col-lg-8 col-md-7 text-md-right text-center"><a class="btn-common green-border no-hover" href="#">
+                                    <div class="pos">$17 - DAYS 8-14</div></a><a class="btn-common green-border no-hover" href="#">
+                                    <div class="pos">$47 - BUY ALL</div></a></div>
+                        </div>
+                    </div>
+                    <div class="banner-promotion-health-hub"><img src="upload/banner-promotion-health-hub.jpg" alt=""></div>
+                </div>
+                <div class="modal fade" id="health-hub-modal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <button class="close" data-dismiss="modal"><span>&times;</span></button>
+                            <div class="modal-body">
+                                <div class="iframe_div no-height"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- FOOTER PAGE-->
+            <footer class="footer-page">
+                <div class="container">
+                    <div class="form-subcribe">
+                        <h3>Subscribe to our Newsletter</h3>
+                        <div class="wrap-form"> 
+                            <form action="">
+                                <ul>
+                                    <li>
+                                        <input type="text" placeholder="Your email address"/>
+                                    </li>
+                                </ul>
+                                <div class="gform_footer">
+                                    <input type="submit" value="SUBMIT"/>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-6">
+                            <ul class="list-menu-footer">
+                                <li><a href="#">Home Page</a></li>
+                                <li><a href="#">Shop</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Education</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-6">
+                            <ul class="list-menu-footer">
+                                <li><a href="#">Stockists</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">My account</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-6">
+                            <ul class="list-menu-footer">
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Delivery, Refund and Returns</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="img-animation">
+                        <div class="item">  <img src="upload/img-footer-1.png" alt=""/></div>
+                        <div class="item">  <img src="upload/img-footer-2.png" alt=""/></div>
+                        <div class="item">  <img src="upload/img-footer-3.png" alt=""/></div>
+                    </div>
+                    <div class="copyright"><span>© 2022 EcoClean</span> Website by <strong><a href="https://uway.asia" target="_blank">Uway Technology</a></strong></div>
+                </div>
+            </footer>
+        </div>
+        <script>window.jQuery || document.write('<script src="src/js/jquery.js"><\/script>')</script>
+        <script src="src/js/plugins.min.js"></script>
+        <script data-src="https://maps.google.com/maps/api/js?libraries=places&amp;key=AIzaSyApEpQ5tDwzlRfH1vuo4351Bwdar8OzyUI" id="google-map"></script>
+        <script src="src/js/main.js"></script>
+        <script src="src/js/pages/slider_v2.js"></script>
+        <script src="src/js/initmap.js"></script>
+    </body>
+</html>

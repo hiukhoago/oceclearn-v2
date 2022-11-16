@@ -1,0 +1,84 @@
+include include/template
+
++template("Health Hub","recipes")
+
+    // HEALTH HUB: BANNER
+    section.banner-product.spacing-around.spacing-header
+        .text-cover
+            h1.title-page Health Hub
+            p.des-page Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+        .img-drop.lazyload(data-src="upload/banner-health-hub.jpg")
+
+    // HEALTH HUB VIDEO POP UP
+    .popup-video
+        .close-btn.health: span
+        .img-drop.video-holder
+            #vimeo-player(data-vimeo-url="https://vimeo.com/67629521" data-vimeo-autoplay="true" data-vimeo-muted="true")
+            #mute-video: i.fa.fa-volume-off
+
+    // HEALTH HUB
+    section.health-hub.bg-skin.spacing-around
+        .container.spacing-section.spacing-end
+            .wrap-title-health
+                .btn-play-popup.order-md-2 play introduction
+                    i.fa.fa-play
+                h5.sub-cate.text-green.order-md-1 Health Programs                
+            h1.title-product.mb-15 The Cleanse
+            .mb-30.not-reset-p
+                p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+                .wrap-btn-health
+                    ul.product-tag-list
+                        li(data-toggle="tooltip" data-html="true" data-placement="bottom" data-original-title="No alcohol is to be consumed during stage 1 of your cleanse and preferably not for the entire 21 days.") No Alcohol
+                        li(data-toggle="tooltip" data-html="true" data-placement="bottom" data-original-title="No alcohol is to be consumed during stage 1 of your cleanse and preferably not for the entire 21 days.") No Free Fats
+                        li(data-toggle="tooltip" data-html="true" data-placement="bottom" data-original-title="No alcohol is to be consumed during stage 1 of your cleanse and preferably not for the entire 21 days.") No Dairy
+                        li(data-toggle="tooltip" data-html="true" data-placement="bottom" data-original-title="No alcohol is to be consumed during stage 1 of your cleanse and preferably not for the entire 21 days.") No Animal Products
+                        li(data-toggle="tooltip" data-html="true" data-placement="bottom" data-original-title="No alcohol is to be consumed during stage 1 of your cleanse and preferably not for the entire 21 days.") Yes Herbal Teas
+                        li(data-toggle="tooltip" data-html="true" data-placement="bottom" data-original-title="No alcohol is to be consumed during stage 1 of your cleanse and preferably not for the entire 21 days.") Yes Black Coffee
+                    a(href="#").btn-common.green-border.no-hover: .pos BUY THE FULL CLEANSE
+            .row.row-health-hub
+                .col-md-4
+                    .item-health
+                        .img-drop
+                            img(src="upload/recipes-5.jpg", alt="")
+                        .wrapper-text
+                            p Rest - Days 1 - 7
+                    .text-center: a(href="#" data-toggle="modal-edit", data-url="modal-health-hub-popup.html").btn-detail See details
+                    a(href="#").btn-common.gray.full-width.disabled.no-hover: .pos $19.95 - ADD TO CART
+                .col-md-4
+                    .item-health
+                        .img-drop.disabled
+                            img(src="upload/recipes-2.jpg", alt="")
+                        .wrapper-text
+                            p Reseed - Days 8 - 14
+                            .icon.locker
+                    .text-center: a(href="#" data-toggle="modal-edit", data-url="modal-health-hub-popup.html").btn-detail See details
+                    a(href="#").btn-common.gray.full-width.no-hover: .pos 
+                        span $19.95 - ADD TO CART
+                .col-md-4
+                    .item-health
+                        .img-drop.disabled
+                            img(src="upload/recipes-1.jpg", alt="")
+                        .wrapper-text
+                            p Reintroduce - Days 15 - 21
+                            .icon.locker
+                    .text-center: a(href="#" data-toggle="modal-edit", data-url="modal-health-hub-popup.html").btn-detail See details
+                    a(href="#").btn-common.gray.full-width.no-hover: .pos $19.95 - ADD TO CART
+            .bottom-health-hub.pb-50
+                .row
+                    .col-lg-4.col-md-5
+                        p Add Reseed - Days 8-14 for #[b $17] 
+                        p or Buy all for #[b $47]
+                    .col-lg-8.col-md-7.text-md-right.text-center
+                        a(href="#").btn-common.green-border.no-hover: .pos $17 - DAYS 8-14
+                        a(href="#").btn-common.green-border.no-hover: .pos $47 - BUY ALL
+
+            .banner-promotion-health-hub
+                img(src="upload/banner-promotion-health-hub.jpg", alt="")
+
+        #health-hub-modal.modal.fade
+            .modal-dialog
+                .modal-content
+                    button.close(data-dismiss="modal"): span &times;
+                    .modal-body: .iframe_div.no-height
+
+

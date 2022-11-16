@@ -1,0 +1,777 @@
+// CODE HERE
+body {
+    font: 400 16px / normal $font-Av;
+    color: #000;
+    background-color: $gray-light;
+    @include big-desktop {
+        font-size: 16 * $rem;
+    }
+    @include print {
+        background-color: #ffffff !important;
+    }
+    .menu-top.right {
+        .login {
+            display: block;
+        }
+        .info-user {
+            display: none;
+        }
+    }
+    &.logged {
+        .menu-top.right {
+            .login {
+                display: none;
+            }
+            .info-user {
+                display: block;
+                a {
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+    &.admin-bar {
+        header.header-page {
+            @include mobile-up {
+                top: 32px;
+            }
+        }
+        .banner-home {
+            @include tablet-up {
+                min-height: calc(100vh - 32px);
+            }
+        }
+        // .scrollpage {
+        //     @include tablet-up {
+        //         padding-top: 60 + 32px;
+        //     }
+        // } // #wrap-page {
+        //     margin-top: 32px;
+        // }
+        // .c-frame__content {
+        //     margin-top: 32px;
+        // }
+        // .container-fluid {
+        //     padding-right: 0;
+        //     padding-left: 0;
+        //     .row {
+        //         @include space-col(0);
+        //         .img-banner {
+        //             padding-top: 100%;
+        //             @include mobile-up {
+        //                 min-height: calc(75vh - 152px);
+        //                 margin-bottom: 0;
+        //             }
+        //             @include tablet-up {
+        //                 padding-top: calc(100vh - 152px);
+        //             }
+        //             @include big-desktop {
+        //                 padding-top: calc(100vh - 6vw);
+        //             }
+        //         }
+        //     }
+        // }
+    }
+}
+.container {
+    @include big-desktop {
+        max-width: 60%;
+    }
+    &.normal {
+        @include tablet-up {
+            max-width: 1350px;
+        }
+    }
+}
+.checkout-page {
+    .btn-cart {
+        display: none;
+    }
+    .icon-x {
+        display: block !important;
+    }
+    .footer-page {
+        display: none;
+    }
+}
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+a {
+    color: #000;
+    transition: all 0.5s ease;
+    &:hover {
+        text-decoration: none;
+        color: #000;
+    }
+}
+.icon {
+    display: inline-block;
+    &.spinner {
+        width: 70px;
+        height: 70px;
+        background: url(../img/loading.svg) center / contain no-repeat;
+    }
+    &.person {
+        width: 15px;
+        height: 15px;
+        background: url(../img/person-icon.png) center / contain no-repeat;
+    }
+    &.tel {
+        width: 22px;
+        height: 22px;
+        background: url(../img/icon-phone.svg) no-repeat center / auto 100%;
+    }
+    &.fb-square {
+        width: 25px;
+        height: 25px;
+        background: url(../img/icon-fb-square.svg) no-repeat center / auto 100%;
+    }
+    &.mail {
+        width: 22px;
+        height: 22px;
+        background: url(../img/icon-mail.svg) no-repeat center / auto 100%;
+    }
+    &.pdf-icon {
+        width: 18px;
+        height: 23px;
+        background: url(../img/pdf.svg) no-repeat center / auto 100%;
+    }
+    &.icon-x {
+        width: 42px;
+        height: 42px;
+        background: url(../img/icon-x.svg) no-repeat center / auto 100%;
+    }
+    &.arrow-down {
+        width: 24px;
+        height: 13px;
+        background: url(../img/arrow-down.svg) center center/ auto 100% no-repeat;
+    }
+    &.loading {
+        width: 24px;
+        height: 24px;
+        background: url(../img/loading.svg) center center/ auto 42px no-repeat;
+    }
+    &.close {
+        width: 13px;
+        height: 13px;
+        background: url(../img/icon-close.svg) center center/ auto 100% no-repeat;
+    }
+    &.locker {
+        width: 40px;
+        height: 47px;
+        background: url(../img/icon-locker.svg) center center/ auto 100% no-repeat;
+    }
+    &.icon-face {
+        background: $icon_face center center/ contain no-repeat;
+    }
+    &.icon-phone {
+        background: $icon_phone center center/ contain no-repeat;
+    }
+    &.icon-skype {
+        background: $icon_skype center center/ contain no-repeat;
+    }
+    &.edit-icon {
+        width: 20px;
+        height: 20px;
+        background: $edit_icon center center/contain no-repeat;
+    }
+}
+.scrollpage {
+    @include tablet-up {
+        padding-top: 60px;
+    }
+    @include big-desktop {
+        padding-top: 60 * $rem;
+    }
+}
+.section-scroll {
+    min-height: 600px;
+    @include tablet-up {
+        padding-right: 60px;
+        padding-left: 60px;
+    }
+    @include big-desktop {
+        min-height: 30vw;
+        padding-right: 60 * $rem;
+        padding-left: 60 * $rem;
+    }
+    &.scroll-effect {
+        @include tablet-up {
+            height: 660px;
+        }
+        @include big-desktop {
+            height: 30vw;
+        }
+    }
+}
+.row-center {
+    @include mobile-up {
+        position: relative;
+        display: flex;
+        align-items: center;
+        .row {
+            align-items: center;
+        }
+    }
+}
+.wrap-text-4-item,
+.wrap-product-information {
+    position: relative;
+    z-index: 1;
+    .text-green {
+        color: $green;
+        font-family: $font-Cir;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+        @include big-desktop {
+            font-size: 14 * $rem;
+        }
+    }
+    @at-root .title-medium {
+        font-family: $font-Cir;
+        font-size: 34px;
+        font-weight: 700;
+        text-transform: capitalize;
+        color: #000;
+        @include tablet-up {
+            font-size: 35px;
+        }
+        @include big-desktop {
+            font-size: 42 * $rem;
+        }
+        @include small-mobile {
+            font-size: 28px;
+        }
+    }
+    .title-small {
+        font-family: $font-Cir;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: -0.195652px;
+        color: #9B9B9B;
+        margin-top: 10px;
+        @include big-desktop {
+            font-size: 16 * $rem;
+        }
+    }
+    .desc {
+        max-width: 420px;
+        line-height: 24 / 14 * 1em;
+        @include big-desktop {
+            margin-top: 20 * $rem;
+            max-width: 420 * $rem;
+            margin-bottom: 15 * $rem;
+        }
+    }
+    .learn-more {
+        font-family: $font-Cir;
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        display: inline-block;
+        position: relative;
+        @include tablet-down {
+            margin-bottom: 20px;
+        }
+        @include big-desktop {
+            font-size: 14 * $rem;
+            margin-bottom: 40 * $rem;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: $green;
+        }
+    }
+}
+.btn-common,
+.jssocials-share {
+    display: block;
+    max-width: 250px;
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: $font-Cir;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+    @include big-desktop {
+        max-width: 220 * $rem;
+        font-size: 14 * $rem;
+    }
+    &.big-btn {
+        min-width: 200px;
+        max-width: 100%;
+    }
+    &.disabled {
+        opacity: .5;
+        pointer-events: none;
+    }
+    &.large {
+        @include max-width-center(355px);
+    }
+    &.trans {
+        .pos {
+            background-color: $gray-light;
+        }
+    }
+    &.gray {
+        .pos {
+            background-color: $gray-medium;
+        }
+    }
+    &.green-border {
+        max-width: 270px;
+        display: inline-block;
+        width: 100%;
+        @include desktop-up {
+            max-width: 300px;
+        }
+        .pos {
+            background-color: $green;
+            @include print {
+                background-color: #ffffff !important;
+            }
+        }
+    }
+    &.no-hover {
+        .pos>span {
+            width: auto;
+        }
+    }
+    &.green {
+        .pos {
+            background-color: $green;
+            @include print {
+                background-color: #ffffff !important;
+            }
+        }
+    }
+    .pos,
+    .jssocials-share-link {
+        position: relative;
+        z-index: 1;
+        padding: 20px 0;
+        border: 1px solid #000;
+        @include big-desktop {
+            padding: 20 * $rem 0;
+        }
+    }
+    .pos>span {
+        height: 14px;
+        width: auto;
+        overflow: hidden;
+        display: inline-flex;
+        justify-content: flex-end;
+        transition: all 0.5s ease;
+        @include big-desktop {
+            height: 14 * $rem;
+        }
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -6px;
+        right: -6px;
+        width: 100%;
+        height: 100%;
+        border-right: 2px solid $green;
+        border-bottom: 2px solid $green;
+        transition: all 0.5s ease;
+        z-index: -1;
+        @include big-desktop {
+            bottom: -6 * $rem;
+            right: -6 * $rem;
+            border-width: 2 * $rem;
+        }
+    }
+    &:hover {
+        @include big-desktop {
+            span {
+                height: 14 * $rem;
+            }
+        }
+        &:after {
+            background-color: $green;
+        }
+    }
+    &.full-width {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+.btn-black {
+    @include reset-input;
+    position: relative;
+    vertical-align: top;
+    display: inline-flex;
+    height: 60px;
+    min-width: 290px;
+    color: #fff;
+    background: #000;
+    font: 400 16px/1.2em $font-Cir;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 5px 12px;
+    cursor: pointer;
+    outline: 0 !important;
+    i {
+        margin-right: 18px;
+    }
+    &:hover {
+        color: #fff;
+        opacity: .8;
+    }
+    &.full-width {
+        width: 100%;
+        min-width: auto;
+    }
+    @include small-mobile {
+        height: 50px;
+        min-width: 220px;
+        font-size: 14px;
+    }
+}
+.btn-white {
+    height: 50px;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    background: #fff;
+    color: #000;
+    font-family: $font-Cir;
+    font-weight: 600;
+    border: 1px solid #000;
+    margin-bottom: 20px;
+    i {
+        margin-right: 25px;
+    }
+}
+.btn-transparent {
+    @include reset-input;
+    vertical-align: top;
+    display: inline-flex;
+    height: 60px;
+    min-width: 290px;
+    color: #000;
+    background: transparent;
+    border: 1px solid #000;
+    font: 400 16px/1.2em $font-Cir;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 5px 12px;
+    cursor: pointer;
+    i {
+        margin-right: 18px;
+    }
+    &:hover {
+        opacity: .8;
+    }
+    &.full-width {
+        width: 100%;
+        min-width: auto;
+    }
+    @include small-mobile {
+        height: 50px;
+        min-width: 220px;
+        font-size: 14px;
+    }
+}
+.backdrop-core {
+    &.for-panel-menu {
+        background: rgba(#E8E6DE, .85);
+        cursor: not-allowed;
+        z-index: 7;
+    }
+}
+/*
+    ================ COLOR =============
+*/
+.bg-skin {
+    background: $gray-medium;
+}
+.bg-green {
+    background: $green;
+}
+.bg-gray {
+    background: $border;
+}
+.text-green {
+    color: $green;
+}
+/*
+    ================ SPACING =============
+*/
+.spacing-header {
+    // cách khoảng trống header
+    margin-top: 60px;
+    @include big-desktop {
+        margin-top: 60 * $rem;
+    }
+    @include print {
+        margin-top: 0 !important;
+    }
+}
+.spacing-footer {
+    // cách khoảng trống footer
+    margin-bottom: 60px;
+    @include big-desktop {
+        margin-bottom: 60 * $rem;
+    }
+}
+.spacing-around {
+    // cách khoảng trống 2 bên
+    @include tablet-up {
+        padding-right: 60px;
+        padding-left: 60px;
+    }
+    @include big-desktop {
+        padding-right: 60 * $rem;
+        padding-left: 60 * $rem;
+    }
+    @include print {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+}
+.spacing-section {
+    padding-top: 60px;
+    @include tablet-up {
+        padding-top: 110px;
+    }
+    @include print {
+        padding-top: 50px !important;
+    }
+}
+.spacing-section-medium {
+    padding-top: 60px;
+    @include tablet-up {
+        padding-top: 80px;
+    }
+}
+.spacing-end {
+    padding-bottom: 60px;
+    @include tablet-up {
+        padding-bottom: 110px;
+    }
+    @include print {
+        padding-bottom: 50px !important;
+    }
+}
+.spacing-checkout {
+    padding-bottom: 100px;
+    @include tablet-up {
+        padding-bottom: 150px;
+    }
+}
+.col-gap-medium {
+    @include tablet-up {
+        @include space-col(60px);
+    }
+}
+.fw-500 {
+    font-weight: 500;
+}
+.fw-600 {
+    font-weight: 600;
+}
+.mh-100vh {
+    min-height: 100vh;
+}
+/*
+    ================ LAYOUT =============
+*/
+.title-page {
+    font: 700 34px / normal $font-Cir;
+    margin-bottom: 20px;
+    @include tablet-up {
+        font: 700 42px / normal $font-Cir;
+    }
+    @include big-desktop {
+        font-size: 42 * $rem;
+    }
+    @include small-mobile {
+        font-size: 28px;
+    }
+}
+.title-section {
+    font: 700 28px / normal $font-Cir;
+    line-height: 45/34*1em;
+    @include tablet-up {
+        font-size: 34px;
+    }
+    @include big-desktop {
+        font-size: 34 * $rem;
+    }
+}
+.title-product {
+    font: 700 42px/1.2em $font-Cir;
+    letter-spacing: -.52px;
+    color: #000;
+    margin-bottom: .5em;
+    @include tablet-down {
+        font-size: 36px;
+    }
+    @include small-mobile {
+        font-size: 28px;
+    }
+    &.mb-15 {
+        margin-bottom: 15px !important;
+    }
+    &.for-checkout {
+        position: relative;
+        @include small-mobile {
+            padding-bottom: 50px;
+        }
+    }
+}
+.title-featured {
+    font: 700 26px / normal $font-Cir;
+    margin-bottom: 20px;
+    @include tablet-up {
+        font: 700 32px / normal $font-Cir;
+    }
+    @include big-desktop {
+        font-size: 32 * $rem;
+    }
+}
+.medium-title {
+    font: 700 32px / 1.25em $font-Cir;
+    margin-bottom: 35px;
+    @include tablet-down {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+}
+.des-page,
+.des-intro {
+    line-height: 28/18*1em;
+    @include tablet-up {
+        font-size: 18px;
+    }
+    @include big-desktop {
+        font-size: 18 * $rem;
+    }
+}
+.sub-cate {
+    font: 700 14px / normal $font-Cir;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+/*
+    ================ SPACING =============
+*/
+.pb-150 {
+    padding-bottom: 75px;
+    @include tablet-up {
+        padding-bottom: 150px;
+    }
+    @include print {
+        padding-bottom: 50px !important;
+    }
+}
+.pb-100 {
+    padding-bottom: 50px;
+    @include tablet-up {
+        padding-bottom: 100px;
+    }
+    @include print {
+        padding-bottom: 50px !important;
+    }
+}
+.pb-80 {
+    padding-bottom: 80px;
+    @include tablet-down {
+        padding-bottom: 50px;
+    }
+}
+.mb-80 {
+    margin-bottom: 80px;
+    @include tablet-down {
+        margin-bottom: 50px;
+    }
+}
+.mb-45 {
+    margin-bottom: 45px;
+    @include tablet-down {
+        margin-bottom: 30px;
+    }
+}
+.mb-30 {
+    margin-bottom: 30px;
+}
+.mb-15 {
+    margin-bottom: 15px;
+}
+.mt-auto {
+    margin-top: auto;
+}
+@include print {
+    .wow {
+        visibility: visible !important;
+    }
+}
+.page-default-template {
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 700;
+        font-family: $font-Cir;
+        margin-bottom: 15px;
+        @include mobile-down {
+            font-size: 22px;
+        }
+    }
+    p {
+        margin-bottom: 20px;
+    }
+}
+.not-reset-p {
+    p,
+    ul {
+        margin-bottom: 1rem;
+    }
+}
+.tooltip {
+    .tooltip-inner {
+        background: #313131;
+        color: #fff;
+    }
+}
+.product-display-block {
+    display: flex;
+    .product-wrapblock {
+        display: flex;
+    }
+}

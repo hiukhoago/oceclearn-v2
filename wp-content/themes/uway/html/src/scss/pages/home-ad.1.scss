@@ -1,0 +1,112 @@
+@include tablet-up {
+    .scroll-effect {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 10;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .7s ease;
+        padding-top: 60px;
+        &.opa-transition {
+            &:before {
+                content: '';
+                top: 0;
+                left: 0;
+                position: absolute;
+                z-index: 2;
+                width: 100%;
+                height: 100%;
+                background: #fff;
+                transition: all .7s ease;
+                opacity: 1;
+                visibility: visible;
+            }
+            &.active {
+                &:before {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+        }
+        &.white-layer {
+            .fadeToLeft {
+                transition-delay: 1.5s !important;
+            }
+            &:before {
+                content: '';
+                top: 0;
+                left: 0;
+                position: absolute;
+                z-index: 2;
+                width: 100%;
+                height: 100%;
+                background: #fff;
+                transition: all 1.5s ease-in-out;
+            }
+            &.active {
+                &:before {
+                    width: 0;
+                }
+            }
+        }
+        &.active {
+            opacity: 1;
+            visibility: visible;
+            z-index: 11;
+            .fadeToLeft {
+                transform: translate3d(0, 0, 0);
+                opacity: 1;
+                visibility: visible;
+            }
+            .white-layer-effect {
+                &:before {
+                    width: 0;
+                }
+            }
+        }
+    }
+    .home-effect {
+        #wrap-page {
+            overflow: unset;
+        }
+        .footer-page {
+            display: none;
+        }
+    }
+    #content-5 {
+        .container-fluid {
+            height: 100%;
+            .row {
+                height: 100%;
+            }
+        }
+        .item-health {
+            height: 100%;
+            .img-drop {
+                height: 100%;
+            }
+        }
+    }
+}
+.fadeToLeft {
+    position: relative;
+    transform: translate3d(25px, 0, 0);
+    opacity: 0;
+    visibility: hidden;
+}
+.white-layer-effect {
+    &:before {
+        content: '';
+        top: 0;
+        left: 0;
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        transition: all 1s ease-in-out;
+    }
+}

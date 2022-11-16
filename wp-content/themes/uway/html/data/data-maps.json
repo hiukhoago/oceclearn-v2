@@ -1,0 +1,52 @@
+[
+    {
+        "id": 16,
+        "locname": "FLOURISH",
+        "lat": "-37.8868274",
+        "lng": "145.07988939999996",
+        "address": "Waterman Business Centre, Level 2, 1341 Dandenong Rd, Chadstone VIC 3148",
+        "phone": "1800 904 131",
+        "website": "https://vencreative.com.au/",
+        "image": "upload/stockist-img.png"
+    },
+    {
+        "id": 12,
+        "locname": "FLOURISH",
+        "lat": "-37",
+        "lng": "140",
+        "address": "Waterman Business Centre, Level 2, 1341 Dandenong Rd, Chadstone VIC 3148",
+        "phone": "1800 904 131",
+        "website": "https://vencreative.com.au/",
+        "image": "upload/stockist-img.png"
+    },
+    {
+        "id": 13,
+        "locname": "FLOURISH",
+        "lat": "-37.8868274",
+        "lng": "120",
+        "address": "Waterman Business Centre, Level 2, 1341 Dandenong Rd, Chadstone VIC 3148",
+        "phone": "1800 904 131",
+        "website": "https://vencreative.com.au/",
+        "image": "upload/stockist-img.png"
+    },
+    {
+        "id": 13,
+        "locname": "FLOURISH",
+        "lat": "-37.8868274",
+        "lng": "120",
+        "address": "Waterman Business Centre, Level 2, 1341 Dandenong Rd, Chadstone VIC 3148",
+        "phone": "1800 904 131",
+        "website": "https://vencreative.com.au/",
+        "image": "upload/stockist-img.png"
+    },
+    {
+        "id": 13,
+        "locname": "FLOURISH",
+        "lat": "-37.8868274",
+        "lng": "120",
+        "address": "Waterman Business Centre, Level 2, 1341 Dandenong Rd, Chadstone VIC 3148",
+        "phone": "1800 904 131",
+        "website": "https://vencreative.com.au/",
+        "image": "upload/stockist-img.png"
+    }
+]

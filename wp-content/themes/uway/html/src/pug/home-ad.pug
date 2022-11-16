@@ -1,0 +1,130 @@
+include include/template
+
++template("Homepage","home","home-effect")
+
+    //WRAP CONTENT
+    .c-frame__content
+        // BANNER HOME
+        section.banner-home.spacing-around.scrollpage.scroll-effect.active.opa-transition
+            .container-fluid
+                .row                        
+                    .col-md-6.bg-green.order-md-2.order-1.a-center
+                        .owl-carousel.wrap-owl-carousel
+                            each val in [1,2]
+                                .item-intro
+                                    .wrap-img
+                                        a(href="#" data-img="upload/banner-home-"+val+".jpg").img-drop: img(src="upload/img-home-prod-"+val+".png", alt="")
+                                    .wrap-text
+                                        a(href="#"): h3.title-medium Lorem ipsum dolor
+                                        .desc Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium
+                    .col-md-6.order-md-1.order-2
+                        .img-drop.img-banner#banner-change-img
+                            img(src="upload/banner-home-1.jpg", alt="")
+        //SECTION 1
+        section.section-scroll#content-1.row-center.scroll-effect.white-layer
+            .container
+                .row
+                    .col-md-5
+                        .wrap-text-4-item
+                            .text-green.fadeToLeft(data-duration="300ms") Featured product
+                            h4.title-medium.fadeToLeft(data-duration="500ms") Daily Detox Blend
+                            .desc.fadeToLeft(data-duration="700ms") Beetroot is the main ingredient, and it is mixed with 9 other ingredients which aid its absorption and utilisation by the body.
+                            a.learn-more.fadeToLeft(href="#" data-duration="900ms") Learn more
+                            a.btn-common.trans.fadeToLeft(href="#" data-duration="1200ms") 
+                                .pos: <span>$50&nbsp;-</span> add to cart
+                    .col-md-7
+                        .img-custom-mobile
+                            .img-drop
+                                img(src="upload/img-home-prod-1.png", alt="")
+                        .img-trans
+                            img(src="upload/img-home-1.png", alt="")
+        //SECTION 2
+        section.section-scroll#content-2.row-center.scroll-effect 
+            .container
+                .row                    
+                    .col-md-5.order-md-2
+                        .wrap-text-4-item
+                            .text-green.fadeToLeft(data-duration="300ms") Featured product
+                            h4.title-medium.fadeToLeft(data-duration="500ms") Turmeric Blend
+                            .desc.fadeToLeft(data-duration="700ms") Turmeric is the main ingredient, and it is mixed with 12 other ingredients which aid its absorption and utilization by the body.
+                            a.learn-more.fadeToLeft(href="#" data-duration="900ms") Learn more
+                            a.btn-common.trans.fadeToLeft(href="#" data-duration="1200ms")
+                                .pos: <span>$50&nbsp;-</span> add to cart
+                    .col-md-7.order-md-1
+                        .img-custom-mobile
+                            .img-drop
+                                img(src="upload/img-home-prod-2.png", alt="")
+                        .img-trans
+                            img(src="upload/img-home-2.png", alt="")     
+        //SECTION 3
+        section.section-scroll#content-3.row-center.scroll-effect.opa-transition
+            .container
+                .row
+                    .col-md-6.order-md-2
+                        .wrap-text-4-item
+                            .text-green.fadeToLeft(data-duration="500ms") about
+                            h4.title-medium.fadeToLeft(data-duration="700ms") Kathy Ashton
+                            h4.title-small.fadeToLeft(data-duration="900ms") Founder – BHSc(NutMed), Dip. Plant Based Nutrition
+                            .img-circle.d-md-none.d-block
+                                .img-drop
+                                    img(src="upload/img-home-people-1.png", alt="")
+                            .desc.fadeToLeft(data-duration="1100ms") Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
+                            a.btn-common.gray.fadeToLeft(href="#" data-duration="1300ms"): .pos meet the team 
+                    .col-md-6.order-md-1
+                        .img-circle.d-md-block.d-none.fadeToLeft(data-duration="300ms") 
+                            .img-drop
+                                img(src="upload/img-home-people-1.png", alt="")
+        //SECTION 4
+        section.section-scroll#content-4.row-center.scroll-effect.opa-transition
+            .container
+                .row
+                    .col-md-6
+                        .wrap-text-4-item
+                            .text-green.fadeToLeft(data-duration="300ms") books
+                            h4.title-medium.fadeToLeft(data-duration="500ms") by Kathy Ashton
+                            .desc.fadeToLeft(data-duration="700ms") Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                            a.btn-common.gray.fadeToLeft(href="#" data-duration="900ms"): .pos learn more
+                    .col-md-6
+                        .wrap-book
+                            .book-add.under.fadeToLeft(data-duration="1200ms")
+                                .inner
+                                    img(src="upload/img-home-book-1.png", alt="")
+                                    a.btn-common.trans(href="book-single.html") 
+                                        .pos: <span>$30&nbsp;-</span> add to cart
+                            .book-add.upper.fadeToLeft(data-duration="2000ms")
+                                .inner
+                                    img(src="upload/img-home-book-2.png", alt="")
+                                    a.btn-common.trans(href="book-single.html") 
+                                        .pos: <span>$30&nbsp;-</span> add to cart
+        //SECTION 5
+        section.section-scroll#content-5.scroll-effect.opa-transition
+            .container-fluid
+                .row    
+                    .col-md-6.bg-green.white-layer-effect
+                        .wrap-text-4-item
+                            h4.title-medium Health benefits of our ingredients
+                            .desc Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                            a.btn-common.green(href="#"): .pos learn more
+                    .col-md-6
+                        .row
+                            .col-lg-6
+                                a(href="#").item-health.white-layer-effect    
+                                    .img-drop.ratio-11
+                                        img(src="upload/home-health-01.jpg", alt="")
+                                    .wrap-title
+                                        span featured post
+                                        h3 Lorem ipsum dolor sit amet
+                            .col-lg-6
+                                a(href="#").item-health.white-layer-effect    
+                                    .img-drop.ratio-11
+                                        img(src="upload/home-health-02.jpg", alt="")
+                                    .wrap-title
+                                        span featured post
+                                        h3 Lorem ipsum dolor sit amet
+                            .col-md-12
+                                a(href="#").item-health.white-layer-effect    
+                                    .img-drop.ratio-169
+                                        img(src="upload/home-health-03.jpg", alt="")
+                                    .wrap-title
+                                        span featured post
+                                        h3 Lorem ipsum dolor sit amet

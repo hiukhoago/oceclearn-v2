@@ -1,0 +1,381 @@
+include include/template
+
++template("Appointment","recipes","page-template-template-appointment")
+
+    // APPOINTMENT: BANNER
+    section.banner-product.spacing-around.spacing-header.appointment-banner
+        .text-cover
+            h1.title-page Appointment
+            p.des-page We use food as medicine to treat chronic disease processes. We focus on the underlying cause of the disease so that the symptoms fall away when the cause is addressed.
+        .img-drop.lazyload(data-src="upload/banner-health-hub.jpg")
+
+    // APPOINTMENT: BENEFITS
+    section.appointment-benefits.spacing-around.bg-skin
+        .container
+            //ROW TITLE
+            .row
+                .col-lg-5
+                    h2.title-page Benefits
+                .col-lg-7
+                    p Relieve anxiety around their issues and validate their situation, by offering our clients the time and support to be heard and understood.
+                    p Through education our clients gain an understanding as to what is the cause of their problem and how it can be resolved, in simple easy to understand drawings and explanations.
+                    p A wholistic health plan that actually sees results.
+            
+            //ROW BENEFITS BLOCK
+            .row.row-benefits-block
+                .col-lg-4
+                    .block-benefit
+                        .flex-row
+                            h3.medium-title Education
+                            img(src="upload/leaf.svg", alt="")
+                        p A greater understanding about your condition, its pathophysiology as well as where and how it started.
+                .col-lg-4
+                    .block-benefit
+                        .flex-row
+                            h3.medium-title Plan
+                            img(src="upload/education.svg", alt="")
+                        p Therapeutic health plan – based on a holistic assessment that will help reduce symptoms by focusing on the underlying problem.
+                .col-lg-4
+                    .block-benefit
+                        .flex-row
+                            h3.medium-title Support
+                            img(src="upload/smile.svg", alt="")
+                        p Emotional Support for your journey & on-going support via text and/or email – during and after your healing phase.  
+
+    // APPOINTMENT: MEET PRACTITIONERS
+    section.booking-appointment.spacing-around.pb-80
+        .wrapper-effect
+            //INTRO PRACTITIONERS
+            .container-fluid.row-intro.active   
+                h2.title-page.text-green.text-center.mobile-appointment-title Meet Our Practitioners
+                .row
+                    .col-12.order-lg-2
+                        .row
+                            .col-lg-7.offset-lg-5
+                                .wrap-slider
+                                    .owl-carousel.practitioners-slider
+                                        a(href="#").practitioner-item.active
+                                            .img-drop
+                                                img(src="upload/round-1.png", alt="")
+                                            .practitioner-text
+                                                h5 #[span.desktop-name Kathy] #[span.mobile-name Kathy Ashton] 
+                                                .abbr-pos BHSc(NutMed)
+                                        a(href="#").practitioner-item
+                                            .img-drop
+                                                img(src="upload/round-2.png", alt="")
+                                            .practitioner-text
+                                                h5 #[span.desktop-name Chris] #[span.mobile-name Chris Hemsworth]
+                                                .abbr-pos BHSc(NutMed)
+                                        a(href="#").practitioner-item
+                                            .img-drop
+                                                img(src="upload/round-2.png", alt="")
+                                            .practitioner-text
+                                                h5 #[span.desktop-name Tim] #[span.mobile-name Tim Howard]
+                                                .abbr-pos BHSc(NutMed)
+                                        a(href="#").practitioner-item
+                                            .img-drop
+                                                img(src="upload/round-1.png", alt="")
+                                            .practitioner-text
+                                                h5 layla
+                                                .abbr-pos BHSc(NutMed)
+                    .col-12
+                        .owl-profile.owl-carousel
+                            .row
+                                .col-lg-5
+                                    .wrap-avt
+                                        .img-drop.big-avt.ratio-11
+                                            img(src="upload/round-1.png", alt="")
+                                .col-lg-7
+                                    .wrapper-intro
+                                        h2.title-page.text-green.desktop-appointment-title Meet Our Practitioners
+                                        h3.title-section Kathy Ashton
+                                        .abbr-pos BHSc(NutMed)
+                                        .short-des
+                                            p It’s Kathy's extensive knowledge, clinical experience, and immense passion for helping others that’s made Flourish what it is today. Her whole foods’ alchemy has now culminated in a range of raw, whole food, plant-based supplements that empower people to achieve their health goals naturally.
+                                        .degree-info
+                                            p #[b Bachelor of Health Science]#[br]Nutritional Medicine
+                                            p #[b Certificate of Plant Based Nutrition]#[br]Cornell University
+                                            p #[b Certificate Level 4]#[br]Adult Education#[br]
+                                            p #[b NLP Practitioner]
+                                            p #[b Advance Diploma Health Science]#[br](Remedial Therapy)
+                                            p #[b Certificate Level 4]#[br]Pilates Instructor
+                                            p #[b Fully Qualified LifeCoach]
+                                            p &nbsp;
+                                        a.btn-common.trans.book-appointment-btn(href="#")
+                                            .pos BOOK WITH KATHY
+                            .row
+                                .col-lg-5
+                                    .wrap-avt
+                                        .img-drop.big-avt.ratio-11
+                                            img(src="upload/round-2.png", alt="")
+                                .col-lg-7
+                                    .wrapper-intro
+                                        h2.title-page.text-green.desktop-appointment-title Meet Our Practitioners
+                                        h3.title-section Chris Hemsworth
+                                        .abbr-pos BHSc(NutMed)
+                                        .short-des
+                                            p It’s Kathy's extensive knowledge, clinical experience, and immense passion for helping others that’s made Flourish what it is today. Her whole foods’ alchemy has now culminated in a range of raw, whole food, plant-based supplements that empower people to achieve their health goals naturally.
+                                        .degree-info
+                                            p #[b Bachelor of Health Science]#[br]Nutritional Medicine
+                                            p #[b Certificate of Plant Based Nutrition]#[br]Cornell University
+                                            p #[b Certificate Level 4]#[br]Adult Education#[br]
+                                            p #[b NLP Practitioner]
+                                            p #[b Advance Diploma Health Science]#[br](Remedial Therapy)
+                                            p #[b Certificate Level 4]#[br]Pilates Instructor
+                                            p #[b Fully Qualified LifeCoach]
+                                            p &nbsp;
+                                        a.btn-common.trans.book-appointment-btn(href="#")
+                                            .pos BOOK WITH CHRIS
+                            .row
+                                .col-lg-5
+                                    .wrap-avt
+                                        .img-drop.big-avt.ratio-11
+                                            img(src="upload/round-2.png", alt="")
+                                .col-lg-7
+                                    .wrapper-intro
+                                        h2.title-page.text-green.desktop-appointment-title Meet Our Practitioners
+                                        h3.title-section Tim Howard
+                                        .abbr-pos BHSc(NutMed)
+                                        .short-des
+                                            p It’s Kathy's extensive knowledge, clinical experience, and immense passion for helping others that’s made Flourish what it is today. Her whole foods’ alchemy has now culminated in a range of raw, whole food, plant-based supplements that empower people to achieve their health goals naturally.
+                                        .degree-info
+                                            p #[b Bachelor of Health Science]#[br]Nutritional Medicine
+                                            p #[b Certificate of Plant Based Nutrition]#[br]Cornell University
+                                            p #[b Certificate Level 4]#[br]Adult Education#[br]
+                                            p #[b NLP Practitioner]
+                                            p #[b Advance Diploma Health Science]#[br](Remedial Therapy)
+                                            p #[b Certificate Level 4]#[br]Pilates Instructor
+                                            p #[b Fully Qualified LifeCoach]
+                                            p &nbsp;
+                                        a.btn-common.trans.book-appointment-btn(href="#")
+                                            .pos BOOK WITH TIM
+                            .row
+                                .col-lg-5
+                                    .wrap-avt
+                                        .img-drop.big-avt.ratio-11
+                                            img(src="upload/round-1.png", alt="")
+                                .col-lg-7
+                                    .wrapper-intro
+                                        h2.title-page.text-green.desktop-appointment-title Meet Our Practitioners
+                                        h3.title-section Layla Atkinson
+                                        .abbr-pos BHSc(NutMed)
+                                        .short-des
+                                            p It’s Kathy's extensive knowledge, clinical experience, and immense passion for helping others that’s made Flourish what it is today. Her whole foods’ alchemy has now culminated in a range of raw, whole food, plant-based supplements that empower people to achieve their health goals naturally.
+                                        .degree-info
+                                            p #[b Bachelor of Health Science]#[br]Nutritional Medicine
+                                            p #[b Certificate of Plant Based Nutrition]#[br]Cornell University
+                                            p #[b Certificate Level 4]#[br]Adult Education#[br]
+                                            p #[b NLP Practitioner]
+                                            p #[b Advance Diploma Health Science]#[br](Remedial Therapy)
+                                            p #[b Certificate Level 4]#[br]Pilates Instructor
+                                            p #[b Fully Qualified LifeCoach]
+                                            p &nbsp;
+                                        a.btn-common.trans.book-appointment-btn(href="#")
+                                            .pos BOOK WITH LAYLA
+            //STEP 1
+            .container-fluid.row-step-1
+                .row-top-step
+                    a.btn-common.trans.return-step(href="#")
+                        .pos CLOSE
+                    h3.text-center.title-page Book an appointment
+                .wrapper-stepper
+                    form(action="")
+                        .step-slide-1.stepper
+                            .row
+                                .col-lg-2
+                                    .step-number STEP 1
+                                    .step-title Practitioner of choice
+                                .col-lg-10
+                                    .selection-practitioner-list
+                                        a(href="#").selection-practitioner.text-center.active
+                                            .img-drop
+                                                img(src="upload/round-1.png", alt="")
+                                            h5 kathy
+                                        a(href="#").selection-practitioner.text-center
+                                            .img-drop
+                                                img(src="upload/round-2.png", alt="")
+                                            h5 chris
+                                        a(href="#").selection-practitioner.text-center
+                                            .img-drop
+                                                img(src="upload/round-2.png", alt="")
+                                            h5 tim
+                                        a(href="#").selection-practitioner.text-center
+                                            .img-drop
+                                                img(src="upload/round-1.png", alt="")
+                                            h5 layla
+                            .row
+                                .col-lg-2
+                                    .step-number STEP 2
+                                    .step-title Consultation selection
+                                .col-lg-10.consult-wrapper-append
+                                    .consult-wrapper
+                                        input#consult-1(type="radio" name="consultation" value="220")
+                                        label(for="consult-1")
+                                            span.title-consult initial consultation
+                                            span.price-consult #[span.currency $] 220
+                                            span.time-consult #[span.minutes 90] minutes 
+                                    .consult-wrapper
+                                        input#consult-2(type="radio" name="consultation" value="180")
+                                        label(for="consult-2")
+                                            span.title-consult Follow Up Consults
+                                            span.price-consult #[span.currency $] 180
+                                            span.time-consult #[span.minutes 60] minutes
+                                    .consult-wrapper
+                                        input#consult-3(type="radio" name="consultation" value="110")
+                                        label(for="consult-3")
+                                            span.title-consult 1⁄2 Consult
+                                            span.price-consult #[span.currency $] 110
+                                            span.time-consult #[span.minutes 30] minutes
+                            .row
+                                .col-lg-2
+                                    .step-number STEP 3
+                                    .step-title Method of Appointment
+                                .col-lg-10
+                                    .method-wrapper
+                                        input#method-1(type="radio" name="method" value="face to face")
+                                        label(for="method-1") #[i.icon.icon-face] FACE TO FACE
+                                    .method-wrapper
+                                        input#method-2(type="radio" name="method" value="over phone")
+                                        label(for="method-2") #[i.icon.icon-phone] OVER PHONE
+                                    .method-wrapper
+                                        input#method-3(type="radio" name="method" value="skype")
+                                        label(for="method-3") #[i.icon.icon-skype] SKYPE
+                        .step-slide-2.stepper
+                            // APPOINTMENT STEP : 4
+                            .row
+                                .col-lg-2
+                                    .step-number STEP 4
+                                    .step-title Pick a date
+                                .col-lg-10
+                                    .wrapper-step-4
+                                        .calendar-custom
+                                            .wrap-calendar
+                                                #calendar
+                                            .box-chosen-date
+                                                p Your chosen date is: #[span.date-chosen]
+                                        .box-info-pick
+                                            .item-inner
+                                                .title Practitioner
+                                                .text #[span.practitioner-name] #[i.fa.fa-pencil.edit-back]
+                                            .item-inner
+                                                .title Consultation
+                                                .text #[span.consultation-title] #[i.fa.fa-pencil.edit-back]
+                                            .item-inner
+                                                .title Method of appointment
+                                                .text #[span.method-name] #[i.fa.fa-pencil.edit-back]
+                                            .item-inner
+                                                .title Date
+                                                .text #[span.date-chosen]
+                                            .item-inner
+                                                .title Time
+                                                .text #[span.time-start]#[span.time-end]
+                            .row
+                                .col-lg-2
+                                    .step-number STEP 5
+                                    .step-title Select time
+                                .col-lg-10
+                                    .wrap-slide-time-picker
+                                        .owl-carousel.owl-time-picker
+                                            .item-time-picker 
+                                                input#time-picker-1(type="radio" name="time-picker" value="9.00") 
+                                                label(for="time-picker-1") 9.00
+                                            .item-time-picker 
+                                                input#time-picker-2(type="radio" name="time-picker" value="9.30") 
+                                                label(for="time-picker-2") 9.30
+                                            .item-time-picker
+                                                input#time-picker-3(type="radio" name="time-picker" value="10.00") 
+                                                label(for="time-picker-3") 10.00
+                                            .item-time-picker
+                                                input#time-picker-4(type="radio" name="time-picker" value="11.30") 
+                                                label(for="time-picker-4") 11.30
+                                            .item-time-picker
+                                                input#time-picker-5(type="radio" name="time-picker" value="1.30") 
+                                                label(for="time-picker-5") 1.30
+                                            .item-time-picker
+                                                input#time-picker-6(type="radio" name="time-picker" value="2.30")  
+                                                label(for="time-picker-6") 2.30
+                                            .item-time-picker
+                                                input#time-picker-7(type="radio" name="time-picker" value="3.30") 
+                                                label(for="time-picker-7") 3.30
+                                            .item-time-picker
+                                                input#time-picker-8(type="radio" name="time-picker" value="4.30") 
+                                                label(for="time-picker-8") 4.30
+                                            .item-time-picker
+                                                input#time-picker-9(type="radio" name="time-picker" value="5.00") 
+                                                label(for="time-picker-9") 5.00
+                        .text-center.row-bottom-step
+                            .dot-holder
+                                .dot.active
+                                .dot
+                            a(href="#").btn-black.book-step-next.show NEXT
+                            a(href="#").btn-transparent.btn-final-step.book-step-prev BACK
+                            a(href="#").btn-black.btn-final-step.book-step-final $#[span]&nbsp;- PAY FOR BOOKING
+
+    // APPOINTMENT: WHAT WILL YOU GET?
+    section.what-will-get.spacing-around.bg-skin.pb-80(style="background-image: url('upload/img-home-1.png')")
+        .container
+            .row
+                .col-lg-5
+                    h2.title-page What will you get out of meeting with us?
+                .col-lg-7
+                    h3 We offer a wholistic health service.
+                    p Our aim is to help patients become responsible for their own healing regime and outcomes.
+                    p We want them to understand the enormous ramifications that eating the wrong foods can have on all health outcomes. If they understand a little of the biochemistry and pathophysiology then they are equipped to make informed rational positive decisions when it comes to food and food choices.
+                    p By giving people access to us via text or email, they feel well supported and not so alone on their health journey
+                    a.btn-common.trans.to-booking-section(href="#")
+                        .pos BOOK NOW
+
+    // APPOINTMENT: PRICING
+    section.appointment-pricing.bg-green.pb-80.spacing-around
+        .container
+            .wrap-title.text-center
+                h2.title-page.text-center Pricing
+                .desc
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor  lorem ipsum dolor
+            .wrap-appointment-pricing-content
+                .wrap-width
+                    .owl-carousel.slider-pricing
+                        .block-pricing
+                            .item-pricing.text-center
+                                h3.item-top 1/2 CONSULT
+                                .bg-skin
+                                    .item-icon: img(src="upload/clock.svg", alt="")                                    
+                                    .item-cost #[span.item-currency $] 110
+                                    .item-time 30 minutes
+                                    p Lorem, ipsum dolor sit amet, consectetuer
+                            a.btn-common.trans.to-booking-section(href="#")
+                                .pos BOOK NOW
+                        .block-pricing
+                            .item-pricing.text-center
+                                h3.item-top INITIAL CONSULTATION 
+                                .bg-skin
+                                    .item-icon: img(src="upload/handshake.svg", alt="") 
+                                    .item-cost #[span.item-currency $] 220
+                                    .item-time 90 minutes
+                                    p Lorem, ipsum dolor sit amet, consectetuer
+                            a.btn-common.trans.to-booking-section(href="#")
+                                .pos BOOK NOW
+                        .block-pricing
+                            .item-pricing.text-center
+                                h3.item-top FOLLOW UP CONSULTS
+                                .bg-skin
+                                    .item-icon: img(src="upload/comments.svg", alt="") 
+                                    .item-cost #[span.item-currency $] 180
+                                    .item-time 60 minutes
+                                    p Lorem, ipsum dolor sit amet, consectetuer            
+                            a.btn-common.trans.to-booking-section(href="#")
+                                .pos BOOK NOW
+                    .text-center
+                        a.btn-common.trans.to-booking-section.mobile-button-booking(href="#")
+                            .pos BOOK NOW
+    
+    .fade.modal#modal-alert.modal-alert
+        .modal-dialog.modal-lg.modal-dialog-centered           
+            .modal-content
+                .modal-header
+                    button.close(type="button" data-dismiss="modal") &times;
+                .modal-body
+                    h6.text-center You need to complete checkout product | appointment first to add to cart. Do you wish to overwrite your current item in cart?
+                    .d-flex.flex-wrap.justify-content-center
+                        a(href="#").btn-black Confirm
+                        a(href="#").btn-transparent Cancel

@@ -1,0 +1,462 @@
+.body-detail{
+    font-family: $mainFont;
+    margin:$marginBody;
+    &-product{
+        padding:5% 0;
+        display:flex;
+        @include small-mobile{
+            display:block;
+        }
+        @include tablet{
+            display:block;
+        }
+        &-detail{
+            width:100%;
+            text-align:center;
+            margin-right: 5%;
+            @include small-mobile{
+                display:block;
+                padding:10% 0;
+            }
+            @include tablet{
+                padding:5% 0;
+            }
+            &-large-img{
+                width:100%;
+                img{
+                    object-fit:cover;
+                    width:74%;
+                }
+            }
+            &-small-img{
+                display:flex;
+                align-items: center;
+                width:100%;
+                position:relative;
+                .img-detail{
+                    display:flex;
+                    justify-content:center;
+                    img{
+                        object-fit:cover;
+                        width:16%;
+                        margin: 0 2% 0 2%;
+                        &:hover{
+                            border:1px solid #008984;
+                        }
+                    }
+                }
+                .btn-product-next{
+                    background-image:url(../../src/img/btn-next.svg);
+                    background-repeat:no-repeat;
+                    background-size:cover;
+                    font-size:20px;
+                    position:absolute;
+                    right:14%;
+                    bottom:33%;
+                }
+            }
+        }
+        &-describe{
+            width:100%;
+            border:1px solid #008984;
+            &-container{
+                padding:7%;
+                .name-container{
+                    @include font-Basic(#112848, 32px, 40px,700);
+                }
+                .desc-container{
+                    @include font-Basic(#112848, 18px,27px,400);
+                    padding:5% 0;
+                }
+                .price-container{
+                    display:flex;
+                    padding:3% 0;
+                    width: 50%;
+                    justify-content: space-between;
+                    align-items: end;
+                    @include small-mobile{
+                        width:100%;
+                    }
+                    .price-discount{
+                        @include font-Basic(#112848, 18px,21px,400)
+                        text-decoration: line-through;
+                        opacity:.5;
+                    }
+                    .price-real{
+                        @include font-Basic(#008984, 32px,27px,700);
+                    }
+                }
+                .capacity-container{
+                    @include font-Basic($fontColor, 16px,none,400);
+                    padding: 4% 0%;
+                    .capacity-content{
+                        display:flex;
+                        width: 22%;
+                        justify-content: space-between;
+                        @include small-mobile{
+                            width:40%;
+                        }
+                        &-item{
+                            display:flex;
+                            width: 40%;
+                            justify-content: space-between;
+                            .text-capacity{
+                                @include font-Basic(#112848, 16px,50px,400)
+                                opacity:.5;
+                            }
+                        }
+                    }
+                }
+                .order-container{
+                    display:flex;
+                    width: 60%;
+                    justify-content: space-between;
+                    @include small-mobile{
+                        width: 100%;
+                    }
+                    .count-container{
+                        display: flex;
+                        justify-content: space-between;
+                        width: 33%;
+                        align-items: end;
+                    }
+                    .btn-order{
+                        button{
+                            @include button-ecoclearn(#008984, #008984, 144px, white)
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-property{
+        display:flex;
+        padding:5% 0;
+        @include small-mobile{
+            display:block;
+        }
+        &-img{
+            padding-right:10%;
+            img{
+                object-fit:cover;
+                width:100%;
+            }
+            @include small-mobile{
+                display:none;
+            }
+        }
+        &-typical{
+            .property-title{
+                @include font-Basic($fontColor,28px, 33.6px,700);
+                text-transform: uppercase;
+                @include small-mobile{
+                    text-align:center;
+                }
+            }
+            .property-content{
+                display:flex;
+                justify-content:space-between;
+                padding:10% 0;
+                width:85%;
+                @include small-mobile{
+                    width:100%;
+                    justify-content:space-between;
+                }
+                .name-property{
+                    @include font-Basic(#112848, 18px, 34px, 400)
+                }
+                .product-property{
+                    @include font-Basic(#112848, 18px, 34px, 400)
+                }
+            }
+        }
+    }
+    &-information{
+        padding:5% 0;
+        @include tablet{
+            padding:0;
+        }
+        &-product{
+            @include font-Basic($fontColor,28px, 33.6px,700);
+            text-align:center;
+            text-transform: uppercase;
+        }
+        &-content{
+            display:flex;
+            flex-direction: row-reverse;
+            padding-top:6%;
+            @include small-mobile{
+                display:block;
+            }
+            &-img{
+                object-fit:cover;
+                width:100%;
+                padding-left:2%;
+                @include small-mobile{
+                    display:none;
+                }
+                @include tablet{
+                    display:none;
+                }
+            }
+            &-text{
+                width:62%;
+                @include small-mobile{
+                    width:100%;
+                    padding:2% 0;
+                }
+                @include tablet{
+                    width:100%;
+                }
+                .infor-uses{
+                    &-title{
+                        @include font-Basic($fontColor,18px, 27px,700);
+                    }
+                    &-content{
+                        padding: 2% 4%;
+                        @include small-mobile{
+                            padding: 2% 6%;
+                        }
+                        ul{
+                            list-style: disc !important;
+                            li{
+                                @include font-Basic($fontColor,18px, 27px,400);
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+        &-final{
+            .infor-using{
+                margin-top:2%;
+                &-title{
+                    @include font-Basic($fontColor,18px, 0px,700);
+                    @include small-mobile{
+                        line-height:27px;
+                    }
+                    
+                }
+                &-content{
+                    padding: 2% 0;
+                    @include small-mobile{
+                        padding: 2% 4%;
+                    }
+                    @include tablet{
+                        padding: 4% 0%;
+                    }
+                    p{
+                        @include font-Basic($fontColor,18px, 27px,400);
+                    }
+                    ul{
+                        list-style: disc !important;
+                        padding: 0% 2%;
+                        li{
+                            @include font-Basic($fontColor,18px, 27px,400);
+                        }
+                    }
+                }
+            }
+            .infor-application-industry{
+                &-title{
+                    @include font-Basic($fontColor,18px, 0px,700);
+                    @include small-mobile{
+                        line-height:27px;
+                    }
+                }
+                &-content{
+                    padding: 0 2%;
+                    @include small-mobile{
+                        padding: 2% 4%;
+                    }
+                    @include tablet{
+                        padding: 2%;
+                    }
+                    ul{
+                        list-style: disc !important;
+                        padding: 2% 0%;
+                        
+                        li{
+                            @include font-Basic($fontColor,18px, 27px,400);
+                        }
+                    }
+                }
+            }
+            .infor-application-system{
+                &-title{
+                    @include font-Basic($fontColor,18px, 0px,700);
+                    @include small-mobile{
+                        line-height:27px;
+                    }
+                }
+                &-content{
+                    padding: 2% 0;
+                    @include small-mobile{
+                        padding: 4% 0;
+                    }
+                    @include tablet{
+                        padding: 4% 0%;
+                    }
+                    p{
+                        @include font-Basic($fontColor,18px, 27px,400);
+                    }
+                }
+            }
+        }
+    }
+    &-video{
+        &-title{
+            text-transform: uppercase;
+            text-align:center;
+            padding-bottom:5%;
+            @include font-Basic($fontColor,28px, 33.6px,700);
+        }
+        &-content{
+            iframe{
+                width:100%;
+                height:679px;
+                @include small-mobile{
+                    height:400px;
+                }
+            }
+        }
+    }
+    &-relate-product{
+        padding: 5% 0;
+        &-title{
+            @include font-Basic($fontColor,40px, 60px,700);
+            text-transform:uppercase;
+            @include small-mobile{
+                text-align:center;
+            }
+        }
+        &-content{
+            padding: 3% 0;
+            .list-product {
+                display: grid;
+                grid-template-columns: 24% 24% 24% 24%;
+                grid-gap: 15px;
+                text-align: center;
+                @include tablet {
+                    grid-gap: 80px;
+                    overflow:hidden;
+                    overflow:scroll;
+                }
+                @include mobile-down {
+                    display: block;
+                }
+                .product-item {
+                    @include tablet {
+                        width:190%;
+                    }
+                    @include small-mobile {
+                        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                        margin-bottom: 15px;
+                    }
+                    .img-product {
+                        img {
+                            height: 250px;
+                        }
+                        @include mobile-down {
+                            text-align: center;
+                        }
+                    }
+                    .info-product {
+                        padding: 40px 0;
+                        .name-product {
+                            text-align: center;
+                            padding: 0 20px;
+                            width: 97%;
+                            @include font-Basic($fontColor, 15px, 27px, none);
+                            @include tablet {
+                                padding:0 10%;
+                            }
+                        }
+                        .price-product {
+                            @include font-Basic(#008984, 28px, 110px, 700);
+                            text-align: center;
+                            @include mobile-down {
+                                line-height: 70px;
+                            }
+                        }
+                        .btn-order {
+                            text-align: center;
+                            .button-order {
+                                @include button-ecoclearn(white, #008984, 144px, $mainColor)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-seen-product{
+        &-title{
+            @include font-Basic($fontColor,40px, 60px,700);
+            text-transform:uppercase;
+        }
+        @include small-mobile{
+            text-align:center;
+        }
+        &-content{
+            padding: 3% 0;
+            .list-product {
+                display: grid;
+                grid-template-columns: 24% 24% 24% 24%;
+                grid-gap: 15px;
+                text-align: center;
+                @include tablet {
+                    grid-gap: 80px;
+                    overflow:hidden;
+                    overflow:scroll;
+                }
+                @include mobile-down {
+                    display: block;
+                }
+                .product-item {
+                    @include tablet {
+                        width:190%;
+                    }
+                    @include small-mobile {
+                        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                        margin-bottom: 15px;
+                    }
+                    .img-product {
+                        img {
+                            height: 250px;
+                        }
+                        @include mobile-down {
+                            text-align: center;
+                        }
+                    }
+                    .info-product {
+                        padding: 40px 0;
+                        .name-product {
+                            text-align: center;
+                            padding: 0 20px;
+                            width: 97%;
+                            @include font-Basic($fontColor, 15px, 27px, none);
+                            @include tablet {
+                                padding:0 10%;
+                            }
+                        }
+                        .price-product {
+                            @include font-Basic(#008984, 28px, 110px, 700);
+                            text-align: center;
+                            @include mobile-down {
+                                line-height: 70px;
+                            }
+                        }
+                        .btn-order {
+                            text-align: center;
+                            .button-order {
+                                @include button-ecoclearn(white, #008984, 144px, $mainColor)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

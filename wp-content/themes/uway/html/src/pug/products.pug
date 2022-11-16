@@ -1,0 +1,59 @@
+include include/template
+
++template("Product Archive","product")
+
+    // PRODUCTS: BANNER
+    section.banner-product.spacing-around.spacing-header
+        .text-cover
+            h1.title-page Products
+            p.des-page Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+        .img-drop: img.lazygo(data-src="upload/products-banner.jpg", alt="")
+    
+    // PRODUCTS: LIST PRODUCT
+    section.list-product.bg-skin.spacing-around
+        .container.spacing-section
+            h2.title-page Whole food supplement
+            p.des-page 100% Natural Supplements by Flourish. When we say 100% Natural we mean it. It's important to keep the blends clean from man made additives and extracts that have been through chemical processes to become what they are. At Flourish we will never compromise your health or our supplements with sub par ingredients
+            .row.row-list-product
+                .col-md-4
+                    .item-product
+                        a(href="product-single.html"): .img-drop: img.lazygo(data-src="upload/img-home-prod-1.png", alt="")
+                        a(href="product-single.html"): h3.name Turmeric blend
+                        .price $50
+                        a(href="#addcart").addcart-btn: span
+                .col-md-4
+                    .item-product
+                        a(href="product-single.html"): .img-drop: img.lazygo(data-src="upload/img-home-prod-2.png", alt="")
+                        a(href="product-single.html"): h3.name Daily detox blend
+                        .price $50
+                        a(href="#addcart").addcart-btn: span
+                .col-md-4
+                    .item-product
+                        a(href="product-single.html"): .img-drop: img.lazygo(data-src="upload/img-home-prod-3.png", alt="")
+                        a(href="product-single.html"): h3.name Coming soon
+                        a(href="#addcart").addcart-btn: span
+    // PRODUCTS: LIST BOOK
+    section.list-book.bg-skin.spacing-around.spacing-footer
+        .container.spacing-section
+            h2.title-page Books
+            p.des-page Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor #[br] incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam
+            .row.row-list-book
+                .col-md-4
+                    .item-book
+                        a(href="book-single.html").img-drop: img.lazygo(data-src="upload/img-home-book-1.png", alt="")
+                        a(href="book-single.html"): h3.name My Healing Program
+                        .price $140
+                        a(href="#addcart").addcart-btn: span
+                .col-md-4
+                    .item-book
+                        a(href="book-single.html").img-drop: img.lazygo(data-src="upload/img-home-book-12.png", alt="")
+                        a(href="book-single.html"): h3.name 2 Book Combo
+                        .price $150
+                        a(href="#addcart").addcart-btn: span
+                .col-md-4
+                    .item-book
+                        a(href="book-single.html").img-drop: img.lazygo(data-src="upload/img-home-book-2.png", alt="")
+                        a(href="book-single.html"): h3.name My Healing Kitchen
+                        .price $30
+                        a(href="#addcart").addcart-btn: span
+

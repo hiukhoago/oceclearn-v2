@@ -1,0 +1,33 @@
+.bag-hover
+    .ul-cart.fixed
+        .name Product
+        .quanity.gray Quantity
+        .price Price
+        .delete: a(href="#").btn-close-cart: i.icon.close
+    ul.header-cart-list.scrollbar-macosx
+        each val in [1,2,3,3,2,1,2,3]
+            li
+                .wrap-infor-image-title
+                    .header-cart-img
+                        .img-drop.ratio-11
+                            img(src="upload/img-home-prod-1.png", alt="")
+                    .header-cart-info
+                        h5 Turmeric blend
+                .header-cart-quanity.item-qty
+                   .qty-holder
+                        input(type="number" value="1")
+                        i.square-minus
+                        i.square-plus
+                .header-cart-price $220.0
+                .delete-header-cart
+    .wrap-cart-panel-bottom
+        .row
+            .coupon
+                input(type="text" placeholder="Coupon Code")
+                button(type="submit") APPLY
+            .header-cart-buttons.header-total
+                div Total
+                div $820
+            .row-cart-buttons 
+                a(href="checkout.html").header-cart-buttons.header-viewbag View bag
+                a(href="checkout.html").header-cart-buttons.header-checkout check out

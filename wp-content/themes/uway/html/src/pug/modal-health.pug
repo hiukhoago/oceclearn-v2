@@ -1,0 +1,59 @@
+include include/template-popup-health
+
++template-popup-health
+    // RECIPE: CONTENT 
+    section.blog-content.bg-skin.popup-health.scrollbar-macosx
+        .img-drop.img-food: img(src="upload/img-health-1.jpg", alt="")
+        .container.spacing-section.spacing-end
+            .row
+                // Main Content Blog
+                .col-lg-8
+                    h5.sub-cate.text-green RECIPES
+                    h1.title-product.mb-15 Lorem ipsum dolor sit consec
+                    .desc
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+                    ul.recipes-tab.nav
+                        li.nav-item
+                            a.nav-link.active(data-toggle='tab', href='#recipes-extra1') ingredients
+                        li.nav-item
+                            a.nav-link(data-toggle='tab', href="#recipes-extra2") method
+                    .tab-content.recipes-info
+                        #recipes-extra1.tab-pane.show.active.fade
+                            h5 Ingredients
+                            p 180 g cooked soba noodles 
+                            p 1 cucumber finely sliced
+                            p 1 bunch asparagus blanched then finely sliced
+                            p 4-5 shallots finely sliced
+                            p 2 handfuls salad leaves shredded
+                            p 2 tsps capers
+                            p 100 g smoked salmon or avocado
+                            br
+                            h5 Dressing
+                            p 3 tbsps Private: Organic Extra Virgin Olive Oil
+                            p 1/2 tsp toasted sesame oil
+                            p 1/2 tsp Organic Tamari to season
+                            p freshly squeezed lemon juice (optional)
+                        #recipes-extra2.tab-pane.fade
+                            h5 Ingredients
+                            p 4-5 shallots finely sliced
+                            p 2 handfuls salad leaves shredded
+                            p 2 tsps capers
+                            p 100 g smoked salmon or avocado
+                // Related Post
+                .col-lg-4
+                    .wrap-sidebar-blog-single
+                        .gallery-sidebar: h6 Information
+                        ul.gray-tag-list
+                            li
+                                span 2250kJ
+                            li 
+                                span 40 minutes
+                        // Gallery sidebar
+                        .gallery-sidebar 
+                            h6 GALLERY
+                            .gallery-thumb-list
+                                each val in [1,2,3,4,5,6,7,8]
+                                    a(href="upload/gallery-thumb-"+val+".jpg")
+                                        .img-drop.ratio-11
+                                            img(src="upload/gallery-thumb-"+val+".jpg", alt="/")

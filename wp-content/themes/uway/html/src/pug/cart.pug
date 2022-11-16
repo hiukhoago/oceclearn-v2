@@ -1,0 +1,90 @@
+include include/template-cart
+
++template-cart("Cart","cart")
+
+    //SECTION CART
+    section.cart.spacing-header.spacing-around.spacing-section-medium
+        .container
+            .row.col-gap-medium
+                .col-lg-3.d-flex.flex-column
+                    .sidebar-cart
+                        h1.title-product.wow.fadeInUp.mb-15 Cart
+                        p.mb-45 You have 3 items in your cart
+                        .img-drop.ratio-11.wow.fadeIn
+                            img(src="upload/cart-img.jpg", alt="/")
+                    .mt-auto Complimentary ground shipping on all orders over $100#[br]Shipping to Australia.
+                .col-lg-9
+                    form(action="")   
+                        table.table-list
+                            thead.title-list
+                                tr
+                                    td.item-name(colspan=2) Product&nbsp;(3)
+                                    td.item-qty Quantity
+                                    td.remove-product
+                                    td.item-price Price
+                            tbody.list-item
+                                tr.cart_item
+                                    td.item-img(data-label="Image")
+                                        img(src="upload/img-home-prod-1.png", alt="/")
+                                    td.item-name(data-label="product")
+                                        span.span-name Turmeric blend
+                                    td.item-qty(data-label="quantity")
+                                        .qty-holder
+                                            input(type="number" value="1")
+                                            i.square-plus
+                                            i.square-minus
+                                    td.remove-product
+                                        a(href="#").remove-btn Remove
+                                    td.item-price(data-label="price")
+                                        span $50
+                                tr.cart_item
+                                    td.item-img(data-label="Image")
+                                        img(src="upload/img-home-prod-2.png", alt="/")
+                                    td.item-name(data-label="product")
+                                        span.span-name Turmeric blend
+                                    td.item-qty(data-label="quantity")
+                                        .qty-holder
+                                            input(type="number" value="1")
+                                            i.square-plus
+                                            i.square-minus
+                                    td.remove-product 
+                                        a(href="#").remove-btn Remove
+                                    td.item-price(data-label="price")
+                                        span $50
+                                tr.cart_item
+                                    td.item-img(data-label="Image")
+                                        img(src="upload/img-home-prod-3.png", alt="/")
+                                    td.item-name(data-label="product")
+                                        span.span-name Turmeric blend
+                                    td.item-qty(data-label="quantity")
+                                        .qty-holder
+                                            input(type="number" value="1")
+                                            i.square-plus
+                                            i.square-minus
+                                    td.remove-product
+                                        a(href="#").remove-btn Remove
+                                    td.item-price(data-label="price")
+                                        span $50
+                                tr.coupon-cart-row
+                                    td(colspan=5)
+                                        button(type="submit" name="update_cart") Update Cart
+                                        .coupon
+                                            input(type="number" placeholder="Coupon Code")
+                                            button(type="submit") APPLY
+                        .cart-collaterals
+                            .cart_totals 
+                                table.cart-total-table
+                                    tbody
+                                        tr.cart-subtotal
+                                            th SubTotal (Tax Incl.)
+                                            td $150                                      
+                                        //- tr.order-total
+                                        //-     th total
+                                        //-     td $249.80
+                        p.shipping-extra-info Complimentary ground shipping on all orders over $100#[br]Shipping to Australia.
+                        .wc-proceed-to-checkout
+                            a(href="checkout.html").btn-black check out
+
+
+            
+

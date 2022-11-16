@@ -1,0 +1,54 @@
+include include/template
+
++template("Account Personal","account","logged")
+
+    // ACCOUNT: BANNER
+    section.banner-product.spacing-around.spacing-header
+        .text-cover
+            h1.title-page My account
+            p.des-page Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+        .img-drop: img.lazygo(data-src="upload/account-banner.jpg", alt="")
+
+
+    // ACCOUNT: CONTENT TAB
+    section.account.spacing-around.bg-skin
+        // Tab page ul
+        ul.nav(role="tablist").tab-navi-learn
+            li.wow.fadeInUp(data-wow-delay=".1s"): a.active(href="account-personal.html") Personal details
+            li.wow.fadeInUp(data-wow-delay=".2s"): a(href="account-order.html") Order history
+            li.wow.fadeInUp(data-wow-delay=".3s"): a(href="account-address.html") Address book
+            li.wow.fadeInUp(data-wow-delay=".4s").logout: a(href="#") log out
+        .container.spacing-end
+            // Tab page content
+            .tab-content.content-account
+                .row
+                    .col-md-3   
+                        h2.title-page.animated.fadeInUp.margin-bottom Personal <br>details 
+                    .col-md-9
+                        .custom-form
+                            form(action="")
+                                p.form-row.form-row-wide
+                                    label(for="account_email") Email address
+                                    input(type="email", value="vencreative@gmail.com" disabled)#account_email
+                                p.form-row.form-row-one
+                                    label(for="account_title") Title
+                                    input(type="text")#account_title
+                                p.form-row.form-row-two
+                                    label(for="account_first") First Name
+                                    input(type="text")#account_first
+                                p.form-row.form-row-three
+                                    label(for="account_last") Last Name
+                                    input(type="text")#account_last
+                                fieldset
+                                    legend Change password
+                                    p.form-row.form-row-wide
+                                        label(for="account_currentpass") Current password
+                                        input(type="password")#account_currentpass
+                                    p.form-row.form-row-wide
+                                        label(for="account_newpass") New password
+                                        input(type="password")#account_newpass
+                                    p.form-row.form-row-wide
+                                        label(for="account_confirmnewpass") Confirm new password
+                                        input(type="password")#account_confirmnewpass 
+                                p.form-row.no-margin
+                                    button.btn-black(type="submit") Save changes 

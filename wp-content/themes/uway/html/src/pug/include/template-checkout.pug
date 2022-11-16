@@ -1,0 +1,48 @@
+include template-cart
+
+mixin checkout_template(title, activemenu, classbody)
+    
+    +template-cart(title, activemenu, classbody)
+
+        // CHECKOUT: PAGE
+        .checkout-page.spacing-header.spacing-around.spacing-section-medium
+            .container
+                .row
+                    // ACCOUNT: SIDEBAR
+                    .col-lg-3
+                        .checkout-sidebar.wrap-sidebar-blog-single
+                            .checkout-total-panel.active
+                                .total $150
+                                label(for="show-bag-checkout").items 3 items
+                            input(type="checkbox")#show-bag-checkout.d-none
+                            .bag-checkout
+                                h6 CART #[label(for="show-bag-checkout"): i.icon.close]
+                                ul.header-cart-list.scrollbar-macosx
+                                    li
+                                        .header-cart-img
+                                            .img-drop.ratio-11
+                                                img(src="upload/img-home-prod-1.png", alt="")
+                                        .header-cart-info
+                                            h5 Turmeric blend
+                                            .header-cart-price $50 x 1
+                                    li
+                                        .header-cart-img
+                                            .img-drop.ratio-11
+                                                img(src="upload/img-home-prod-2.png", alt="")
+                                        .header-cart-info
+                                            h5 Daily detox blend
+                                            .header-cart-price $50 x 1
+                                    li
+                                        .header-cart-img
+                                            .img-drop.ratio-11
+                                                img(src="upload/img-home-prod-2.png", alt="")
+                                        .header-cart-info
+                                            h5 Daily detox blend
+                                            .header-cart-price $50 x 1
+                            ul.acc-menu-siderbar.nav.for-checkout 
+                                li(class=activemenu=="checkout" ? "active" : ""): a(href="#shipping-detail") Shipping Details
+                                li(class=activemenu=="payment" ? "active" : ""): a(href="#payment") Payment
+                                div
+                    // ACCOUNT: CONTENT
+                    .col-lg-9: block
+        

@@ -1,0 +1,96 @@
+include include/template
+
++template("Recipes Single","recipes")
+
+    // BLOG: BANNER
+    section.banner-product.spacing-around.spacing-header
+        //- .text-cover
+            h1.title-page Blog
+            p.des-page Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+        .img-drop: img.lazygo(data-src="upload/recipe-banner-single.jpg", alt="")
+
+
+    // RECIPE: CONTENT 
+    section.blog-content.bg-skin.spacing-around
+        .container.spacing-section.spacing-end
+            .row
+                // Main Content Blog
+                .col-lg-8
+                    h5.sub-cate.text-green RECIPES
+                    h1.title-product.mb-15 Lorem ipsum dolor sit consec
+                    ul.gray-tag-list
+                        li
+                            span 2250kJ
+                        li 
+                            span 40 minutes
+                    ul.recipes-tab.nav.tabs-anim-ul
+                        li.nav-item
+                            a.nav-link.active(data-toggle='tab', href='#recipes-extra1') ingredients
+                        li.nav-item
+                            a.nav-link(data-toggle='tab', href="#recipes-extra2") method
+                    .tab-content.recipes-info.tabs-anim
+                        #recipes-extra1.tab-pane.show.active.fade
+                            h5 Ingredients
+                            p 180 g cooked soba noodles 
+                            p 1 cucumber finely sliced
+                            p 1 bunch asparagus blanched then finely sliced
+                            p 4-5 shallots finely sliced
+                            p 2 handfuls salad leaves shredded
+                            p 2 tsps capers
+                            p 100 g smoked salmon or avocado
+                            br
+                            h5 Dressing
+                            p 3 tbsps Private: Organic Extra Virgin Olive Oil
+                            p 1/2 tsp toasted sesame oil
+                            p 1/2 tsp Organic Tamari to season
+                            p freshly squeezed lemon juice (optional)
+                        #recipes-extra2.tab-pane.fade
+                            h5 Ingredients
+                            p 4-5 shallots finely sliced
+                            p 2 handfuls salad leaves shredded
+                            p 2 tsps capers
+                            p 100 g smoked salmon or avocado
+                // Related Post
+                .col-lg-4
+                    .wrap-sidebar-blog-single
+                        // Share Social
+                        .group-share-social
+                            h5 Share
+                            .list-social-js
+                        // Print to PDF
+                        a(href="javascript:window.print();").btn-black.full-width.mb-30.btn-print-pdf #[i.icon.pdf-icon] PRINT TO PDF
+                        // Gallery sidebar
+                        .gallery-sidebar 
+                            h6 GALLERY
+                            .gallery-thumb-list#aniimated-thumbnials
+                                each val in [1,2,3,4,5,6,7,8]
+                                    a(href="upload/gallery-thumb-"+val+".jpg")
+                                        .img-drop.ratio-11
+                                            img(src="upload/gallery-thumb-"+val+".jpg", alt="/")
+
+    // BLOG: RELATED
+    section.related-recipes.pb-150.spacing-section.bg-green.spacing-around
+        .container
+            h2.title-product.wow.fadeIn Related recipes
+            .wrap-text
+                .font-product Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                a(href="#").btn-common.green.big-btn: .pos see all recipes
+            .row.row-recipes
+                each val in [1,2]
+                    .col-lg-3.col-sm-6
+                        .item-post
+                            .img-drop.ratio-11
+                                img(src="upload/recipes-"+val+".jpg", alt="/")
+                            .wrap-info
+                                h3 Pumpkin soup topped with seeds
+                                .row-read-btn
+                                    a(href="recipes-single.html").btn-common.trans: .pos read now
+                each val in [3,4]
+                    .col-lg-3.col-sm-6
+                        .item-post
+                            .img-drop.ratio-11
+                                img(src="upload/recipes-"+val+".jpg", alt="/")
+                            .wrap-info
+                                h3 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, repudiandae!
+                                .row-read-btn
+                                    a(href="recipes-single.html").btn-common.trans: .pos read now

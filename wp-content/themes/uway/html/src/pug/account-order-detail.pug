@@ -1,0 +1,64 @@
+include include/template
+
++template("Account Order","account","logged")
+
+    // ACCOUNT: BANNER
+    section.banner-product.spacing-around.spacing-header
+        .text-cover
+            h1.title-page My account
+            p.des-page Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+        .img-drop: img.lazygo(data-src="upload/account-banner.jpg", alt="")
+
+
+    // ACCOUNT: CONTENT TAB
+    section.account.spacing-around.bg-skin
+        // Tab page ul
+        ul.nav(role="tablist").tab-navi-learn
+            li.wow.fadeInUp(data-wow-delay=".1s"): a(href="account-personal.html") Personal details
+            li.wow.fadeInUp(data-wow-delay=".2s"): a.active(href="account-order.html") Order history
+            li.wow.fadeInUp(data-wow-delay=".3s"): a(href="account-address.html") Address book
+            li.wow.fadeInUp(data-wow-delay=".4s").logout: a(href="#") log out
+        .container.spacing-end
+            // Tab page content
+            .tab-content.content-account
+                .row
+                    .col-md-3   
+                        h2.title-page.animated.fadeInUp.margin-bottom Order <br>history
+                    .col-md-9
+                        .wrap-list#wrap-list-order
+                            .list-order-detail
+                                a(href="account-order.html").btn-back-list.toggle-review Back
+                                .order-number Order#: #[b C372613XYZ]
+                                .scrollbar-macosx
+                                    ul.product-review
+                                        each val in [1,2,3,4,5]
+                                            li
+                                                .img-prod
+                                                    img(src="upload/img-home-prod-1.png", alt="")
+                                                .name-prod Turmeric blend
+                                                .quality Quantity: #[span 1]
+                                                .price $85.00
+                                .wrap-box
+                                    .preview-detail
+                                        .bg-gray
+                                            h3 Shipping details 
+                                            p Ven Creative<br>64 Fitzroy, 22<br>Marrickville, NSW 2204
+                                            h3 Payment type
+                                            p Visa credit card 
+                                    .box-total
+                                        ul.list-subtotal
+                                            li
+                                                p Subtotal (Tax Incl.)
+                                                p.price $150
+                                            li
+                                                p Express Shipping
+                                                p.price $9
+                                            li
+                                                p Included Taxes
+                                                p.tax GST
+                                                p.price $41
+                                        ul.total
+                                            li 
+                                                p Total
+                                                p.price-total $150
+                                        a(href="#").btn-black.full-width ORDER AGAIN 

@@ -1,0 +1,26 @@
+include include/template
+
++template("Health Hub","recipes")
+
+    // HEALTH HUB: BANNER
+    section.banner-product.spacing-around.spacing-header
+        .text-cover
+            h1.title-page Health Hub
+            p.des-page Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+        .img-drop.lazyload(data-src="upload/banner-health-hub.jpg")
+    
+    //SECTION PAGES ROW
+    section.pages-row.spacing-around
+        .row
+            each val,index in {1:'Education',2:'The cleanse',3:'Recipes'}
+                .col-lg-4
+                    .wrapper
+                        h2.title-page #{val}
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                        p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        a.btn-common.trans(href="#")
+                            .pos LEARN MORE
+                        img.img-bg(src="upload/row-"+index+".png", alt="")
+
+    
+

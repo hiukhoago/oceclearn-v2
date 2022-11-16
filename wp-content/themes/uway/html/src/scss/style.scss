@@ -1,0 +1,39 @@
+@import "_font";
+@import "_var";
+@import "_var_v2";
+@import "_mixin";
+@import "_mixin_v2";
+@import "_coms";
+@import "_init";
+
+/**
+
+PAGES
+
+*/
+
+@import "./pages/_header";
+@import "./pages/_header_v2";
+@import "./pages/_footer";
+@import "./pages/_footer_v2";
+@import "./pages/home";
+@import "./pages/index_v2";
+@import "./pages/home-ad";
+@import "./pages/products";
+@import "./pages/product_v2";
+@import "./pages/product-detail_v2";
+@import "./pages/product-single";
+@import "./pages/about-contact";
+@import "./pages/blog";
+@import "./pages/recipes";
+@import "./pages/recipes-single";
+@import "./pages/education";
+@import "./pages/account";
+@import "./pages/checkout";
+@import "./pages/stockist";
+@import "./pages/cart";
+@import "./pages/health-program";
+@import "./pages/health-hub";
+@import "./pages/health-hub-new";
+@import "./pages/appointment";
+@import "./pages/appointment-45";

@@ -1,0 +1,55 @@
+include side-left
+include side-right
+include side-bottom
+mixin header(active)
+
+    // HEADER PAGE 
+    header.header-page            
+        a(href="index.html").logo
+            img(src="upload/logo.png", alt="")
+        a(href="#").btn-menu-sp#btn-menu-sp
+            span
+        a(href="#").header-btn-cart.mobile-show.show-cart
+            span 0  
+        .wrap-content-mobile
+            .wrap-inner
+                //HEADER CONTENT
+                .container-fluid
+                    .row                    
+                        .col-6
+                            ul.menu-top
+                                li(class=active=="home" ? "current-menu-item" : "")
+                                    a(href="index.html") Home
+                                li(class=active=="about" ? "current-menu-item" : "")
+                                    a(href="about.html") About
+                                li.has-sub-menu 
+                                    a(href="education.html") Education
+                                    i.dropdown-carret
+                                    ul.dropdown-menu
+                                        each val in [1,2,3]
+                                            li
+                                                a(href="education.html") Education
+                                li(class=active=="recipes" ? "current-menu-item" : "")
+                                    a(href="recipes.html") Recipes
+                        .col-6.row-custom
+                            ul.menu-top.right
+                                li(class=active=="blog" ? "current-menu-item" : "")
+                                    a(href="blog.html") Blog
+                                li(class=(active=="shop" || active=="product") ? "current-menu-item" : "")
+                                    a(href="products.html") Shop
+                                li(class=active=="stockists" ? "current-menu-item" : "")
+                                    a(href="stockists.html") Stockists
+                                li.login(class=active=="login-signup" ? "current-menu-item" : "")
+                                    a(href="#")#login-toggle Login        
+                                li.info-user
+                                    a(href="#") Hi, #[b Vencreative]
+                            a(href="#").header-btn-cart.desktop-show.show-cart
+                                span 0      
+                +sideleft
+        +sideright
+        +sidebottom
+    include panel-login
+    
+                
+                
+                

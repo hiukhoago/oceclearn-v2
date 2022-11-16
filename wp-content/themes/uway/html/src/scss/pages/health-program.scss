@@ -1,0 +1,515 @@
+.banner-health-video {
+    .close-btn {
+        @include reset-input;
+        padding: 8px;
+        background-color: rgba(#252525, 0.8);
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        z-index: 999;
+        cursor: pointer;
+        color: #FFF;
+        opacity: 0;
+        transition: all 0.5s ease;
+        @include small-mobile-up {
+            right: 55px;
+        }
+        span {
+            background: url('../img/icon-close-w.svg') no-repeat center / auto 100%;
+            display: block;
+            width: 20px;
+            height: 20px;
+        }
+    }
+    .play-btn {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 50%;
+        background: #FFF;
+        border: 0;
+        border-radius: 50%;
+        z-index: 1;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        outline: none;
+        cursor: pointer;
+        padding: 0;
+        overflow: hidden;
+        transition: all .3s ease;
+        @include small-mobile-up {
+            width: 50px;
+            height: 50px;
+        }
+        @include tablet-up {
+            width: 80px;
+            height: 80px;
+        }
+        &:before {
+            background: #fff;
+            transition: all .35s ease;
+            transform: scale(1);
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            border-radius: 50%;
+        }
+        i {
+            color: #000;
+            font-size: 10px;
+            margin-left: 3px;
+            vertical-align: middle;
+            transition: all .5s ease;
+            z-index: 2;
+            position: relative;
+            @include small-mobile-up {
+                font-size: 15px;
+            }
+            @include tablet-up {
+                font-size: 18px;
+            }
+        }
+        &:hover {
+            box-shadow: 0 2px 10px rgba(#000, .5);
+            &:before {
+                transform: scale(0);
+                background-color: #000;
+            }
+        }
+    }
+    .video-holder {
+        height: 100%;
+        padding-top: 539/1760*100%;
+        background: #000;
+        transition: all 1s ease;
+        &.ani {
+            padding-top: 100%/(16/9);
+            .close-btn {
+                opacity: 1;
+            }
+            &:hover {
+                .close-btn {
+                    opacity: 1;
+                }
+            }
+        }
+        iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            object-fit: fill;
+            transform: translate3d(-50%, -50%, 0);
+        }
+    }
+}
+.content-health {
+    .wrap-text-4-item {
+        margin-bottom: 15px;
+        @include tablet-up {
+            margin-bottom: 35px;
+        }
+    }
+    .description {
+        text-align: center;
+        p {
+            margin-bottom: 20px;
+        }
+    }
+    .btn-black-get {
+        @include reset-input;
+        background-color: #000;
+        color: #FFF;
+        display: inline-block;
+        min-width: 200px;
+        margin-right: auto;
+        margin-left: auto;
+        cursor: pointer;
+        padding: 20px 0;
+        font-family: $font-Cir;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-top: 30px;
+        margin-bottom: 60px;
+        transition: all 0.5s ease;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+    .box-day-scroll {
+        .title-medium {
+            margin-bottom: 35px;
+            @include tablet-up {
+                margin-bottom: 50px;
+            }
+        }
+        .introduction {
+            @include max-width-center(1075px);
+            dl {
+                @include tablet-up {
+                    display: flex;
+                }
+                &:not(:last-child) {
+                    margin-bottom: 35px;
+                }
+                dt {
+                    font-family: $font-Cir;
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                    @include tablet-up {
+                        flex-basis: 35%;
+                    }
+                }
+                dd {
+                    a:not(.btn-common) {
+                        font-weight: 700;
+                        text-decoration: underline;
+                    }
+                    @include tablet-up {
+                        flex-basis: 65%;
+                    }
+                }
+            }
+        }
+    }
+    .img-food {
+        margin-bottom: 30px;
+        padding-top: 40%;
+        @include tablet-up {
+            padding-top: 330/1350*100%;
+        }
+    }
+    .modal-content {
+        border-radius: 0;
+        overflow-y: auto;
+    }
+    .modal {
+        // overflow: hidden;
+        -webkit-overflow-scrolling: touch;
+        .modal-body {
+            padding: 0;
+        }
+    }
+    .modal-dialog {
+        max-width: 1325px;
+    }
+    .close {
+        position: fixed;
+        padding: 0;
+        right: 20px;
+        top: 15px;
+        z-index: 5;
+        cursor: pointer;
+        @include reset-input;
+        transform: translate3d(0, 0, 0);
+        background-color: transparent;
+        @include small-mobile-up {
+            right: 40px;
+            position: absolute;
+        }
+        span {
+            font-size: 30px;
+        }
+    }
+}
+.lg-outer.lg-visible {
+    background: #0D0A0A;
+    z-index: 9999;
+}
+.popup-health {
+    max-height: calc(100% - 60px);
+    min-height: calc(100% - 60px);
+    overflow: auto;
+    .img-food {
+        @include mobile-down {
+            padding-top: 40% !important;
+        }
+    }
+}
+//HEALTH HUB
+.hero-health {
+    @include desktop-up {
+        height: 540px;
+    }
+}
+.row-health-hub {
+    padding-bottom: 35px;
+    @include mobile-up {
+        @include space-col(16px);
+        padding-bottom: 50px;
+    }
+    .btn-common {
+        width: calc(100% - 6px);
+    }
+    [class^=col-] {
+        @include mobile-down {
+            &:not(:last-child) {
+                margin-bottom: 35px;
+            }
+        }
+    }
+    .btn-detail {
+        display: inline-block;
+        margin-bottom: 30px;
+        font-weight: 700;
+        position: relative;
+        font-family: $font-Cir;
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: $green;
+        }
+    }
+}
+.item-health {
+    background: #fff;
+    margin-bottom: 18px;
+    .img-drop {
+        padding-top: 100%/(355/250);
+        &.disabled {
+            opacity: .5;
+        }
+    }
+    .wrapper-text {
+        padding: 28px 70px 32px 31px;
+        position: relative;
+        font: 700 16px/1em $font-Cir;
+        @include tablet {
+            padding: 28px 70px 32px 20px;
+        }
+    }
+    .locker {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px;
+    }
+}
+.bottom-health-hub {
+    padding-top: 20px;
+    border-top: 1px solid #000;
+    padding-bottom: 35px;
+    @include mobile-up {
+        padding-bottom: 50px;
+    }
+    [class^=col-] {
+        @include mobile-down {
+            &:not(:last-child) {
+                margin-bottom: 25px;
+            }
+        }
+    }
+    p {
+        font-family: $font-Cir;
+        line-height: 1.5em;
+    }
+    .btn-common {
+        margin-bottom: 15px;
+        @include mobile-up {
+            margin-left: 15px;
+        }
+    }
+}
+#recipes-modal,
+.health-hub {
+    .modal {
+        -webkit-overflow-scrolling: touch;
+    }
+    .modal-body {
+        -webkit-overflow-scrolling: touch;
+    }
+    .modal-dialog {
+        transform: none !important;
+    }
+    .iframe_div {
+        // &.no-height {
+        //     iframe {
+        //         min-height: 100% !important;
+        //     }
+        // }
+        iframe {
+            display: block !important;
+            border: 0 !important;
+            width: 100% !important;
+            max-height: calc(100vh - 60px) !important;
+        }
+    }
+}
+.health-hub {
+    .modal-content {
+        border-radius: 0;
+    }
+    .modal {
+        // overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        .modal-body {
+            padding: 0;
+        }
+    }
+    .modal-dialog {
+        max-width: 1325px;
+    }
+    .close {
+        position: fixed;
+        right: 20px;
+        top: 15px;
+        z-index: 5;
+        padding: 0;
+        cursor: pointer;
+        @include reset-input;
+        background-color: transparent;
+        transform: translate3d(0, 0, 0);
+        @include small-mobile-up {
+            right: 40px;
+            position: absolute;
+        }
+        span {
+            font-size: 30px;
+        }
+    }
+}
+.loading-recipes {
+    background: rgba(#fff, 0.8);
+}
+.sticky-bar {
+    @include tablet-down {
+        position: relative;
+        .toggle-nav {
+            background: transparent url(../img/icon-back.svg) no-repeat center/8px auto;
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            right: 0;
+            top: 25px;
+            transform: rotate(-90deg) translateY(-50%);
+            transform-origin: center 0;
+            transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            z-index: 12;
+            &.fixed {
+                top: 85px;
+                position: fixed;
+            }
+            &.is-active {
+                transform: rotate(90deg) translateY(-50%);
+            }
+        }
+        &.slideUp {
+            .toggle-nav.fixed {
+                transform: rotate(-90deg) translateY(-50%) translateX(100%);
+            }
+            .wrap-sticky.fixed {
+                transform: translateY(-100%) translateX(-50%);
+            }
+        }
+    }
+    .wrap-sticky {
+        background-color: #FFF;
+        transition: position 0.5s ease;
+        &.fixed {
+            position: fixed;
+            top: 60px;
+            left: 50%;
+            width: 100%;
+            transform: translateX(-50%);
+            z-index: 10;
+            @include big-desktop {
+                top: 60*$rem;
+            }
+        }
+    }
+    .content-center {
+        display: flex;
+        justify-content: center;
+        font-weight: 700;
+        font-family: $font-Cir;
+        padding: 15px 0;
+        transition: all 0.5s ease;
+        overflow: hidden;
+        @include tablet-up {
+            padding: 25px 0;
+            height: auto !important;
+        }
+        span {
+            display: inline-block;
+            margin-right: 40px;
+        }
+    }
+    .list-days {
+        @include tablet-up {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        @include tablet-down {
+            &.expand {
+                li {
+                    &:not(:first-child) {
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+        li {
+            position: relative;
+            &:last-child {
+                @include tablet-down {
+                    margin-bottom: 5px;
+                }
+            }
+            &:not(:first-child) {
+                padding-left: 30px;
+                background: url(../img/icon-check-gray.svg) no-repeat left center / auto 100%;
+                @include tablet-up {
+                    margin-top: 0;
+                    margin-left: 20px;
+                }
+                @include desktop-up {
+                    margin-left: 40px;
+                }
+                a {
+                    color: rgba(#000, .2);
+                }
+            }
+            &.finished {
+                background: url(../img/icon-check-green.svg) no-repeat left center / auto 100%;
+                a {
+                    color: #000;
+                }
+            }
+            @include tablet-down {
+                &.is-hide {
+                    display: none;
+                }
+                &.active {
+                    display: block !important;
+                    opacity: 1 !important;
+                    pointer-events: none;
+                }
+            }
+            &.active a,
+            a.active {
+                color: #000;
+                @include tablet-up {
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        bottom: -25px;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background-color: $green;
+                    }
+                }
+            }
+        }
+    }
+}

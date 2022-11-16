@@ -1,0 +1,64 @@
+include include/template
+
++template("Recipes Archive","recipes")
+
+    // RECIPES: BANNER
+    section.banner-product.spacing-around.spacing-header
+        .text-cover
+            h1.title-page Recipes
+            p.des-page Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+        .img-drop: img.lazygo(data-src="upload/recipes-banner.jpg", alt="")
+
+    // RECIPES: CONTENT ARCHIVE
+    section.recipes-content-archive.spacing-around.bg-skin
+        .container.spacing-section.spacing-end
+            .featured-recipe.row
+                .col-md-5
+                    a(href="recipes-single.html").img-drop: img(src="upload/recipes-featured.jpg", alt="")
+                .col-md-7
+                    .d-flex.align-items-center
+                        .wrap-text
+                            h5.sub-cate.text-green featured post
+                            a(href="recipes-single.html"): h2.title-featured Lorem ipsum dolor sit 
+                            .des-page Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+                            ul.product-tag-list
+                                li: span 2250 kJ
+                                li: span 40 minutes
+                                li
+                                    span                                        
+                                    | Serves 2 People
+            .list-recipe-archive.row#loading-put-data
+                .col-lg-3.col-sm-6
+                    .item-post.lock
+                        a(href="recipes-single.html").img-drop.ratio-11
+                            img(src="upload/recipes-1.jpg", alt="/")
+                            .label-servers
+                                i.icon.person
+                                span 3
+                            .label-lock
+                        .wrap-info        
+                            h3 Pumpkin soup topped with seeds
+                            .d-flex
+                                .time-info 40 mins
+                            .row-read-btn
+                                a(href="recipes-single.html").btn-common.trans: .pos read now
+                each val in [2,3,4,1,2,3,4]
+                    .col-lg-3.col-sm-6
+                        .item-post
+                            a(href="recipes-single.html").img-drop.ratio-11
+                                img(src="upload/recipes-"+val+".jpg", alt="/")
+                                .label-servers
+                                    i.icon.person
+                                    span 3
+                            .wrap-info        
+                                h3 Pumpkin soup topped with seeds
+                                .d-flex
+                                    .time-info 40 mins
+                                .row-read-btn
+                                    a(href="recipes-single.html").btn-common.trans: .pos read now
+            .loading-more-row.hide-with-me
+                i.icon.loading
+                span.loading-more-data.scroll-auto-trigger(data-urljson="/data/recipes-more.html", data-totalpage="3", data-text="Load more", data-except="abc", data-target="#loading-put-data") load more
+
+            
+    

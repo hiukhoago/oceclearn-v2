@@ -1,0 +1,224 @@
+.calendar-custom {
+    width: 100%;
+    @include mobile-down {
+        padding-right: 20px;
+    }
+    .wrap-calendar {
+        border: 1px solid $green;
+        height: 100%;
+        width: 100%;
+        position: relative;
+        margin-right: 10px;
+        max-width: 300px;
+        @include small-mobile-up {
+            max-width: 420px;
+        }
+        @include desktop-up {
+            max-width: 480px;
+        }
+        @include max-desktop {
+            max-width: 530px;
+        }
+        .perfect-datetimepicker {
+            width: 100% !important;
+            border: 0;
+            margin: 0;
+            background-color: #FFF;
+            padding: 20px 10px;
+            @include small-mobile-up {
+                padding: 40px 35px;
+            }
+            table {
+                width: 100% !important;
+                padding: 0;
+                border-spacing: 0;
+                top: 40px !important;
+                left: 40px !important;
+                thead {
+                    td.hover {
+                        background-color: transparent;
+                        border: 0;
+                    }
+                }
+                tbody {
+                    td {
+                        &.selected {
+                            border: 1px solid $green;
+                            background-color: $green;
+                            border-radius: 50%;
+                            &.today {
+                                color: #FFF;
+                            }
+                        }
+                        &.today {
+                            color: $green;
+                        }
+                    }
+                }
+                td {
+                    height: 47px;
+                    width: 47px;
+                }
+                &:nth-child(1) {
+                    .mainhead {
+                        .prevm {
+                            text-align: right;
+                        }
+                        .title,
+                        .prevm,
+                        .nextm {
+                            padding-top: 10px;
+                            padding-bottom: 10px;
+                        }
+                        .nextm {
+                            text-align: left;
+                        }
+                    }
+                }
+                &:nth-child(2) {
+                    width: calc(100% - 80px) !important;
+                }
+            }
+            .buttonpane {
+                border-top: 0;
+                .clear {
+                    display: none;
+                }
+            }
+        }
+    }
+    .box-chosen-date {
+        position: relative;
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+        @include max-width-center(350px);
+        @include small-mobile-up {
+            @include max-width-center(100%);
+            width: auto;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-top: 5px solid transparent;
+            border-left: 10px solid $green;
+            border-bottom: 5px solid transparent;
+        }
+        .date-chosen {
+            display: block;
+            font-weight: 700;
+            font-size: 16px;
+        }
+    }
+    .buttonpane {
+        // display: none;
+    }
+}
+.mask-data {
+    opacity: .2;
+}
+.details-appointment {
+    .box-info-pick {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+#calendar {
+    .datepicker {
+        width: 100%;
+        padding: 20px 10px;
+        @include small-mobile-up {
+            padding: 20px 25px 20px
+        }
+        @include desktop-up {
+            padding: 20px 55px 20px
+        }
+        .datepicker-days {
+            table {
+                border-collapse: separate;
+                border-spacing: 0 7px;
+                tfoot {
+                    display: none;
+                }
+            }
+        }
+        table {
+            width: 100%;
+            th {
+                padding-top: 5px;
+                padding-bottom: 5px;
+                &.datepicker-switch {
+                    font-size: 20px;
+                    line-height: 26/22*1em;
+                    font-family: $font-Cir;
+                    font-weight: 700;
+                }
+                &.dow {
+                    padding-top: 20px;
+                    color: #C8C9CC;
+                    font-size: 14px;
+                    line-height: 20px;
+                    font-family: $font-Cir;
+                    padding-bottom: 8px;
+                    border-bottom: 1px solid #C8C9CC;
+                    border-radius: 0;
+                    @include small-mobile-up {
+                        font-size: 16px;
+                        padding-top: 36px;
+                    }
+                }
+                &.prev {
+                    i {
+                        font-weight: 300;
+                        font-size: 10px;
+                    }
+                }
+                &.next {
+                    i {
+                        font-weight: 300;
+                        font-size: 10px;
+                    }
+                }
+            }
+            td {
+                height: 40px;
+                padding: 10px;
+                border-radius: 50%;
+                font-size: 13px;
+                line-height: 18px;
+                font-family: Arial, Helvetica, sans-serif;
+                @include small-mobile-up {
+                    height: 53px;
+                    width: 36px;
+                    font-size: 15px;
+                }
+                @include max-desktop {
+                    height: 60px;
+                }
+                &.active {
+                    background: $green;
+                }
+                &.disabled,
+                &.disabled:hover {
+                    color: #E1E1E1;
+                }
+                span.active {
+                    background: $green;
+                }
+                &.disable-date,
+                &.disable-date:hover {
+                    color: #fff;
+                    border-radius: 50%;
+                    background: #ccc;
+                }
+            }
+        }
+    }
+}

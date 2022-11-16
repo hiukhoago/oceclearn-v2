@@ -1,0 +1,40 @@
+include include/template
+
++template("Stockists","stockists")
+
+    //STOCKIST MAPS
+    section.search-stockist.spacing-header.spacing-around
+        .wrap-content-stockist
+            #f-map(data-json='{"lat":-33.8688197, "lng": 151.2092955}', data-icon="src/img/marker-map.svg", data-url="data/data-maps.json")
+            .wrap-mobile
+                .box-search.form-find-a-stoctlist
+                    form(action="")
+                        input#input-text(type="text" placeholder="Enter address or post code")
+                        a.btn-click#btn-stockist-search SEARCH
+                    .box-result#box-result
+                        .wrap-ani
+                            .des
+                                span Stores closest to you
+                                a(href="#").toggle-stockist Looking for an online Stockist?
+                            .list-add-result.scrollbar-macosx#list-add-result
+                                each val in [1,2,3,4,5,6,7,8,9,10,11,12,13]
+                                    .item-add-result
+                                        h5 Flourish
+                                        p Address Field
+                                        p 
+                                            <b>P. </b> 0312 374 282
+                                        span 0.8km
+                .box-search.form-online-stoctlist.d-none
+                    .box-result#box-online-result
+                        .wrap-ani
+                            .des
+                                span.bigger Online Stockists
+                                a(href="#").toggle-stockist Looking for a physical store?
+                            .list-add-result.scrollbar-macosx
+                                each val in [1,2,3,4,5,6,7,8,9,10,11,12,13]
+                                    .item-online-result
+                                        .avatar
+                                            img(src="upload/stockist-avatar.png", alt="")
+                                        .info
+                                            h6 Flourish
+                                            p: a(href="#") woolworths.com.au/flourish

@@ -1,0 +1,203 @@
+.container-max {
+    max-width: 1300px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: auto;
+    @media (max-width: 1299px) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.img-drop {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    img,
+    video,
+    iframe,
+    embed,
+    object {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        font-family: 'object-fit: cover;';
+        transform: translateZ(0);
+    }
+    // FIX FOR SAFARI MOBILE 
+    video,
+    iframe,
+    embed,
+    object {
+        @include mobile-down {
+            object-fit: fill;
+        }
+    }
+    .cap {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        color: #fff;
+        background: rgba(#000, 0.5)
+    }
+    &.ratio-11 {
+        padding-top: 100%;
+    }
+    &.ratio-169 {
+        padding-top: 100%/(16/9);
+    }
+    &.ratio-43 {
+        padding-top: 100%/(4/3);
+    }
+    &.sm-no-drop {
+        @include mobile-down {
+            padding-top: 0;
+            img {
+                position: static;
+            }
+        }
+    }
+}
+
+a {
+    outline: 0;
+}
+
+#wrap-page {
+    position: relative;
+    overflow: hidden;
+}
+
+.owl-fix-android {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 1;
+}
+
+.tab-content.tabs-anim {
+    transition: all 0.8s ease;
+    overflow: hidden;
+}
+
+
+/**
+*
+* BACKDROP
+*
+**/
+
+.backdrop-core {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background: rgba(#FFF, 0.4);
+    transition: opacity 0.5s ease;
+    opacity: 0;
+    &.opening {
+        opacity: 1;
+    }
+    &.top-menu {
+        background: transparent;
+    }
+}
+
+
+/* PRELOADER */
+
+#preloader {
+    position: fixed;
+    transform: translate3d(0, 0, 0);
+    background: #fff;
+    top: 0;
+    left: 0;
+    z-index: 9999999;
+    width: 100%;
+    height: 100%;
+    .loading {
+        position: absolute;
+        top: 48%;
+        left: 50%;
+        width: 80px;
+        height: 80px;
+        background: transparent url('../img/loading.svg') no-repeat center / 100% auto;
+        transform: translate3d(-50%, -50%, 0);
+    }
+}
+
+.gform_ajax_spinner {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    width: 30px;
+    height: 30px;
+}
+
+
+/* LOADING CORE */
+
+.ven-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(#fff, 0.4);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: 11;
+    &.opening {
+        opacity: 1;
+        visibility: visible;
+    }
+    .img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        border-radius: 2px;
+    }
+}
+
+
+/* VENCREATIVE NOTI */
+
+.ven-noti {
+    position: fixed;
+    top: 10vh;
+    right: 0;
+    min-width: 300px;
+    padding: 30px 20px;
+    background: #000;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    color: #fff;
+    z-index: 99999;
+    font-size: 18px;
+    box-shadow: 1px 2px 10px rgba(#000, 0.3);
+    transform: translate3d(100%, 0, 0);
+    transition: 0.4s ease;
+    opacity: 0;
+    &.opening {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+    @include mobile-down {
+        width: 100%;
+        border-radius: 0;
+    }
+}

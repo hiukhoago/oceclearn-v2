@@ -1,0 +1,131 @@
+include include/template
+
++template("Homepage","home")
+
+    //WRAP CONTENT
+    .c-frame__content   
+        // BANNER HOME
+        section.banner-home.spacing-around.scrollpage
+            .container-fluid
+                .row                        
+                    .col-md-6.bg-green.order-md-2.order-1.a-center
+                        .owl-carousel.wrap-owl-carousel
+                            each val in [1,2]
+                                .item-intro
+                                    .wrap-img
+                                        a(href="#" data-img="upload/banner-home-"+val+".jpg").img-drop: img(src="upload/img-home-prod-"+val+".png", alt="")
+                                    .wrap-text
+                                        a(href="#"): h3.title-medium Lorem ipsum dolor
+                                        .desc Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium
+                    .col-md-6.order-md-1.order-2
+                        .img-drop.img-banner#banner-change-img
+                            img(src="upload/banner-home-1.jpg", alt="")
+        section.scrollpage
+            //SECTION 1
+            section.section-scroll#content-1.row-center
+                .container
+                    .row
+                        .col-md-5
+                            .wrap-text-4-item
+                                .text-green Featured product
+                                h4.title-medium Daily Detox Blend
+                                .desc Beetroot is the main ingredient, and it is mixed with 9 other ingredients which aid its absorption and utilisation by the body.
+                                a.learn-more(href="#") Learn more
+                                a.btn-common.trans(href="#") 
+                                    .pos: <span>$50&nbsp;-</span> add to cart
+                        .col-md-7
+                            .img-custom-mobile
+                                .img-drop
+                                    img(src="upload/img-home-prod-1.png", alt="")
+                            .img-trans
+                                img(src="upload/img-home-1.png", alt="")
+            //SECTION 2
+            section.section-scroll#content-2.row-center 
+                .container
+                    .row                    
+                        .col-md-5.order-md-2
+                            .wrap-text-4-item
+                                .text-green Featured product
+                                h4.title-medium Turmeric Blend
+                                .desc Turmeric is the main ingredient, and it is mixed with 12 other ingredients which aid its absorption and utilization by the body.
+                                a.learn-more(href="#") Learn more
+                                a.btn-common.trans(href="#")
+                                    .pos: <span>$50&nbsp;-</span> add to cart  
+                        .col-md-7.order-md-1
+                            .img-custom-mobile
+                                .img-drop
+                                    img(src="upload/img-home-prod-2.png", alt="")
+                            .img-trans
+                                img(src="upload/img-home-2.png", alt="")     
+            //SECTION 3
+            section.section-scroll#content-3.row-center
+                .container
+                    .row
+                        .col-md-6.order-md-2
+                            .wrap-text-4-item
+                                .text-green about
+                                h4.title-medium Kathy Ashton
+                                h4.title-small Founder – BHSc(NutMed), Dip. Plant Based Nutrition
+                                .img-circle.d-md-none.d-block
+                                    .img-drop
+                                        img(src="upload/img-home-people-1.png", alt="")
+                                .desc Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
+                                a.btn-common.gray(href="#"): .pos meet the team 
+                        .col-md-6.order-md-1
+                            .img-circle.d-md-block.d-none 
+                                .img-drop
+                                    img(src="upload/img-home-people-1.png", alt="")
+            //SECTION 4
+            section.section-scroll#content-4.row-center
+                .container
+                    .row
+                        .col-md-6
+                            .wrap-text-4-item
+                                .text-green books
+                                h4.title-medium by Kathy Ashton
+                                .desc Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                                a.btn-common.gray(href="#"): .pos learn more
+                        .col-md-6
+                            .wrap-book
+                                .book-add.under
+                                    .inner
+                                        img(src="upload/img-home-book-1.png", alt="")
+                                        a.btn-common.trans(href="book-single.html") 
+                                            .pos: <span>$30&nbsp;-</span> add to cart
+                                .book-add.upper
+                                    .inner
+                                        img(src="upload/img-home-book-2.png", alt="")
+                                        a.btn-common.trans(href="book-single.html") 
+                                            .pos: <span>$30&nbsp;-</span> add to cart
+            //SECTION 5
+            section.section-scroll#content-5
+                .container-fluid
+                    .row    
+                        .col-md-6.bg-green
+                            .wrap-text-4-item
+                                h4.title-medium Health benefits of our ingredients
+                                .desc Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                                a.btn-common.green(href="#"): .pos learn more
+                        .col-md-6
+                            .row
+                                .col-lg-6
+                                    a(href="#").item-health    
+                                        .img-drop.ratio-11
+                                            img(src="upload/home-health-01.jpg", alt="")
+                                        .wrap-title
+                                            span featured post
+                                            h3 Lorem ipsum dolor sit amet
+                                .col-lg-6
+                                    a(href="#").item-health    
+                                        .img-drop.ratio-11
+                                            img(src="upload/home-health-02.jpg", alt="")
+                                        .wrap-title
+                                            span featured post
+                                            h3 Lorem ipsum dolor sit amet
+                                .col-md-12
+                                    a(href="#").item-health    
+                                        .img-drop.ratio-169
+                                            img(src="upload/home-health-03.jpg", alt="")
+                                        .wrap-title
+                                            span featured post
+                                            h3 Lorem ipsum dolor sit amet

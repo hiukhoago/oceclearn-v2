@@ -1,0 +1,67 @@
+include include/template
+
++template("Blog Single","blog")
+
+    // BLOG: BANNER
+    section.banner-product.spacing-around.spacing-header
+        //- .text-cover
+            h1.title-page Blog
+            p.des-page Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+        .img-drop: img.lazygo(data-src="upload/blog-single-banner.jpg", alt="")
+
+    // BLOG: CONTENT 
+    section.blog-content.bg-skin.spacing-around
+        .container.spacing-section.spacing-end
+            .row
+                // Main Content Blog
+                .col-lg-8
+                    h5.sub-cate.text-green Blog
+                    h1.title-product Lorem ipsum dolor sit consec tetur adipiscing elit
+                    .intro Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+                    .content
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        p Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur
+                        p: img(src="upload/blog-single-content-1.png", alt="")
+                        br
+                        br
+                        br
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        p: img(src="upload/blog-single-content-2.png", alt="")
+                        br
+                        br                       
+                // Related Post
+                .col-lg-4
+                    .wrap-sidebar-blog-single
+                        // Share Social
+                        .group-share-social
+                            h5 Share
+                            .list-social-js
+                        // Next Post
+                        .next-post
+                            h5.sub-cate Next Post
+                            a(href="#").item-posts
+                                .img-drop: img(src="upload/item-post-2.jpg", alt="")
+                                h3.wrap-post Sed ut perspiciatis unde omnis iste 
+                        .next-post.margin-top.prev-post
+                            h5.sub-cate Next Post
+                            a(href="#").item-posts
+                                .img-drop: img(src="upload/item-post-2.jpg", alt="")
+                                h3.wrap-post Sed ut perspiciatis unde omnis iste 
+
+
+    // BLOG: RELATED
+    section.related-recipes.pb-150.spacing-section.bg-green.spacing-around
+        .container
+            h2.title-product.wow.fadeIn Related blog posts
+            .wrap-text
+                .font-product Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                a(href="#").btn-common.green.big-btn: .pos see all posts
+            .row.row-recipes
+                each val in [1,2,3,4]
+                    .col-lg-3.col-md-4.col-sm-6
+                        a(href="#").item-posts
+                            .img-drop: img(src="upload/item-post-"+val+".jpg", alt="")
+                            h3.wrap-post Sed ut perspiciatis unde omnis iste 
+

@@ -1,0 +1,43 @@
+// PANEL-LOGIN
+#panel-login.panel-login
+    a(href="#" title="Close the panel")#btn-close-login
+    .scrollbar-macosx
+        .login-panel-container
+            #signup-fields
+                h1.title-product.text-center Welcome back !
+                p.text-center.mb-15 Please login to your account
+                a(href="#").btn-white #[i.icon.fb-square] Sign up with Facebook
+                .white-textline
+                form(action="").woocommerce-form.woocommerce-form-login                        
+                    .form-text-input
+                        label(for="") Email
+                        input(type="text")
+                    .form-text-input
+                        label(for="") Password
+                        input(type="password")
+                    .lost-pw.text-center
+                        a(href="#").text-futura Forgot your password?       
+                    input(type="submit" value="LOG IN")
+                    .text-center.footer-login
+                        p Don't have an account? 
+                            strong: a(href="javascript:;")#sign-up-show Sign up here
+            #login-fields
+                h1.title-product.text-center Hello there !
+                p.text-center.mb-15 Fill in your details to create an account
+                a(href="#").btn-white #[i.icon.fb-square] Sign up with Facebook
+                .white-textline
+                form(action="").woocommerce-form.woocommerce-form-login                        
+                    .form-text-input
+                        label(for="") Email
+                        input(type="text")
+                    .form-text-input.form-half
+                        label(for="") Password
+                        input(type="password")
+                    .form-text-input.form-half
+                        label(for="") Confirm Password
+                        input(type="password")     
+                    input(type="submit" value="SIGN UP")
+                    .text-center.footer-login
+                        p Already have an account? 
+                            strong: a(href="javascript:;")#login-show Sign in here
+            

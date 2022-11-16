@@ -1,0 +1,36 @@
+@mixin iconEx ($color, $size, $mr) {
+    color: $color;
+    font-size: $size;
+    margin-right: $mr;
+}
+
+@mixin button-ecoclearn($bgColor, $boderColor, $w, $color) {
+    background: $bgColor;
+    border-radius: 4px;
+    width: $w;
+    //width: 144px;
+    height: 47px;
+    border: 1px solid $boderColor;
+    &:hover {
+        background: #008984;
+        span {
+            color: #ffff;
+        }
+    }
+    &:focus {
+        outline: none;
+    }
+    span {
+        color: $color;
+        font-size: 18px;
+        line-height: 27px;
+        font-weight: 400;
+    }
+}
+
+@mixin font-Basic($color, $fontSize, $lineHeght, $fontWeight) {
+    color: $color;
+    font-size: $fontSize;
+    line-height: $lineHeght;
+    font-weight: $fontWeight;
+}

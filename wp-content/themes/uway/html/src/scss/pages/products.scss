@@ -1,0 +1,269 @@
+// PRODUCTS: BANNER
+section.banner-product {
+    position: relative;
+    @include tablet-down {
+        background: #fff;
+    }
+    @include print {
+        display: block;
+    }
+    .img-drop {
+        height: 540/1760*100vw;
+        max-height: 540px;
+        min-height: 300px;
+        @include big-desktop {
+            max-height: 540 * $rem;
+        }
+        @include print {
+            max-height: 360px;
+        }
+    }
+    .text-cover {
+        text-align: center;
+        z-index: 1;
+        padding: 30px 20px;
+        @include max-width-center(480px);
+        @include tablet-up {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);
+            padding: 50px 85px 50px;
+            @include max-width-center(620px);
+            background: #fff;
+        }
+        @include big-desktop {
+            @include max-width-center(620 * $rem);
+            padding: 50 * $rem 85 * $rem 50 * $rem;
+        }
+    }
+}
+// PRODUCTS: LIST PRODUCT
+section.list-product {
+    .row-list-product {
+        margin-top: 30px;
+        @include mobile-up {
+            margin-top: 70px;
+        }
+        @include big-desktop {
+            margin-top: 70 * $rem;
+        }
+        .col-md-4:not(:last-child) {
+            @include mobile-down {
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+// PRODUCTS: LIST BOOK
+section.list-book {
+    .row-list-book {
+        margin-top: 30px;
+        @include mobile-up {
+            margin-top: 70px;
+        }
+        @include big-desktop {
+            margin-top: 70 * $rem;
+        }
+        .col-md-4:not(:last-child) {
+            @include mobile-down {
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+.item-product {
+    position: relative;
+    height: 100%;
+    padding: 50px 0;
+    transition: all .5s ease;
+    @include big-desktop {
+        padding-top: 50 * $rem;
+        padding-bottom: 50 * $rem;
+    }
+    @include mobile-down {
+        @include max-width-center(300px);
+    }
+    .img-drop {
+        padding-top: 391/587*100%;
+        margin-bottom: 20px;
+        @include big-desktop {
+            margin-bottom: 20 * $rem;
+        }
+        img {
+            object-fit: contain;
+        }
+    }
+    .name {
+        font: 700 22px / normal $font-Cir;
+        text-align: center;
+        margin-bottom: 10px;
+        @include tablet-up {
+            font: 700 28px / normal $font-Cir;
+        }
+        @include big-desktop {
+            font-size: 28 * $rem;
+        }
+    }
+    .price {
+        text-align: center;
+        font: 500 20px / normal $font-Cir;
+        @include big-desktop {
+            font-size: 20 * $rem;
+        }
+    }
+    .addcart-btn {
+        position: absolute;
+        top: 5px;
+        right: 20%;
+        @include mobile-up {
+            top: 10%;
+            right: 14%;
+            opacity: 0;
+            visibility: hidden;
+        }
+        @include big-desktop {
+            top: -38 * $rem;
+        }
+    }
+    .wrap-product-information {
+        transition: all .3s ease;
+        &:hover {
+            background: #E8E6DE;
+        }
+    }
+    &.no-event {
+        pointer-events: none;
+    }
+}
+.wrap-buttons-cart {
+    a {
+        margin: 0 auto;
+    }
+}
+.addcart-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff url("../img/cart.svg") no-repeat center right 12px / 28px auto;
+    transition: all 0.5s ease;
+    display: block;
+    position: relative;
+    @include mobile-up {
+        width: 70px;
+        height: 70px;
+        background: #fff url("../img/cart.svg") no-repeat center right 20px / 38px auto;
+    }
+    @include big-desktop {
+        width: 70 * $rem;
+        height: 70 * $rem;
+        background-position: center right 18 * $rem;
+        background-size: 38 * $rem auto;
+    }
+    span {
+        width: 18px;
+        height: 18px;
+        background: $green;
+        position: absolute;
+        top: 9px;
+        right: 7px;
+        border-radius: 50%;
+        @include mobile-up {
+            top: 15px;
+            right: 12px;
+        }
+        @include big-desktop {
+            width: 18 * $rem;
+            height: 18 * $rem;
+            top: 15 * $rem;
+            right: 12 * $rem;
+        }
+        &:after,
+        &:before {
+            content: "";
+            position: absolute;
+            top: 48%;
+            left: calc(50% - 5px);
+            width: 10px;
+            height: 2px;
+            background: #fff;
+            transform: translate3d(0, 0, 0);
+            @include big-desktop {
+                width: 10 * $rem;
+                height: 2 * $rem;
+                left: calc(50% - 0.25vw);
+            }
+        }
+        &:after {
+            transform: rotate(90deg) translate3d(0, 0, 0);
+        }
+    }
+}
+.item-book {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-flow: column wrap;
+    height: 100%;
+    transition: all 0.5s ease;
+    @include big-desktop {
+        padding-top: 50 * $rem;
+        padding-bottom: 50 * $rem;
+    }
+    .img-drop {
+        padding-top: 391/587*100%;
+        margin-bottom: 20px;
+        @include big-desktop {
+            margin-bottom: 20 * $rem;
+        }
+        img {
+            object-fit: contain;
+        }
+    }
+    .name {
+        font: 700 22px / normal $font-Cir;
+        text-align: center;
+        @include max-width-center(234px);
+        margin-bottom: 10px;
+        @include tablet-up {
+            font: 700 28px / normal $font-Cir;
+        }
+        @include big-desktop {
+            font-size: 28 * $rem;
+            margin-bottom: 10 * $rem;
+            @include max-width-center(234 * $rem);
+        }
+    }
+    .price {
+        text-align: center;
+        font: 500 20px / normal $font-Cir;
+        @include big-desktop {
+            font-size: 20 * $rem;
+        }
+    }
+    .addcart-btn {
+        position: absolute;
+        top: 5px;
+        right: 20%;
+        @include mobile-up {
+            top: 10%;
+            right: 14%;
+            opacity: 0;
+            visibility: hidden;
+        }
+        @include big-desktop {
+            top: -38 * $rem;
+        }
+    }
+    &.highlight,
+    &:hover {
+        background: #E8E6DE;
+        .addcart-btn {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    &.no-event {
+        pointer-events: none;
+    }
+}

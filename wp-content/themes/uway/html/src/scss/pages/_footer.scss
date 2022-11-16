@@ -1,0 +1,210 @@
+footer.footer-page {
+    padding-top: 60px;
+    min-height: 700px;
+    @include big-desktop {
+        padding-top: 100 * $rem;
+        min-height: 700 * $rem;
+    }
+    @include tablet-down {
+        padding-bottom: 60px;
+    }
+    @include print {
+        min-height: 100% !important;
+        padding-top: 50px;
+        padding-bottom: 150px;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin: 0 !important;
+        display: none;
+    }
+    .row {
+        align-items: flex-start;
+    }
+    .form-subcribe {
+        padding-bottom: 50px;
+        margin-bottom: 30px;
+        border-bottom: 1px solid #000;
+        @include tablet-up {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 100px;
+            margin-bottom: 60px;
+        }
+        @include big-desktop {
+            padding-bottom: 100 * $rem;
+            margin-bottom: 60 * $rem;
+        }
+        @include print {
+            display: none !important;
+        }
+        h3 {
+            font: 700 42px / normal $font-Cir;
+            max-width: 400px;
+            @include big-desktop {
+                font-size: 42 * $rem;
+                max-width: 400 * $rem;
+            }
+            @include tablet-down {
+                font-size: 32px;
+            }
+            @include small-mobile {
+                font-size: 28px;
+            }
+        }
+        .wrap-form {
+            @include max-width-center(540px);
+            width: 100%;
+            position: relative;
+            padding: 28px 30px;
+            border: 1px solid #000000;
+            @include big-desktop {
+                @include max-width-center(540 * $rem);
+                padding: 28 * $rem 30 * $rem;
+            }
+            @include tablet-down {
+                margin-top: 20px;
+                padding: 20px 15px;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: -6px;
+                right: -6px;
+                width: 100%;
+                height: 100%;
+                border-right: 2px solid $green;
+                border-bottom: 2px solid $green;
+                transition: all 0.5s ease;
+                z-index: -1;
+                @include big-desktop {
+                    bottom: -6 * $rem;
+                    right: -6 * $rem;
+                    border-width: 2 * $rem;
+                }
+            }
+            ul {
+                li {
+                    input:not([type="submit"]) {
+                        @include reset-input;
+                        @include reset-autofill;
+                        background-color: transparent;
+                        text-overflow: ellipsis;
+                        padding-right: 80px;
+                        width: 100%;
+                        @include big-desktop {
+                            padding-right: 80 * $rem;
+                        }
+                        @include placeholder {
+                            transition: opacity 0.5s ease;
+                            color: #9B9B9B;
+                        }
+                        &:focus {
+                            @include placeholder {
+                                opacity: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            input[type="submit"] {
+                @include reset-input;
+                background: transparent;
+                position: absolute;
+                right: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-family: $font-Cir;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                cursor: pointer;
+                transition: all 0.5s ease;
+                @include tablet-up {
+                    right: 30px;
+                }
+                &:hover {
+                    color: $green;
+                }
+            }
+            .gfield {
+                .gfield_description {
+                    color: red;
+                    padding-top: 5px;
+                    font-size: 15px;
+                }
+            }
+            .validation_error,
+            .gfield_label,
+            .gform_validation_container .gfield_description,
+            .gform_validation_container .ginput_container {
+                display: none !important;
+            }
+            .gform_confirmation_message {
+                color: $green;
+                font-size: 18px;
+                font-weight: bold;
+            }
+        }
+    }
+    .list-menu-footer {
+        li {
+            max-width: 180px;
+            @include big-desktop {
+                max-width: 180 * $rem;
+            }
+            a {
+                font-family: $font-Cir;
+                font-size: 18px;
+                line-height: 40px;
+                @include big-desktop {
+                    font-size: 18 * $rem;
+                    line-height: 40 * $rem;
+                }
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .container {
+        position: relative;
+    }
+    .img-animation {
+        max-width: 110px;
+        width: 100%;
+        text-align: center;
+        @include big-desktop {
+            max-width: 110 * $rem;
+            bottom: -120 * $rem;
+        }
+        @include tablet-up {
+            position: absolute;
+            right: 0;
+            bottom: -120px;
+        }
+        @include tablet-down {
+            margin-left: auto;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    .copyright {
+        display: block;
+        position: absolute;
+        bottom: -100px;
+        font-family: $font-Cir;
+        @include tablet-down {
+            bottom: 0;
+        }
+        @include small-mobile {
+            bottom: 15px;
+        }
+        span {
+            display: block;
+            @include tablet-up {
+                display: none;
+            }
+        }
+    }
+}

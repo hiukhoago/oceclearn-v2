@@ -1,0 +1,189 @@
+.gallery-sidebar {
+    h6 {
+        margin-bottom: 20px;
+        font: 700 16px/1.25em $font-Cir;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        @include print {
+            font: 700 36px/1.2em $font-Cir !important;
+            letter-spacing: -.52px;
+            color: #000;
+            margin-bottom: .5em;
+            text-transform: capitalize;
+        }
+    }
+}
+
+.gallery-thumb-list {
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 -5px;
+    &>a {
+        width: calc(50% - 10px);
+        margin: 0 5px 10px;
+        position: relative;
+        @include print {
+            width: calc(33.333% - 10px);
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(#000, .3);
+            z-index: 1;
+            transition: all .3s ease;
+            opacity: 0;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            transform: translate3d(-50%, -50%, 0);
+            background: transparent url(../img/search-solid.svg) center/ auto 100% no-repeat;
+            z-index: 1;
+            transition: all .3s .05s ease;
+            opacity: 0;
+        }
+        &:hover {
+            &:before {
+                opacity: 1;
+            }
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.lg-sub-html {
+    display: none;
+}
+
+.gray-tag-list {
+    list-style-type: none;
+    margin-bottom: 50px;
+    @include tablet-down {
+        margin-bottom: 35px;
+    }
+    @include print {
+        margin-bottom: 0 !important;
+    }
+    &>li {
+        padding: 10px 20px;
+        border: 1px solid #ddd;
+        background: #e8e6de;
+        border-radius: 6px;
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 6px;
+        margin-bottom: 6px;
+        @include small-mobile {
+            padding: 6px 10px;
+            font-size: 12px;
+        }
+        span {
+            font-family: $font-Cir;
+            font-weight: 500;
+            letter-spacing: -.17px;
+        }
+    }
+}
+
+.recipes-tab {
+    display: flex;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e8e6de;
+    margin-bottom: 40px;
+    @include small-mobile {
+        margin-bottom: 25px;
+    }
+    @include print {
+        display: none;
+    }
+    &>li {
+        margin: 0 15px;
+        &:first-child {
+            margin-left: 0;
+        }
+        .nav-link {
+            padding: 0;
+            font: 700 18px/1.25em $font-Cir;
+            color: #000;
+            position: relative;
+            letter-spacing: 2.25px;
+            text-transform: uppercase;
+            @include desktop-down {
+                font-size: 16px;
+            }
+            @include break-max(350px) {
+                font-size: 14px;
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                bottom: -11px;
+                height: 2px;
+                width: 100%;
+                left: 0;
+                background: $green;
+                transform: translate3d(0, 50%, 0);
+                opacity: 0;
+                transition: all .3s ease;
+            }
+            &.active {
+                color: $green;
+                &:before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.recipes-info {
+    font-size: 18px;
+    line-height: 2em;
+    @include tablet-down {
+        margin-bottom: 30px;
+        font-size: 16px;
+    }
+    @include print {
+        height: auto !important;
+        margin-bottom: 50px;
+        @include make-row;
+        .tab-pane {
+            display: block !important;
+            opacity: 1 !important;
+            @include make-col(2);
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    p {
+        margin-bottom: 1em;
+        @include print {
+            margin-bottom: 0.5em;
+        }
+    }
+    h3,
+    h4,
+    h5,
+    h6 {
+        font: 700 32px / 1.25em $font-Cir;
+        margin-bottom: 35px;
+        @include tablet-down {
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+        @include print {
+            padding-top: 20px;
+        }
+    }
+}

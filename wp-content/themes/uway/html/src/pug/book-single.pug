@@ -1,0 +1,55 @@
+include include/template
+
++template("Book Single","product")
+
+    //SECTION PRODUCT SINGLE INFO
+    section.product-single.spacing-header.spacing-around.pb-100.spacing-section.bg-skin
+        .container
+            .wrap-flex
+                .product-img-wrap
+                    .owl-carousel.owl-product-single.for-book
+                        each val in [1,2,1]
+                            div
+                                .img-drop.ratio-11
+                                    img(src="upload/img-home-book-"+val+".png", alt="/")                    
+                .product-single-info
+                    h1.title-product.wow.fadeIn Turmeric blend
+                    .product-description.no-scroll Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. #[br]#[br]Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. qtw dolore magna aliqua.#[br]Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.                      
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum minus excepturi asperiores, voluptates sed laboriosam quisquam molestiae hic nesciunt voluptatum, porro nostrum! Velit dolores magnam consectetur ducimus dicta perspiciatis aut!
+                    .cta-add-to-cart
+                        select.qty-box
+                            option(value="1") 1
+                            option(value="2") 2
+                            option(value="3") 3
+                            option(value="4") 4
+                            option(value="5") 5
+                            option(value="6") 6
+                        a(href="#").add-to-cart.btn-black $50 - add to cart 
+                    .absolute-video
+                        .img-drop.video-holder.shadow-lengo.wow.fadeIn(data-link="https://www.youtube.com/watch?v=YuDhbLQtt2k")
+                            button.home-play-btn
+                                i.fa.fa-play
+                            img(src="upload/book-video-banner.jpg", alt="/")
+
+    // SECTION RELATED BOOK
+    section.related-book.bg-green.spacing-around
+        .container.spacing-section.spacing-end
+            .row.row-book
+                .col-md-12.col-lg-4
+                    .item-book.for-intro
+                        h2.title-product.wow.fadeIn You may also like
+                        .wrap-text
+                            .font-product Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam
+                .col-md-6.col-lg-4
+                    a(href="book-single.html").item-book
+                        .img-drop: img.lazygo(data-src="upload/img-home-book-12.png", alt="")
+                        h3.name 2 Book Combo
+                        .price $150
+                .col-md-6.col-lg-4
+                    a(href="book-single.html").item-book
+                        .img-drop: img.lazygo(data-src="upload/img-home-book-2.png", alt="")
+                        h3.name My Healing Kitchen
+                        .price $30
+
+
+    

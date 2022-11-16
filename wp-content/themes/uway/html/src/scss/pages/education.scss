@@ -1,0 +1,128 @@
+// EDUCATION: CONTENT TAB
+section.education {
+    .des-intro {
+        margin-bottom: 30px;
+    }
+    .des-page {
+        img {
+            max-width: 100%;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+    .learn-text-editor {
+        padding-top: 45px;
+    }
+    .tab-content {
+        padding-top: 70px;
+    }
+    .content-learn {
+        p {
+            margin-bottom: 1em;
+        }
+        ul {
+            list-style: initial;
+            padding-left: 20px;
+        }
+        img {
+            height: auto;
+            width: 100%;
+        }
+    }
+}
+
+.tab-navi-learn {
+    justify-content: center;
+    padding: 0 15px;
+    border-bottom: 2px solid $border;
+    padding-top: 45px;
+    li {
+        &:not(:last-child) {
+            margin-right: 25px;
+            @include big-desktop {
+                margin-right: 25*$rem;
+            }
+        }
+    }
+    a {
+        text-transform: uppercase;
+        font-size: 16px;
+        letter-spacing: 2.25px;
+        text-align: center;
+        font-weight: 600;
+        position: relative;
+        padding: 10px 0;
+        display: block;
+        @include big-desktop {
+            font-size: 18 * $rem;
+            padding: 10*$rem 0;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            background: $green;
+            height: 2px;
+            opacity: 0;
+            transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+        &:hover {
+            color: gray;
+        }
+        &.active {
+            color: $green;
+            &:after {
+                width: 100%;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.ingredients-select {
+    @include reset-input;
+    padding: 12px 40px 12px 15px;
+    background: transparent url(../img/icon-triangle-down.svg) no-repeat center right 18px/10px auto;
+    border: 1px solid #D8D8D8;
+    letter-spacing: 0.44px;
+    float: right;
+    font-weight: 500;
+    color: #000000;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+.ingredient-item {
+    display: flex;
+    &:not(:last-child) {
+        border-bottom: 2px solid $border;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        @include tablet-up {
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+        }
+    }
+    .ingredient-img {
+        flex: 0 0 80px;
+        margin-right: 20px;
+        @include tablet-up {
+            flex: 0 0 138px;
+            margin-right: 50px;
+        }
+        .img-drop {
+            padding-top: 100%;
+            border-radius: 50%;
+            overflow: hidden;
+            background: gray;
+            img {
+                border-radius: 50%;
+            }
+        }
+    }
+    .ingredient-des {
+        width: 100%;
+    }
+}

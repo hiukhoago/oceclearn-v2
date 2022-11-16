@@ -1,0 +1,292 @@
+.about-nutritional {
+    @include tablet-down {
+        padding-top: 20px;
+        padding-bottom: 50px;
+    }
+    .wrap-text-4-item {
+        @include tablet-down {
+            padding: 40px 0;
+        }
+    }
+    .img-drop {
+        padding-top: 550/460*100%;
+    }
+}
+
+.our-promise {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    @include tablet-up {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .list-nutritional {
+        background-color: #FFF;
+        padding: 40px 20px;
+        margin-top: 40px;
+        position: relative;
+        z-index: 1;
+        @include tablet-up {
+            padding: 80px 50px;
+        }
+        @include big-desktop {
+            padding: 80 * $rem 50 * $rem;
+        }
+        .items {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            &:not(:last-child) {
+                border-bottom: 1px solid rgba($green, 0.4);
+                margin-bottom: 30px;
+                padding-bottom: 30px;
+                @include tablet-up {
+                    margin-bottom: 50px;
+                    padding-bottom: 50px;
+                }
+                @include big-desktop {
+                    margin-bottom: 50 * $rem;
+                    padding-bottom: 50 * $rem;
+                }
+            }
+            .icon {
+                max-width: 80px;
+                margin-bottom: 10px;
+                @include mobile-up {
+                    flex: 0 0 120px;
+                    margin-bottom: 0;
+                }
+                @include big-desktop {
+                    flex: 0 0 120 * $rem;
+                }
+            }
+            .wrap-item {
+                @include mobile-up {
+                    flex: 0 0 calc(100% - 120px);
+                }
+                h5 {
+                    font: 700 22px / normal $font-Cir;
+                    letter-spacing: -0.347826px;
+                    margin-bottom: 10px;
+                    @include tablet-up {
+                        font-size: 28px;
+                        margin-bottom: 20px;
+                    }
+                    @include big-desktop {
+                        font-size: 28 * $rem;
+                        margin-bottom: 20 * $rem;
+                    }
+                }
+            }
+        }
+    }
+    .box-quote {
+        text-align: center;
+        position: relative;
+        &:after,
+        &:before {
+            content: '';
+            position: absolute;
+            background: url(../../upload/img-quote.png) no-repeat center / 100%;
+            width: 150px;
+            height: 150px;
+            z-index: 0;
+            @include mobile-up {
+                width: 370px;
+                height: 270px;
+            }
+            @include big-desktop {
+                width: 370 * $rem;
+                height: 270 * $rem;
+            }
+        }
+        &:before {
+            top: -150px;
+            left: -20px;
+            @include mobile-up {
+                left: -130px;
+            }
+            @include big-desktop {
+                left: -130 * $rem;
+                top: -150 * $rem;
+            }
+        }
+        &:after {
+            transform: rotate(180deg);
+            bottom: -80px;
+            right: -20px;
+            @include mobile-up {
+                right: -130px;
+                bottom: -150px;
+            }
+            @include big-desktop {
+                right: -130 * $rem;
+                bottom: -80 * $rem;
+            }
+        }
+        .avatar {
+            background-color: #E8E6DE;
+            border-radius: 50%;
+            width: 186px;
+            height: 186px;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 120px;
+            position: relative;
+            @include big-desktop {
+                width: 186 * $rem;
+                height: 186 * $rem;
+                margin-top: 120 * $rem;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: -90px;
+                width: 1px;
+                height: 60px;
+                background-color: #000;
+            }
+            @include big-desktop {
+                width: 186 * $rem;
+                height: 186 * $rem;
+            }
+            .img-drop {
+                padding-top: 100%;
+            }
+            img {
+                border-radius: 50%;
+            }
+        }
+        .desc {
+            font: 500 20px/ normal $font-Cir;
+            font-style: italic;
+            margin: 30px 0;
+            @include big-desktop {
+                font-size: 20 * $rem;
+                margin: 30 * $rem 0;
+            }
+        }
+        .signature {
+            font-weight: 700;
+            font-family: $font-Cir;
+            span {
+                display: block;
+                color: #9B9B9B;
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+.about-contact {
+    position: relative;
+    z-index: 1;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @include mobile-up {
+        padding-top: 80px;
+    }
+    @include tablet-up {
+        padding-top: 150px;
+    }
+    @include big-desktop {
+        min-height: auto;
+        padding-bottom: 150px;
+    }
+    .wrap-contact {
+        max-width: 666px;
+        @include big-desktop {
+            max-width: 666 * $rem;
+        }
+        .validation_error {
+            display: none;
+        }
+        ul {
+            li {
+                margin-bottom: 20px;
+                label {
+                    font-weight: 700;
+                    position: relative;
+                    width: 100%;
+                    display: block;
+                    span {
+                        position: absolute;
+                        right: 0;
+                        top: 2px;
+                    }
+                }
+            }
+        }
+        input:not([type="submit"]),
+        textarea {
+            @include reset-input;
+            @include reset-autofill;
+            background-color: $green;
+            border: 1px solid #000;
+            padding: 10px 20px;
+            width: 100%;
+        }
+        textarea {
+            max-height: 150px;
+            resize: none;
+        }
+        .gform_footer {
+            border: 1px solid #000;
+            max-width: 220px;
+            display: inline-block;
+            width: 100%;
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: -6px;
+                right: -6px;
+                width: 100%;
+                height: 100%;
+                border-right: 2px solid #000;
+                border-bottom: 2px solid #000;
+                transition: all 0.5s ease;
+                z-index: -2;
+                @include big-desktop {
+                    bottom: -6 * $rem;
+                    right: -6 * $rem;
+                    border-width: 2 * $rem;
+                }
+            }
+        }
+        input[type="submit"] {
+            @include reset-input;
+            @include reset-autofill;
+            background-color: transparent;
+            display: block;
+            text-align: center;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: $font-Cir;
+            padding: 20px 0;
+            width: 100%;
+            position: relative;
+            cursor: pointer;
+            z-index: 2;
+            @include big-desktop {
+                max-width: 220 * $rem;
+                font-size: 14 * $rem;
+            }
+        }
+        .validation_error {
+            display: none;
+        }
+        .gform_ajax_spinner {
+            right: 10px;
+            top: 16px;
+            width: 20px;
+            height: auto;
+        }
+        .gform_validation_container {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+mixin listProduct()
+    -const products = {"Xịt lau bếp Stain Remover, khăn lau đa năng Micro Fiber":1, "Vệ sinh khử mùi nhà vệ sinh - Ecofresh":2,"Tẩy ố quần áo 250ml Stain Remover":3,"Vi sinh xử lý dầu mỡ Ecolean Fog - chai 1 lít":4}
+    .list-product
+        each value,index in products
+            .product-item
+                .img-product
+                    img(src="../../src/img/product-selling-"+value+".png", alt="")
+                .info-product
+                    .name-product= index
+                    .price-product 245,000 đ
+                    .btn-order
+                        button(name="button" type="button").button-order
+                            span Đặt hàng  

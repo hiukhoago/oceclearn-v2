@@ -1,0 +1,54 @@
+.pages-row {
+    .row {
+        @include space-col(0);
+        &>[class^=col-] {
+            &:nth-child(3n+1) {
+                background: rgba($orange, .64);
+            }
+            &:nth-child(3n+2) {
+                background: $blue-light;
+            }
+            &:nth-child(3n+3) {
+                background: $green-light;
+            }
+        }
+    }
+    .wrapper {
+        padding: 35px 30px 200px 30px;
+        @include small-mobile-up {
+            padding: 50px 25% 220px 56px;
+        }
+        @include desktop-up {
+            padding: 80px 20% 220px 56px;
+        }
+        .title-page {
+            z-index: 1;
+            position: relative;
+        }
+        p {
+            margin-bottom: 1rem;
+            line-height: 28/18*1em;
+            z-index: 1;
+            position: relative;
+            @include tablet-up {
+                font-size: 18px;
+            }
+        }
+        .btn-common {
+            z-index: 1;
+            margin-top: 35px;
+            max-width: 170px;
+            .pos {
+                padding: 15px 0;
+            }
+        }
+        .img-bg {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            max-height: 250px;
+            width: auto;
+            max-width: 100%;
+        }
+    }
+}

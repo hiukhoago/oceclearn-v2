@@ -1,0 +1,220 @@
+include include/template-checkout
+
++checkout_template("Checkout", "checkout")
+
+    h1.d-none Checkout
+
+    // CHECKOUT
+    .section-checkout
+        .custom-form.checkout-width
+            h1.title-product.mb-45 Where would you like your order sent?
+            form(action="")
+                .fieldset.billing
+                    p.form-row.form-row-one
+                        label(for="account_title") Title
+                        select#account_title(name="account_title")
+                            option Mr
+                            option Ms
+                            option Mrs
+                    p.form-row.form-row-two
+                        label(for="account_first") First Name
+                        input(type="text", value="Ven")#account_first
+                    p.form-row.form-row-three
+                        label(for="account_last") Last Name
+                        input(type="text", value="Creative")#account_last
+                    p.form-row.form-row-wide
+                        label(for="account_country") Country #[abbr *]
+                        select#account_country(name="account_country")
+                            option Australia
+                            option United States
+                            option United Kingdom
+                            option Thailand
+                            option Japan
+                    p.form-row.form-row-wide
+                        label(for="account_address") Address #[abbr *]
+                        input(type="text", value="64 Fitzroy St")#account_address
+                    //- p.form-row.form-row-wide#billing_address_2_field
+                        label(for="account_address11") Address
+                        input(type="text", placeholder="Lorem ipsum dolor sit.")#account_address11
+                    p.form-row.form-row-first
+                        label(for="account_apartment") Apartment/Unit #
+                        input(type="text", value="")#account_apartment
+                    p.form-row.form-row-last
+                        label(for="account_company") Company
+                        input(type="text")#account_company
+                    p.form-row.form-row-first
+                        label(for="account_suburb") Suburb
+                        input(type="text", value="Marrickville")#account_suburb
+                    p.form-row.form-row-last
+                        label(for="account_state") State
+                        select#account_state(name="account_state")
+                            option New South Wales
+                            option Lorem, ipsum dolor.
+                            option Lorem, ipsum.
+                    p.form-row.form-row-first
+                        label(for="account_postcode") Postcode
+                        input(type="text", value="2204")#account_postcode
+                    p.form-row.form-row-last
+                        label(for="account_phone") Phone number
+                        input(type="text", value="0123456789")#account_phone
+                .active-show-shipping-fieldset
+                    input(type="checkbox")#show-shipping-fieldset
+                    label(for="show-shipping-fieldset") Different billing address ?
+                .fieldset.shipping(style="display: none")
+                    p.form-row.form-row-first
+                        label(for="account_first2") First Name #[abbr *]
+                        input(type="text", value="Ven")#account_first2
+                    p.form-row.form-row-last
+                        label(for="account_last2") Last Name #[abbr *]
+                        input(type="text", value="Creative")#account_last2
+                    p.form-row.form-row-wide
+                        label(for="account_country2") Country #[abbr *]
+                        select#account_country2(name="account_country")
+                            option Australia
+                            option United States
+                            option United Kingdom
+                    p.form-row.form-row-wide#shipping_address_1_field
+                        label(for="account_address2") Address #[abbr *]
+                        input(type="text", value="64 Fitzroy St")#account_address2
+                    p.form-row.form-row-wide#shipping_address_2_field
+                        label(for="account_address22") Address
+                        input(type="text", placeholder="64 Fitzroy St")#account_address22
+                    p.form-row.form-row-first
+                        label(for="account_apartment2") Apartment/Unit #
+                        input(type="text", value="")#account_apartment2
+                    p.form-row.form-row-last
+                        label(for="account_company2") Company
+                        input(type="text")#account_company2
+                    p.form-row.form-row-first
+                        label(for="account_suburb2") Suburb
+                        input(type="text", value="Marrickville")#account_suburb2
+                    p.form-row.form-row-last
+                        label(for="account_state2") State
+                        select#account_state2(name="account_state")
+                            option New South Wales
+                            option Lorem, ipsum dolor.
+                            option Lorem, ipsum.
+                    p.form-row.form-row-first
+                        label(for="account_postcode2") Postcode
+                        input(type="text", value="2204")#account_postcode2
+                    p.form-row.form-row-last
+                        label(for="account_phone2") Phone number
+                        input(type="text", value="0123456789")#account_phone2
+                //- .fieldset.orders-message
+                //-     p.form-row.form-row-wide
+                //-         label(for="account_message") Leave a message
+                //-         textarea#account_message(name="", rows="5")
+                .fieldset.orders-addons
+                    .radio-style-inline
+                        .big-label Please Choose Your Preferred Shipping Method
+                        p.form-row
+                            input(type="radio", value="2204", name="method_shipping", checked)#method1
+                            label(for="method1") Standard #[span $0] #[span 2-6 business days]
+                            input(type="radio", value="2204", name="method_shipping")#method2
+                            label(for="method2") Express #[span $9] #[span 1-3 business days]
+                    //- .radio-style-block
+                    //-     .big-label Receiving your order
+                    //-     p.form-row
+                    //-         input(type="radio", value="2204", name="pack_shipping", checked)#pack1
+                    //-         label(for="pack1") Deliver my package without collecting a signature #[span I confirm that my parcel can be left outside the premises of the address provided. I take responsibility for any loss or damage that may occur.]
+                    //-         input(type="radio", value="2204", name="pack_shipping")#pack2
+                    //-         label(for="pack2") I will sign for my shipment #[span Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, doloribus.]
+                p.form-row.no-margin
+                    button(type="submit").btn-black GO TO PAYMENT
+
+    // PAYMENT
+    .section-payment.d-none
+        h2.title-product.mb-30.for-checkout Order placed by
+            a(href="#shipping-detail").btn-common.gray.btn-back-section-shipping #[.pos change]
+        .shipping-review-info
+            | Mr Ven Creative#[br]
+            | vencreative@gmail.com
+        h2.title-product.mb-30.for-checkout Shipping details
+            a(href="#shipping-detail").btn-common.gray.btn-back-section-shipping #[.pos change]
+        .shipping-review-info
+            | Ven Creative #[br]
+            | 64 Fitzroy, 22 #[br]
+            | Marrickville, NSW 2204 #[br]#[br]
+            | Express shipping#[br]
+            | $9
+        h2.title-product.mb-45 Review your order
+        .box-order-review
+            .scrollbar-macosx                    
+                table.product-review
+                    thead
+                        tr
+                            td.img-prod(colspan="2") Product (5)
+                            td.quality Quantity
+                            td.price Price
+                    tbody
+                        each row in [1,2,3,4,5]
+                            tr
+                                td.img-prod
+                                    img(src="upload/img-home-prod-1.png", alt="/")
+                                td.name-prod Turmeric blend
+                                td.quality 1
+                                td.price $50.00                           
+            table.shop_table.woocommerce-checkout-review-order-table
+                tbody
+                    tr
+                        td(colspan=3)
+                            .coupon
+                                input(type="text" placeholder="Coupon Code")
+                                button(type="submit") APPLY
+                tfoot
+                    tr.cart-subtotal
+                        th(colspan="2") Subtotal (Tax Incl.)
+                        td
+                            span.woocommerce-Price-amount.amount
+                                span.woocommerce-Price-currencySymbol $112
+                    tr.fee
+                        th(colspan="2") Express Shipping
+                        td $9
+                    tr.fee
+                        th Included Taxes
+                        td.gst-text GST
+                        td $41
+                    tr.order-total
+                        th(colspan="2") Total
+                        td
+                            strong
+                            span.woocommerce-Price-amount.amount
+                                span.woocommerce-Price-currencySymbol $
+                                | 112
+        h2.title-product.mb-30 How would you like to pay?
+        #payment.custom-form
+            .wc_payment_methods
+                .wc_payment_method.payment_method_stripe
+                    input#payment_method_stripe(type="radio", name="payment_method", checked)
+                    label(for="payment_method_stripe") Credit Card         
+                .wc_payment_method.payment_method_paypal
+                    input#payment_method_paypal(type="radio", name="payment_method")
+                    label(for="payment_method_paypal")
+                .payment_box.payment_method_stripe(style='display: block;')
+                    #stripe-payment-data
+                        p Pay with your credit card via Stripe.
+                        .fieldset
+                            .form-row.form-row-wide
+                                label Card Holder 
+                                input(type="text")
+                            .form-row.form-row-wide
+                                label Card Number 
+                                input(type="text")
+                            .form-row.form-row-first
+                                label MM/YY
+                                input(type="text")
+                            .form-row.form-row-last
+                                label Card Code (CVC)
+                                input(type="text")
+                    
+            .place-order
+                p.form-row
+                    label
+                        input#payment_method_stripe(type="checkbox", name="payment_method", checked)
+                        span I would like to receive Flourish communications.
+                p.form-row
+                    label
+                        input#payment_method_stripe(type="checkbox", name="payment_method", checked)
+                        span I've read and accept Flourish #[a(href="#") Terms & Conditions]
+                form(action="order-confirmation.html")
+                    button(type="submit").btn-black Complete payment

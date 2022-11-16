@@ -1,0 +1,32 @@
+include include/template_v2
++template("ProductPage","product")
+    .body-content 
+        .body-content-product-banner
+            img(src="../../src/img/product-banner-1.png" id="product-banner")
+            span(id="desc-product")
+            a(href="#") Xem tất cả
+
+    -const listPro= {"Vi sinh xử lý hầm tự loại":1, "Vi sinh ăn mỡ":2, "Vi sinh khử mùi":3, "Vi sinh ủ phân compost":4}
+    each valueList,indexList in listPro
+        .body-content-list-1
+            .body-content-list-1-content
+                .body-content-list-1-content-describe
+                    .name-describe= indexList
+                    .long-describe Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                    a(href="#") Xem thêm
+                -const listProducts = {"Men vi sinh Ecolean Septic - thông tắt bồn cầu, giảm mùi WC":1,"Men vi sinh ecoflush thông tắc bể phốt - túi tự hủy":2, "Men vi sinh Ecoflush thông tắt bể phốt - Túi tự hủy - Hộp 6 gói": 3}
+                .list-product
+                    each value1,index1 in listProducts
+                        .product-item
+                            .img-product
+                                img(src="../../src/img/product-selling-"+value1+".png", alt="")
+                            .info-product
+                                .name-product= index1
+                                .price-product 245,000 đ
+                                .btn-order
+                                    button(name="button" type="button").button-order
+                                        span Đặt hàng 
+
+            
+
+        

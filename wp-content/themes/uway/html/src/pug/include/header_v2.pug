@@ -1,0 +1,101 @@
+mixin header(active)
+    // HEADER PAGE 
+    header.header
+        .header-welcome
+            .header-welcome-content
+                .header-welcome-content-left
+                    .mobile-info
+                        .icon-mobile
+                            i.fa.fa-mobile
+                        .number-mobile +84 3555 01613
+                    .email-info
+                        .icon-email
+                            i.fa.fa-envelope-o
+                        .name-email hiukhoa@gmail.com
+                .header-welcome-content-right
+                    .icon-flag
+                        img(src="../../../src/img/flag-VN.svg", alt="")
+                    .country Vietnamese
+                    .icon-dropdown-menu
+                        img(src="../../../src/img/drop-down-more.svg", alt="")
+        .header-menu
+            .header-menu-content 
+                .header-menu-content-left
+                    a(href="").logo-menu
+                        img(src="../../../src/img/ecolear-logo.png", alt="")
+                    .nav-menu
+                        ul.menu 
+                            li.item-menu                       
+                                a(href="../../../product_v2.html") Sản phẩm
+                            li.item-menu                       
+                                a(href="#") Về chúng tôi
+                            li.item-menu
+                                a(href="#") Blog 
+                .header-menu-content-right
+                    .icon-account 
+                        .dropdown
+                            img(src="../../../src/img/ecolearn-user.svg", alt="")
+                            .dropdown-content
+                                a(href="#") Đăng nhập 
+                                a(href="#") Đăng ký  
+                    .icon-cart-shop
+                        label(for="nav-cart-input")
+                            img(src="../../../src/img/ecolearn-cart.svg", alt="")
+                        input(type="checkbox")#nav-cart-input.nav-cart
+                        label(for="nav-cart-input").nav-overlay
+                        .nav-menu-cart
+                            .cart-content
+                                .content-title
+                                    .content-title-name
+                                        .name-product Tên sản phẩm
+                                        .count-product Số lượng 
+                                        .price-product Đơn giá
+                                    label(for="nav-cart-input").btn-close-cart
+                                        i.fa.fa-times
+                                .content-product-cart
+                                    -const carts={"Vi sinh khử mùi nhà vệ sinh - Ecofresh":1,"Tẩy ố quần áo 250ml Stain Remover":2,"Vi sinh khử mùi nhà vệ sinh":3,"Vi sinh khử mùi nhà vệ sinh - 4":4,"Vi sinh khử mùi nhà vệ sinh - 8":4,"Vi sinh khử mùi nhà vệ sinh - 12":4}
+                                    each valueCart,indexCart in carts
+                                        .cart-item
+                                            .infor-cart
+                                                .img-name 
+                                                    img(src="../../../src/img/product-selling-"+valueCart+".png", alt="")
+                                                    .name-cart-product= indexCart
+                                                .count-cart 
+                                                    button(onclick="handleDecrease()").btn-decrease
+                                                    .value-cart
+                                                        input(type="text" id="amount" value="1").amount-input
+                                                    button(onclick="handleIncrease()").btn-increase
+                                                .price-cart 245,000 đ
+                                            button(onclick="handleClear()").btn-clear-product
+                                                i.fa.fa-times
+                                .cart-footer
+                                    .cart-footer-content
+                                        .shipping-fee
+                                            .shipping-fee-text Phí vận chuyển
+                                            .shipping-fee-price 150,000 đ
+                                        .total-order
+                                            .total-order-text Tổng đơn hàng
+                                            .total-order-price 245,000 đ
+                                        .btn-pay
+                                            button(type="button")
+                                                span Thanh toán
+                    .icon-menu-mobile
+                        label(for="nav-mobile-input").btn-bars
+                            i.fa.fa-bars
+                        input(type="checkbox")#nav-mobile-input.nav-input
+                        label(for="nav-mobile-input").nav-overlay
+                        nav.nav-menu-mobile
+                            label(for="nav-mobile-input").btn-close
+                                i.fa.fa-times
+                            ul.menu-mobile
+                                li.item-menu-mobile
+                                    a(href="#") Sản phẩm
+                                li.item-menu-mobile
+                                    a(href="#") Về chúng tôi
+                                li.item-menu-mobile
+                                    a(href="#") Blog 
+                    
+    
+                
+                
+                

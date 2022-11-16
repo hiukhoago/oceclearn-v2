@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- Favicon-->
+        <link rel="shortcut icon" href="upload/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" href="upload/favicon.png">
+        <!-- CSS-->
+        <link rel="stylesheet" href="src/scss/plugins.css">
+        <link rel="stylesheet" href="src/scss/style.css">
+        <!-- Title-->
+        <title>About &amp; Contact - Flourish</title>
+    </head>
+    <body>
+        <script>sessionStorage.getItem("isFirstRun") || document.write('<div id="preloader"><div class="loading"></div></div>')</script>
+        <!-- HEADER PAGE -->
+        <header class="header-page">           <a class="logo" href="index.html"><img src="upload/logo.png" alt=""/></a><a class="btn-menu-sp" href="#" id="btn-menu-sp"><span></span></a><a class="header-btn-cart mobile-show show-cart" href="#"><span>0  </span></a>
+            <div class="wrap-content-mobile">
+                <div class="wrap-inner">
+                    <!--HEADER CONTENT-->
+                    <div class="container-fluid">
+                        <div class="row">                   
+                            <div class="col-6">
+                                <ul class="menu-top">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li class="current-menu-item"><a href="about.html">About</a></li>
+                                    <li class="has-sub-menu"> <a href="education.html">Education</a><i class="dropdown-carret"></i>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="education.html">Education</a></li>
+                                            <li><a href="education.html">Education</a></li>
+                                            <li><a href="education.html">Education</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="recipes.html">Recipes</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 row-custom">
+                                <ul class="menu-top right">
+                                    <li><a href="blog.html">Blog</a></li>
+                                    <li><a href="products.html">Shop</a></li>
+                                    <li><a href="stockists.html">Stockists</a></li>
+                                    <li class="login"><a href="#" id="login-toggle">Login        </a></li>
+                                    <li class="info-user"><a href="#">Hi, <b>Vencreative</b></a></li>
+                                </ul><a class="header-btn-cart desktop-show show-cart" href="#"><span>0      </span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--SIDEBAR LEFT-->
+                    <section class="sidebar-left">
+                        <ul class="list-social">
+                            <li class="ins"><a href="#" target="_blank">Instagram </a></li>
+                            <li class="fb"><a href="#" target="_blank">Facebook</a></li>
+                        </ul>
+                        <ul class="list-mobile-contact d-lg-none d-block">
+                            <li><a href="tel:1300121248">1300 121 248</a></li>
+                            <li><a href="mailto:hello@flourishln.com.au">hello@flourishln.com.au </a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+            <!--SIDEBAR RIGHT-->
+            <section class="sidebar-right"><i class="icon icon-x"></i></section>
+            <!-- FOOTER PAGE-->
+            <section class="side-bottom">
+                <div class="container-fluid">
+                    <ul class="item-footer">
+                        <li class="d-lg-block d-none">© 2018 Flourish Nutritional Medicine Pty Ltd </li>
+                        <li>Free shipping for orders over $100</li>
+                        <li> <a href="tel:1300121248"><span>1300 121 248</span><i class="icon tel"></i></a><a href="mailto:hello@flourishln.com.au"><span>hello@flourishln.com.au</span><i class="icon mail"> </i></a></li>
+                    </ul>
+                </div>
+            </section>
+        </header>
+        <!-- PANEL-LOGIN-->
+        <div class="panel-login" id="panel-login"><a href="#" title="Close the panel" id="btn-close-login"></a>
+            <div class="scrollbar-macosx">
+                <div class="login-panel-container">
+                    <div id="signup-fields">
+                        <h1 class="title-product text-center">Welcome back !</h1>
+                        <p class="text-center mb-15">Please login to your account</p><a class="btn-white" href="#"><i class="icon fb-square"></i> Sign up with Facebook</a>
+                        <div class="white-textline"></div>
+                        <form class="woocommerce-form woocommerce-form-login" action="">                       
+                            <div class="form-text-input">
+                                <label for="">Email</label>
+                                <input type="text"/>
+                            </div>
+                            <div class="form-text-input">
+                                <label for="">Password</label>
+                                <input type="password"/>
+                            </div>
+                            <div class="lost-pw text-center"><a class="text-futura" href="#">Forgot your password?       </a></div>
+                            <input type="submit" value="LOG IN"/>
+                            <div class="text-center footer-login">
+                                <p>Don't have an account? <strong><a href="javascript:;" id="sign-up-show">Sign up here</a></strong></p>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="login-fields">
+                        <h1 class="title-product text-center">Hello there !</h1>
+                        <p class="text-center mb-15">Fill in your details to create an account</p><a class="btn-white" href="#"><i class="icon fb-square"></i> Sign up with Facebook</a>
+                        <div class="white-textline"></div>
+                        <form class="woocommerce-form woocommerce-form-login" action="">                       
+                            <div class="form-text-input">
+                                <label for="">Email</label>
+                                <input type="text"/>
+                            </div>
+                            <div class="form-text-input form-half">
+                                <label for="">Password</label>
+                                <input type="password"/>
+                            </div>
+                            <div class="form-text-input form-half">
+                                <label for="">Confirm Password</label>
+                                <input type="password"/>
+                            </div>
+                            <input type="submit" value="SIGN UP"/>
+                            <div class="text-center footer-login">
+                                <p>Already have an account? <strong><a href="javascript:;" id="login-show">Sign in here</a></strong></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bag-hover">
+            <div class="ul-cart fixed">
+                <div class="name">Product</div>
+                <div class="quanity gray">Quantity</div>
+                <div class="price">Price</div>
+                <div class="delete"><a class="btn-close-cart" href="#"><i class="icon close"></i></a></div>
+            </div>
+            <ul class="header-cart-list scrollbar-macosx">
+                <li>
+                    <div class="wrap-infor-image-title">
+                        <div class="header-cart-img">
+                            <div class="img-drop ratio-11"><img src="upload/img-home-prod-1.png" alt=""></div>
+                        </div>
+                        <div class="header-cart-info">
+                            <h5>Turmeric blend</h5>
+                        </div>
+                    </div>
+                    <div class="header-cart-quanity item-qty">
+                        <div class="qty-holder">
+                            <input type="number" value="1"><i class="square-minus"></i><i class="square-plus"></i>
+                        </div>
+                    </div>
+                    <div class="header-cart-price">$220.0</div>
+                    <div class="delete-header-cart"></div>
+                </li>
+                <li>
+                    <div class="wrap-infor-image-title">
+                        <div class="header-cart-img">
+                            <div class="img-drop ratio-11"><img src="upload/img-home-prod-1.png" alt=""></div>
+                        </div>
+                        <div class="header-cart-info">
+                            <h5>Turmeric blend</h5>
+                        </div>
+                    </div>
+                    <div class="header-cart-quanity item-qty">
+                        <div class="qty-holder">
+                            <input type="number" value="1"><i class="square-minus"></i><i class="square-plus"></i>
+                        </div>
+                    </div>
+                    <div class="header-cart-price">$220.0</div>
+                    <div class="delete-header-cart"></div>
+                </li>
+                <li>
+                    <div class="wrap-infor-image-title">
+                        <div class="header-cart-img">
+                            <div class="img-drop ratio-11"><img src="upload/img-home-prod-1.png" alt=""></div>
+                        </div>
+                        <div class="header-cart-info">
+                            <h5>Turmeric blend</h5>
+                        </div>
+                    </div>
+                    <div class="header-cart-quanity item-qty">
+                        <div class="qty-holder">
+                            <input type="number" value="1"><i class="square-minus"></i><i class="square-plus"></i>
+                        </div>
+                    </div>
+                    <div class="header-cart-price">$220.0</div>
+                    <div class="delete-header-cart"></div>
+                </li>
+                <li>
+                    <div class="wrap-infor-image-title">
+                        <div class="header-cart-img">
+                            <div class="img-drop ratio-11"><img src="upload/img-home-prod-1.png" alt=""></div>
+                        </div>
+                        <div class="header-cart-info">
+                            <h5>Turmeric blend</h5>
+                        </div>
+                    </div>
+                    <div class="header-cart-quanity item-qty">
+                        <div class="qty-holder">
+                            <input type="number" value="1"><i class="square-minus"></i><i class="square-plus"></i>
+                        </div>
+                    </div>
+                    <div class="header-cart-price">$220.0</div>
+                    <div class="delete-header-cart"></div>
+                </li>
+                <li>
+                    <div class="wrap-infor-image-title">
+                        <div class="header-cart-img">
+                            <div class="img-drop ratio-11"><img src="upload/img-home-prod-1.png" alt=""></div>
+                        </div>
+                        <div class="header-cart-info">
+                            <h5>Turmeric blend</h5>
+                        </div>
+                    </div>
+                    <div class="header-cart-quanity item-qty">
+                        <div class="qty-holder">
+                            <input type="number" value="1"><i class="square-minus"></i><i class="square-plus"></i>
+                        </div>
+                    </div>
+                    <div class="header-cart-price">$220.0</div>
+                    <div class="delete-header-cart"></div>
+                </li>
+                <li>
+                    <div class="wrap-infor-image-title">
+                        <div class="header-cart-img">
+                            <div class="img-drop ratio-11"><img src="upload/img-home-prod-1.png" alt=""></div>
+                        </div>
+                        <div class="header-cart-info">
+                            <h5>Turmeric blend</h5>
+                        </div>
+                    </div>
+                    <div class="header-cart-quanity item-qty">
+                        <div class="qty-holder">
+                            <input type="number" value="1"><i class="square-minus"></i><i class="square-plus"></i>
+                        </div>
+                    </div>
+                    <div class="header-cart-price">$220.0</div>
+                    <div class="delete-header-cart"></div>
+                </li>
+                <li>
+                    <div class="wrap-infor-image-title">
+                        <div class="header-cart-img">
+                            <div class="img-drop ratio-11"><img src="upload/img-home-prod-1.png" alt=""></div>
+                        </div>
+                        <div class="header-cart-info">
+                            <h5>Turmeric blend</h5>
+                        </div>
+                    </div>
+                    <div class="header-cart-quanity item-qty">
+                        <div class="qty-holder">
+                            <input type="number" value="1"><i class="square-minus"></i><i class="square-plus"></i>
+                        </div>
+                    </div>
+                    <div class="header-cart-price">$220.0</div>
+                    <div class="delete-header-cart"></div>
+                </li>
+                <li>
+                    <div class="wrap-infor-image-title">
+                        <div class="header-cart-img">
+                            <div class="img-drop ratio-11"><img src="upload/img-home-prod-1.png" alt=""></div>
+                        </div>
+                        <div class="header-cart-info">
+                            <h5>Turmeric blend</h5>
+                        </div>
+                    </div>
+                    <div class="header-cart-quanity item-qty">
+                        <div class="qty-holder">
+                            <input type="number" value="1"><i class="square-minus"></i><i class="square-plus"></i>
+                        </div>
+                    </div>
+                    <div class="header-cart-price">$220.0</div>
+                    <div class="delete-header-cart"></div>
+                </li>
+            </ul>
+            <div class="wrap-cart-panel-bottom">
+                <div class="row">
+                    <div class="coupon">
+                        <input type="text" placeholder="Coupon Code">
+                        <button type="submit">APPLY</button>
+                    </div>
+                    <div class="header-cart-buttons header-total">
+                        <div>Total</div>
+                        <div>$820</div>
+                    </div>
+                    <div class="row-cart-buttons"> <a class="header-cart-buttons header-viewbag" href="checkout.html">View bag</a><a class="header-cart-buttons header-checkout" href="checkout.html">check out</a></div>
+                </div>
+            </div>
+        </div>
+        <!-- WRAP PAGE-->
+        <div id="wrap-page">
+            <!-- ABOUT: BANNER-->
+            <section class="banner-product spacing-around spacing-header">
+                <div class="text-cover">
+                    <h1 class="title-page">About us</h1>
+                    <p class="des-page">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+                </div>
+                <div class="img-drop"><img class="lazygo" data-src="upload/about-banner.jpg" alt=""></div>
+            </section>
+            <!-- SUPPLEMENT CONTENT-->
+            <section class="about-nutritional spacing-around bg-green section-scroll row-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="wrap-text-4-item">
+                                <h4 class="title-medium">Flourish Nutritional Supplements</h4>
+                                <div class="desc">Flourish Nutritional Supplements are made purely from health-giving whole foods, just as Mother Nature provided. Like a symphony, all ingredients work in harmony to help alleviate aches and pains, improve sleep and energy, and relieve some chronic conditions.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="img-drop"><img class="lazygo" data-src="upload/img-about-1.jpg" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- OUR PROMISE-->
+            <section class="our-promise spacing-around bg-skin">
+                <div class="container">
+                    <div class="wrap-text-4-item">
+                        <h4 class="title-medium">Our Promise</h4>
+                        <div class="desc">Flourish Nutritional Supplements will always be;</div>
+                    </div>
+                    <div class="list-nutritional">
+                        <div class="items">
+                            <div class="icon"><img src="upload/about-icon-1.png" alt=""></div>
+                            <div class="wrap-item">
+                                <h5>Whole Foods</h5>
+                                <div class="desc">Every ingredient comes from it’s whole food natural source. Our turmeric, for example, is powered from the whole root – containing all the curcuminoids, turmerones, vitamins and minerals in their natural form, nothing added or subtracted. Together, these phytochemicals and nutrients produce their most powerful effects.</div>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="icon"><img src="upload/about-icon-2.png" alt=""></div>
+                            <div class="wrap-item">
+                                <h5>Plant-Based</h5>
+                                <div class="desc">We use plants as medicine, and believe in harnessing the healing powers of nature. All ingredients within our blends are mindfully selected and designed to work synergistically, so as much as possible is absorbed by the cells and available to be of benefit to the body.</div>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="icon"><img src="upload/about-icon-3.png" alt=""></div>
+                            <div class="wrap-item">
+                                <h5>Powdered</h5>
+                                <div class="desc">We will always make our products powdered, to allow for the most therapeutic dose.<br>This way, you can use the powder to give a healthy boost to your meals and drinks.<br>This also solves problems for people who struggle to take tablets or capsules.<br>Our products are designed as medicinal remedies to help health conditions, and will be made to be as palatable as possible, but do keep in mind that it is food as medicine.</div>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="icon"><img src="upload/about-icon-4.png" alt=""></div>
+                            <div class="wrap-item">
+                                <h5>Pure</h5>
+                                <div class="desc">Our blends are all natural. There is nothing synthetic within them. No extracts, no fillers, no artificial preservatives. This makes them unique to the market.<br>Every batch is independently tested to ensure its safety for consumption and that it is free from any environmental contaminants.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-quote">
+                        <div class="avatar">
+                            <div class="img-drop"><img src="upload/img-home-people-1.png" alt=""></div>
+                        </div>
+                        <div class="desc">Our body is designed to heal,<br> it’s not designed to kill us,<br> unless you are not feeding it properly.</div>
+                        <div class="signature">Kathy Ashton <span>Founder & Medicinal Nutritionist</span></div>
+                    </div>
+                </div>
+            </section>
+            <!-- CONTACT CONTENT-->
+            <section class="about-contact spacing-around bg-green section-scroll">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="wrap-text-4-item">
+                                <h4 class="title-medium">Contact</h4>
+                                <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="wrap-contact">
+                                <form action="">
+                                    <ul>
+                                        <li>
+                                            <label for="label-1">Your name <span class="gfield_required">*</span></label>
+                                            <input id="label-1" type="text">
+                                        </li>
+                                        <li>
+                                            <label for="label-3">Your email <span class="gfield_required">*</span></label>
+                                            <input id="label-2" type="email">
+                                        </li>
+                                        <li>
+                                            <label for="label-3">Your message <span class="gfield_required">*</span></label>
+                                            <textarea id="label-3" name="" cols="30" rows="10"></textarea>
+                                        </li>
+                                    </ul>
+                                    <div class="gform_footer">
+                                        <input type="submit" value="send">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- FOOTER PAGE-->
+            <footer class="footer-page">
+                <div class="container">
+                    <div class="form-subcribe">
+                        <h3>Subscribe to our Newsletter</h3>
+                        <div class="wrap-form"> 
+                            <form action="">
+                                <ul>
+                                    <li>
+                                        <input type="text" placeholder="Your email address"/>
+                                    </li>
+                                </ul>
+                                <div class="gform_footer">
+                                    <input type="submit" value="SUBMIT"/>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-6">
+                            <ul class="list-menu-footer">
+                                <li><a href="#">Home Page</a></li>
+                                <li><a href="#">Shop</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Education</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-6">
+                            <ul class="list-menu-footer">
+                                <li><a href="#">Stockists</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">My account</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-6">
+                            <ul class="list-menu-footer">
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Delivery, Refund and Returns</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="img-animation">
+                        <div class="item">  <img src="upload/img-footer-1.png" alt=""/></div>
+                        <div class="item">  <img src="upload/img-footer-2.png" alt=""/></div>
+                        <div class="item">  <img src="upload/img-footer-3.png" alt=""/></div>
+                    </div>
+                    <div class="copyright"><span>© 2022 EcoClean</span> Website by <strong><a href="https://uway.asia" target="_blank">Uway Technology</a></strong></div>
+                </div>
+            </footer>
+        </div>
+        <script>window.jQuery || document.write('<script src="src/js/jquery.js"><\/script>')</script>
+        <script src="src/js/plugins.min.js"></script>
+        <script data-src="https://maps.google.com/maps/api/js?libraries=places&amp;key=AIzaSyApEpQ5tDwzlRfH1vuo4351Bwdar8OzyUI" id="google-map"></script>
+        <script src="src/js/main.js"></script>
+        <script src="src/js/pages/slider_v2.js"></script>
+        <script src="src/js/initmap.js"></script>
+    </body>
+</html>

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- Favicon-->
+        <link rel="shortcut icon" href="upload/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" href="upload/favicon.png">
+        <!-- CSS-->
+        <link rel="stylesheet" href="src/scss/plugins.css">
+        <link rel="stylesheet" href="src/scss/style.css">
+        <!-- Title-->
+        <title>Product Detail - ECOCLEARN</title>
+    </head>
+    <body>
+        <script>sessionStorage.getItem("isFirstRun") || document.write('<div id="preloader"><div class="loading"></div></div>')</script>
+        <!-- HEADER PAGE -->
+        <header class="header">
+            <div class="header-welcome">
+                <div class="header-welcome-content">
+                    <div class="header-welcome-content-left">
+                        <div class="mobile-info">
+                            <div class="icon-mobile"><i class="fa fa-mobile"></i></div>
+                            <div class="number-mobile">+84 3555 01613</div>
+                        </div>
+                        <div class="email-info">
+                            <div class="icon-email"><i class="fa fa-envelope-o"></i></div>
+                            <div class="name-email">hiukhoa@gmail.com</div>
+                        </div>
+                    </div>
+                    <div class="header-welcome-content-right">
+                        <div class="icon-flag"><img src="../../../src/img/flag-VN.svg" alt=""/></div>
+                        <div class="country">Vietnamese</div>
+                        <div class="icon-dropdown-menu"><img src="../../../src/img/drop-down-more.svg" alt=""/></div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-menu">
+                <div class="header-menu-content"> 
+                    <div class="header-menu-content-left"><a class="logo-menu" href=""><img src="../../../src/img/ecolear-logo.png" alt=""/></a>
+                        <div class="nav-menu">
+                            <ul class="menu"> 
+                                <li class="item-menu">                      <a href="../../../product_v2.html">Sản phẩm</a></li>
+                                <li class="item-menu">                      <a href="#">Về chúng tôi</a></li>
+                                <li class="item-menu"><a href="#">Blog </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="header-menu-content-right">
+                        <div class="icon-account"> 
+                            <div class="dropdown"><img src="../../../src/img/ecolearn-user.svg" alt=""/>
+                                <div class="dropdown-content"><a href="#">Đăng nhập </a><a href="#">Đăng ký  </a></div>
+                            </div>
+                        </div>
+                        <div class="icon-cart-shop">
+                            <label for="nav-cart-input"><img src="../../../src/img/ecolearn-cart.svg" alt=""/></label>
+                            <input class="nav-cart" type="checkbox" id="nav-cart-input"/>
+                            <label class="nav-overlay" for="nav-cart-input"></label>
+                            <div class="nav-menu-cart">
+                                <div class="cart-content">
+                                    <div class="content-title">
+                                        <div class="content-title-name">
+                                            <div class="name-product">Tên sản phẩm</div>
+                                            <div class="count-product">Số lượng </div>
+                                            <div class="price-product">Đơn giá</div>
+                                        </div>
+                                        <label class="btn-close-cart" for="nav-cart-input"><i class="fa fa-times"></i></label>
+                                    </div>
+                                    <div class="content-product-cart">
+                                        <div class="cart-item">
+                                            <div class="infor-cart">
+                                                <div class="img-name"> <img src="../../../src/img/product-selling-1.png" alt=""/>
+                                                    <div class="name-cart-product">Vi sinh khử mùi nhà vệ sinh - Ecofresh</div>
+                                                </div>
+                                                <div class="count-cart"> 
+                                                    <button class="btn-decrease" onclick="handleDecrease()"></button>
+                                                    <div class="value-cart">
+                                                        <input class="amount-input" type="text" id="amount" value="1"/>
+                                                    </div>
+                                                    <button class="btn-increase" onclick="handleIncrease()"></button>
+                                                </div>
+                                                <div class="price-cart">245,000 đ</div>
+                                            </div>
+                                            <button class="btn-clear-product" onclick="handleClear()"><i class="fa fa-times"></i></button>
+                                        </div>
+                                        <div class="cart-item">
+                                            <div class="infor-cart">
+                                                <div class="img-name"> <img src="../../../src/img/product-selling-2.png" alt=""/>
+                                                    <div class="name-cart-product">Tẩy ố quần áo 250ml Stain Remover</div>
+                                                </div>
+                                                <div class="count-cart"> 
+                                                    <button class="btn-decrease" onclick="handleDecrease()"></button>
+                                                    <div class="value-cart">
+                                                        <input class="amount-input" type="text" id="amount" value="1"/>
+                                                    </div>
+                                                    <button class="btn-increase" onclick="handleIncrease()"></button>
+                                                </div>
+                                                <div class="price-cart">245,000 đ</div>
+                                            </div>
+                                            <button class="btn-clear-product" onclick="handleClear()"><i class="fa fa-times"></i></button>
+                                        </div>
+                                        <div class="cart-item">
+                                            <div class="infor-cart">
+                                                <div class="img-name"> <img src="../../../src/img/product-selling-3.png" alt=""/>
+                                                    <div class="name-cart-product">Vi sinh khử mùi nhà vệ sinh</div>
+                                                </div>
+                                                <div class="count-cart"> 
+                                                    <button class="btn-decrease" onclick="handleDecrease()"></button>
+                                                    <div class="value-cart">
+                                                        <input class="amount-input" type="text" id="amount" value="1"/>
+                                                    </div>
+                                                    <button class="btn-increase" onclick="handleIncrease()"></button>
+                                                </div>
+                                                <div class="price-cart">245,000 đ</div>
+                                            </div>
+                                            <button class="btn-clear-product" onclick="handleClear()"><i class="fa fa-times"></i></button>
+                                        </div>
+                                        <div class="cart-item">
+                                            <div class="infor-cart">
+                                                <div class="img-name"> <img src="../../../src/img/product-selling-4.png" alt=""/>
+                                                    <div class="name-cart-product">Vi sinh khử mùi nhà vệ sinh - 4</div>
+                                                </div>
+                                                <div class="count-cart"> 
+                                                    <button class="btn-decrease" onclick="handleDecrease()"></button>
+                                                    <div class="value-cart">
+                                                        <input class="amount-input" type="text" id="amount" value="1"/>
+                                                    </div>
+                                                    <button class="btn-increase" onclick="handleIncrease()"></button>
+                                                </div>
+                                                <div class="price-cart">245,000 đ</div>
+                                            </div>
+                                            <button class="btn-clear-product" onclick="handleClear()"><i class="fa fa-times"></i></button>
+                                        </div>
+                                        <div class="cart-item">
+                                            <div class="infor-cart">
+                                                <div class="img-name"> <img src="../../../src/img/product-selling-4.png" alt=""/>
+                                                    <div class="name-cart-product">Vi sinh khử mùi nhà vệ sinh - 8</div>
+                                                </div>
+                                                <div class="count-cart"> 
+                                                    <button class="btn-decrease" onclick="handleDecrease()"></button>
+                                                    <div class="value-cart">
+                                                        <input class="amount-input" type="text" id="amount" value="1"/>
+                                                    </div>
+                                                    <button class="btn-increase" onclick="handleIncrease()"></button>
+                                                </div>
+                                                <div class="price-cart">245,000 đ</div>
+                                            </div>
+                                            <button class="btn-clear-product" onclick="handleClear()"><i class="fa fa-times"></i></button>
+                                        </div>
+                                        <div class="cart-item">
+                                            <div class="infor-cart">
+                                                <div class="img-name"> <img src="../../../src/img/product-selling-4.png" alt=""/>
+                                                    <div class="name-cart-product">Vi sinh khử mùi nhà vệ sinh - 12</div>
+                                                </div>
+                                                <div class="count-cart"> 
+                                                    <button class="btn-decrease" onclick="handleDecrease()"></button>
+                                                    <div class="value-cart">
+                                                        <input class="amount-input" type="text" id="amount" value="1"/>
+                                                    </div>
+                                                    <button class="btn-increase" onclick="handleIncrease()"></button>
+                                                </div>
+                                                <div class="price-cart">245,000 đ</div>
+                                            </div>
+                                            <button class="btn-clear-product" onclick="handleClear()"><i class="fa fa-times"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="cart-footer">
+                                        <div class="cart-footer-content">
+                                            <div class="shipping-fee">
+                                                <div class="shipping-fee-text">Phí vận chuyển</div>
+                                                <div class="shipping-fee-price">150,000 đ</div>
+                                            </div>
+                                            <div class="total-order">
+                                                <div class="total-order-text">Tổng đơn hàng</div>
+                                                <div class="total-order-price">245,000 đ</div>
+                                            </div>
+                                            <div class="btn-pay">
+                                                <button type="button"><span>Thanh toán</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="icon-menu-mobile">
+                            <label class="btn-bars" for="nav-mobile-input"><i class="fa fa-bars"></i></label>
+                            <input class="nav-input" type="checkbox" id="nav-mobile-input"/>
+                            <label class="nav-overlay" for="nav-mobile-input"></label>
+                            <nav class="nav-menu-mobile">
+                                <label class="btn-close" for="nav-mobile-input"><i class="fa fa-times"></i></label>
+                                <ul class="menu-mobile">
+                                    <li class="item-menu-mobile"><a href="#">Sản phẩm</a></li>
+                                    <li class="item-menu-mobile"><a href="#">Về chúng tôi</a></li>
+                                    <li class="item-menu-mobile"><a href="#">Blog </a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- WRAP PAGE-->
+        <div id="wrap-page">
+            <div class="body-detail">
+                <div class="body-detail-product">
+                    <div class="body-detail-product-detail">
+                        <div class="body-detail-product-detail-large-img"><img src="../../src/img/product-selling-2.png" id="main-img"></div>
+                        <div class="body-detail-product-detail-small-img">
+                            <div class="img-detail"><img src="../../src/img/product-selling-1.png" onclick="handleChangeImage('one')" id="one"><img src="../../src/img/product-selling-3.png" onclick="handleChangeImage('two')" id="two"><img src="../../src/img/product-selling-4.png" onclick="handleChangeImage('three')" id="three"></div>
+                            <div class="btn-product-next"></div>
+                        </div>
+                    </div>
+                    <div class="body-detail-product-describe">
+                        <div class="body-detail-product-describe-container">
+                            <div class="name-container">Xịt lau bếp Stain Remover, khăn lau đa năng Micro Fiber</div>
+                            <div class="desc-container">EcoClean FOG là sản phẩm làm sạch dầu mỡ chuyên dụng, dạng lỏng. Được sản xuất trên dây chuyền hiện đại của Mỹ với công thức độc quyền là sự phối trộn nhiều</div>
+                            <div class="price-container">
+                                <div class="price-discount">250,000 đ</div>
+                                <div class="price-real">245,000 đ</div>
+                            </div>
+                            <div class="capacity-container">Dung tích
+                                <div class="capacity-content">
+                                    <div class="capacity-content-item">
+                                        <input class="btn-radio" type="radio" checked="checked" name="radio">
+                                        <div class="text-capacity">1 lít</div>
+                                    </div>
+                                    <div class="capacity-content-item">
+                                        <input class="btn-radio" type="radio" checked="checked" name="radio">
+                                        <div class="text-capacity">2 lít</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-container">
+                                <div class="count-container">
+                                    <div class="btn-decrease"><img src="../../../src/img/btn-decrease.svg" alt=""></div>
+                                    <div class="value-cart">2</div>
+                                    <div class="btn-increase"><img src="../../../src/img/btn-increase.svg" alt=""></div>
+                                </div>
+                                <div class="btn-order">                       
+                                    <button type="button"><span>Đặt hàng</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="body-detail-property">
+                    <div class="body-detail-property-img"><img src="../../../src/img/property-product.png"></div>
+                    <div class="body-detail-property-typical">
+                        <div class="property-title">Tính chất điển hình của sản phẩm</div>
+                        <div class="property-content">
+                            <div class="name-property">
+                                <p>Hình thức:</p>
+                                <p>Mùi:</p>
+                                <p>Dạng:</p>
+                                <p>pH:</p>
+                                <p>Hạn sử dụng:</p>
+                                <p>Điểm cháy:</p>
+                            </div>
+                            <div class="product-property">
+                                <p>Trong đến trắng</p>
+                                <p>Mùn</p>
+                                <p>Lỏng</p>
+                                <p>6.8 - 8.5</p>
+                                <p>2 năm</p>
+                                <p>Không</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="body-detail-information">
+                    <div class="body-detail-information-product">Thông tin sản phẩm</div>
+                    <div class="body-detail-information-content">
+                        <div class="body-detail-information-content-img"><img src="../../../src/img/propety-product-2.png"></div>
+                        <div class="body-detail-information-content-text">
+                            <div class="infor-uses">
+                                <div class="infor-uses-title">Cách sử dụng vi sinh xử lý đầu mỡ EcoClean FOG</div>
+                                <div class="infor-uses-content">
+                                    <ul type="disc">
+                                        <li>Phân hủy rộng các hợp chất hữu cơ phức tạo. </li>
+                                        <li>Hạn chế mùi phát sinh tại nguồn xả. </li>
+                                        <li>Phân hủy chất béo và mỡ tích tụ. </li>
+                                        <li>Giảm bùn tích tụ. </li>
+                                        <li>Tăng cường loại bỏ BOD/COD. </li>
+                                        <li>Giảm H2S. </li>
+                                        <li>Bao gồm quá trình phân hủy kỵ khí tùy nghi. </li>
+                                        <li>Thay đổi động học sinh khối. </li>
+                                        <li>Kinh tế/Dễ sử dụng. </li>
+                                        <li>Không cần thiết bị hỗ trợ. </li>
+                                        <li>Không chứa hóa chất. </li>
+                                        <li>Tăng hiệu quả hệ thống. </li>
+                                        <li>Giảm đáng kể công lao động.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="body-detail-information-final">
+                        <div class="infor-using">
+                            <div class="infor-using-title">Cách sử dụng vi sinh xử lý dầu mỡ EcoClean FOG</div>
+                            <div class="infor-using-content">
+                                <p> Dưới đây là hướng dẫn và liều lượng sử dụng vi sinh ăn mỡ EcoClean FOG chuẩn để bạn tham khảo như sau:</p>
+                                <ul type="disc">
+                                    <li>Nên tạm ngừng toàn bộ hoạt động xả thải trước khi sử dụng sản phẩm, nhất là không xả nước nóng xuống đường ống để đảm bảo vi sinh vật đạt số lượng cao nhất và khả năng sống tốt nhất;</li>
+                                    <li>Nên sử dụng vi sinh EcoClean FOG vào buổi tối trước khi đi ngủ hoặc ngưng đường ống trong khoảng 6-8 giờ.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="infor-application-industry">
+                            <div class="infor-application-industry-title">Khối ngành ứng dụng EcoClean FOG</div>
+                            <div class="infor-application-industry-content">
+                                <ul type="disc">
+                                    <li>Khối ngành ứng dụng EcoClean FOG</li>
+                                    <li>Nhà hàng, khách sạn, resort.</li>
+                                    <li>Chế biến thực phẩm, sản xuất nước giải khát.</li>
+                                    <li>Bẫy mỡ bảo trì đường cống dẫn.</li>
+                                    <li>Xử lý dầu mỡ trong nước thải</li>
+                                    <li>Làm sạch bề mặt sàn.</li>
+                                    <li>Khử mùi.</li>
+                                    <li>RV, Toilet di động, hầm tự hoại.</li>
+                                    <li>Thú nuôi và trại nuôi.</li>
+                                    <li>Thiết bị tăng tốc, ủ phân compost.</li>
+                                    <li>Nước thải chế biến thực phẩm, chế biến thịt.</li>
+                                    <li>Nước thải có chứa nhiều chất hoạt động bề mặt và xà phòng.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="infor-application-system">
+                            <div class="infor-application-system-title">Hệ thống ứng dụng EcoClean FOG</div>
+                            <div class="infor-application-system-content">
+                                <p>Trạm thu; Trạm bơm; Mương Oxy hóa; RBCS; Bể lọc; Bể lắng; Ao hồ; Đường cống dẫn Inhoff Tanks; Bẫy mỡ. </p>
+                                <p>Hợp chất phân hủy</p>
+                                <p>Fats Oils & Grease;  Starches; Proteins; Malodors;  Animal Fats, Triglycerides; Foaming   Surfactants; Soaps Amines Organics.</p><br>
+                                <p>Enzyme hoạt tính</p>
+                                <p>- Protease (Casein Digesting)........................................... Units/Gram: 35,000 Min</p>
+                                <p>- Amylase (Modified Wohlgemuth).................................. Units/Gram: 55,000 - 80,000</p>
+                                <p>- Lipase (USP)................................................................. Units/Gram: 400</p>
+                                <p>- Cellulase (CAU)............................................................ Units/Gram: 150 Min</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="body-detail-video">
+                    <div class="body-detail-video-title">Video sản phẩm</div>
+                    <div class="body-detail-video-content">
+                        <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                    </div>
+                </div>
+                <div class="body-detail-relate-product">
+                    <div class="body-detail-relate-product-title">Sản phẩm liên quan</div>
+                    <div class="body-detail-relate-product-content">
+                        <div class="list-product">
+                            <div class="product-item">
+                                <div class="img-product"><img src="../../src/img/product-selling-1.png" alt=""></div>
+                                <div class="info-product">
+                                    <div class="name-product">Xịt lau bếp Stain Remover, khăn lau đa năng Micro Fiber</div>
+                                    <div class="price-product">245,000 đ</div>
+                                    <div class="btn-order">
+                                        <button class="button-order" name="button" type="button"><span>Đặt hàng  </span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="img-product"><img src="../../src/img/product-selling-2.png" alt=""></div>
+                                <div class="info-product">
+                                    <div class="name-product">Vệ sinh khử mùi nhà vệ sinh - Ecofresh</div>
+                                    <div class="price-product">245,000 đ</div>
+                                    <div class="btn-order">
+                                        <button class="button-order" name="button" type="button"><span>Đặt hàng  </span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="img-product"><img src="../../src/img/product-selling-3.png" alt=""></div>
+                                <div class="info-product">
+                                    <div class="name-product">Tẩy ố quần áo 250ml Stain Remover</div>
+                                    <div class="price-product">245,000 đ</div>
+                                    <div class="btn-order">
+                                        <button class="button-order" name="button" type="button"><span>Đặt hàng  </span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="img-product"><img src="../../src/img/product-selling-4.png" alt=""></div>
+                                <div class="info-product">
+                                    <div class="name-product">Vi sinh xử lý dầu mỡ Ecolean Fog - chai 1 lít</div>
+                                    <div class="price-product">245,000 đ</div>
+                                    <div class="btn-order">
+                                        <button class="button-order" name="button" type="button"><span>Đặt hàng  </span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="body-detail-seen-product">
+                    <div class="body-detail-seen-product-title">Sản phẩm đã xem</div>
+                    <div class="body-detail-seen-product-content">
+                        <div class="list-product">
+                            <div class="product-item">
+                                <div class="img-product"><img src="../../src/img/product-selling-1.png" alt=""></div>
+                                <div class="info-product">
+                                    <div class="name-product">Xịt lau bếp Stain Remover, khăn lau đa năng Micro Fiber</div>
+                                    <div class="price-product">245,000 đ</div>
+                                    <div class="btn-order">
+                                        <button class="button-order" name="button" type="button"><span>Đặt hàng  </span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="img-product"><img src="../../src/img/product-selling-2.png" alt=""></div>
+                                <div class="info-product">
+                                    <div class="name-product">Vệ sinh khử mùi nhà vệ sinh - Ecofresh</div>
+                                    <div class="price-product">245,000 đ</div>
+                                    <div class="btn-order">
+                                        <button class="button-order" name="button" type="button"><span>Đặt hàng  </span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="img-product"><img src="../../src/img/product-selling-3.png" alt=""></div>
+                                <div class="info-product">
+                                    <div class="name-product">Tẩy ố quần áo 250ml Stain Remover</div>
+                                    <div class="price-product">245,000 đ</div>
+                                    <div class="btn-order">
+                                        <button class="button-order" name="button" type="button"><span>Đặt hàng  </span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="img-product"><img src="../../src/img/product-selling-4.png" alt=""></div>
+                                <div class="info-product">
+                                    <div class="name-product">Vi sinh xử lý dầu mỡ Ecolean Fog - chai 1 lít</div>
+                                    <div class="price-product">245,000 đ</div>
+                                    <div class="btn-order">
+                                        <button class="button-order" name="button" type="button"><span>Đặt hàng  </span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- FOOTER PAGE-->
+            <footer class="footer">
+                <div class="footer-content"> 
+                    <div class="footer-content-list">
+                        <div class="footer-content-list-info">
+                            <div class="logo-footer"><a class="bg-image" href="#"><img src="../../../src/img/ecolearn-logo-footer.png" alt=""/></a></div>
+                            <div class="infor-footer">
+                                <div class="mobile-info-footer">
+                                    <div class="icon-mobile"><i class="fa fa-mobile"></i></div>
+                                    <div class="number-mobile">+84 3555 01613</div>
+                                </div>
+                                <div class="email-info-footer">
+                                    <div class="icon-email"><i class="fa fa-envelope-o"></i></div>
+                                    <div class="name-email">hiukhoa@gmail.com</div>
+                                </div>
+                                <div class="address-info-footer">
+                                    <div class="icon-address"><i class="fa fa-map-marker"></i></div>
+                                    <div class="name-address">Lý Chính Thắng, Quận 3</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-content-list-menu">
+                            <div class="link">Liên kết </div><a href="#"> 
+                                <p class="link-item">Giới thiệu</p></a><a href="#">
+                                <p class="link-item">Blog</p></a><a href="#">
+                                <p class="link-item">Shop </p></a><a href="#">
+                                <p class="link-item">Liên hệ</p></a>
+                        </div>
+                        <div class="footer-content-list-policy">
+                            <div class="support">Hỗ trợ</div><a href="#">
+                                <p class="policy-item">Chính sách giao hàng</p></a><a href="#">
+                                <p class="policy-item">Chính sách bảo mật</p></a><a href="#">
+                                <p class="policy-item">Chính sách đổi trả</p></a><a href="#">
+                                <p class="policy-item">Chính sách bảo hành</p></a>
+                        </div>
+                        <div class="footer-content-list-follow">
+                            <div class="follow-title">Theo dõi chúng tôi</div>
+                            <div class="list-icon-social">
+                                <div class="icon-intagram"><a href="#"><img src="../../../src/img/icon-intargram.svg" alt=""/></a></div>
+                                <div class="icon-tiktok"><a href="#"><img src="../../../src/img/icon-tiktok.svg" alt=""/></a></div>
+                                <div class="icon-facebook"><a href="#"><img src="../../../src/img/icon-facebook.svg" alt=""/></a></div>
+                                <div class="icon-youtube"><a href="#"><img src="../../../src/img/icon-youtube.svg" alt=""/></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-content-bottom"> 
+                        <div class="copyright">Copyright 2022 ECOCLEAN VIETNAM. </div>
+                        <div class="site-by">Site by Uway Technology</div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script>window.jQuery || document.write('<script src="src/js/jquery.js"><\/script>')</script>
+        <script src="src/js/plugins.min.js"></script>
+        <script data-src="https://maps.google.com/maps/api/js?libraries=places&amp;key=AIzaSyApEpQ5tDwzlRfH1vuo4351Bwdar8OzyUI" id="google-map"></script>
+        <script src="src/js/pages/slider_v2.js"></script>
+        <script src="src/js/main.js"></script>
+        <script src="src/js/initmap.js"></script>
+    </body>
+</html>

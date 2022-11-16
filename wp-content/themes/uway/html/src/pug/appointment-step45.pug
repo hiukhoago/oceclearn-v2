@@ -1,0 +1,28 @@
+include include/template
+
++template("Appointment","recipes")
+
+    // APPOINTMENT STEP : 4
+    .appointment-step-4.spacing-around.spacing-header(style="min-height: 500px")
+        .wrapper
+            .calendar-custom
+                .wrap-calendar
+                    #calendar
+                .box-chosen-date
+                    p You chosen date is: #[span.date-chosen 10th June 2019]
+            .box-info-pick
+                .item-inner
+                    .title Practitioner
+                    .text Kathy
+                .item-inner
+                    .title Consultation
+                    .text Initial Consultation
+                .item-inner
+                    .title Method of appointment
+                    .text over phone
+                .item-inner
+                    .title Date
+                    .text #[span.date-chosen 10th June 2019]
+                .item-inner
+                    .title Time
+                    .text #[span.time-chosen 9:00 - 11:00]

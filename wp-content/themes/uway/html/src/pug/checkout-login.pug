@@ -1,0 +1,35 @@
+include include/template-cart
+    
++template-cart("Checkout Login","checkout-login")
+
+    // CHECKOUT: PAGE
+    .checkout-page.spacing-header.spacing-around.spacing-section-medium
+        .container
+            .row
+                // ACCOUNT: SIDEBAR
+                .col-lg-3
+                    .checkout-sidebar.wrap-sidebar-blog-single
+                        .checkout-total-panel
+                            .total $150
+                            .items 3 items
+                        ul.acc-menu-siderbar.nav 
+                            li(class="active"): a(href="#login") Log in
+                            li(): a(href="checkout.html") Shipping Details
+                            li(): a(href="checkout.html") Payment
+                            div
+                // ACCOUNT: CONTENT
+                .col-lg-9
+                    .checkout-width.custom-form.checkout-login
+                        h1.title-product.mb-45 Who is placing this order?
+                        a(href="#").btn-white.mb-45 #[i.icon.fb-square] Sign up with Facebook
+                        form(action="checkout.html")
+                            p.form-row.form-row-wide
+                                label(for="") Email address
+                                input(type="email", value="")
+                            p.form-row.form-row-wide
+                                label(for="") Password
+                                input(type="password", value="")
+                            p.form-row.form-row-first 
+                                button.btn-black.full-width(type="submit") GO TO SHIPPING DETAILS
+                            p.form-row.form-row-last
+                                a(href="checkout.html").btn-transparent.full-width CONTINUE AS GUEST

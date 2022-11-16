@@ -1,0 +1,86 @@
+// @font-face {
+//     font-family: 'MyWebFont';
+//     src: url('webfont.eot');
+//     /* IE9 Compat Modes */
+//     src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//     url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
+//     url('webfont.woff') format('woff'), /* Pretty Modern Browsers */
+//     url('webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+//     url('webfont.svg#svgFontName') format('svg');
+//     /* Legacy iOS */
+// }
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('../fonts/AvenirNext-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/AvenirNext-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/AvenirNext-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+    url('../fonts/AvenirNext-Regular.ttf') format('truetype');
+    /* Safari, Android, iOS */
+    /* Legacy iOS */
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('../fonts/AvenirNext-Medium.woff2') format('woff2'), url('../fonts/AvenirNext-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('../fonts/AvenirNext-DemiBold.woff2') format('woff2'), url('../fonts/AvenirNext-DemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('../fonts/avenir-next-bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/avenir-next-bold.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/avenir-next-bold.woff') format('woff'), /* Pretty Modern Browsers */
+    url('../fonts/avenir-next-bold.ttf') format('truetype');
+    /* Safari, Android, iOS */
+    /* Legacy iOS */
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Circular Std';
+    src: url('../fonts/CircularStd-Bold.eot');
+    /* IE9 Compat Modes */
+    src: url('../fonts/CircularStd-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/CircularStd-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/CircularStd-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+    url('../fonts/CircularStd-Bold.ttf') format('truetype');
+    /* Safari, Android, iOS */
+    /* Legacy iOS */
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Circular Std';
+    src: url('../fonts/CircularStd-Book.eot');
+    /* IE9 Compat Modes */
+    src: url('../fonts/CircularStd-Book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/CircularStd-Book.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/CircularStd-Book.woff') format('woff'), /* Pretty Modern Browsers */
+    url('../fonts/CircularStd-Book.ttf') format('truetype');
+    /* Safari, Android, iOS */
+    /* Legacy iOS */
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Circular Std';
+    src: url('../fonts/CircularStd-BookItalic.eot');
+    /* IE9 Compat Modes */
+    src: url('../fonts/CircularStd-BookItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/CircularStd-BookItalic.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/CircularStd-BookItalic.woff') format('woff'), /* Pretty Modern Browsers */
+    url('../fonts/CircularStd-BookItalic.ttf') format('truetype');
+    /* Safari, Android, iOS */
+    /* Legacy iOS */
+    font-weight: 500;
+    font-style: italic;
+}
